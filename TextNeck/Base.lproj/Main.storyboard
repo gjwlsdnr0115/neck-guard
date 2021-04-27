@@ -74,7 +74,7 @@
                                                     <constraint firstAttribute="width" constant="72" id="rFx-UH-I1h"/>
                                                 </constraints>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.4 hrs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1M-IQ-Slw">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.2 hrs" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1M-IQ-Slw">
                                                 <rect key="frame" x="17.666666666666671" y="75.999999999999943" width="37" height="14"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                                 <nil key="textColor"/>
@@ -274,10 +274,17 @@
         <!--History-->
         <scene sceneID="63R-BN-AjA">
             <objects>
-                <viewController id="O32-tz-fZG" sceneMemberID="viewController">
+                <viewController id="O32-tz-fZG" customClass="OverallHistoryViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KSL-tk-WyC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-9M-M4s" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
+                                <rect key="frame" x="42" y="287" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qYj-z7-CsC"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>

@@ -29,6 +29,10 @@ class HomeViewController: UIViewController {
     
     
     let values = [0.8]
+    let values2 = [0.54]
+    let values3 = [0.46]
+    let values4 = [0.66]
+    
     let chartColor1 = [UIColor(displayP3Red: 123/255.0, green: 110/255.0, blue: 242/255.0, alpha: 1.0),
                        UIColor(displayP3Red: 228/255.0, green: 225/255.0, blue: 252/255.0, alpha: 1.0),]
     let chartColor2 = [UIColor(displayP3Red: 124/255.0, green: 225/255.0, blue: 238/255.0, alpha: 1.0),
@@ -44,9 +48,9 @@ class HomeViewController: UIViewController {
     
     func reloadData() {
         drawCircleChart(values: values, fgColor: chartColor1[0], bgColor: UIColor.systemGray5, width: 10, margin: 2, radius: 90, view: goalCircleChartView)
-        drawCircleChart(values: values, fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, view: goodCircleChartView)
-        drawCircleChart(values: values, fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, view: badCircleChartView)
-        drawCircleChart(values: values, fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+        drawCircleChart(values: values2, fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, view: goodCircleChartView)
+        drawCircleChart(values: values3, fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, view: badCircleChartView)
+        drawCircleChart(values: values4, fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
     }
 
     
