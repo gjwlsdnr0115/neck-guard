@@ -368,10 +368,41 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-LC-TRB" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
                                 <rect key="frame" x="210" y="545" width="160" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sua-Rd-PMu">
+                                        <rect key="frame" x="12" y="13.999999999999998" width="69.333333333333329" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Jkb-el-Ufy">
+                                        <rect key="frame" x="65" y="75" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Lco-Wy-vek"/>
+                                            <constraint firstAttribute="width" constant="30" id="oCH-DO-qdH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="IBl-Al-B3x">
+                                        <rect key="frame" x="40" y="107" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="2s4-KA-jhY"/>
+                                            <constraint firstAttribute="height" constant="30" id="yIe-Dp-tbS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="Shs-VO-fR9">
+                                        <rect key="frame" x="86" y="107" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="EJT-hI-YvK"/>
+                                            <constraint firstAttribute="width" constant="30" id="Nbs-ur-Zle"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="Sua-Rd-PMu" firstAttribute="leading" secondItem="xBs-LC-TRB" secondAttribute="leading" constant="12" id="Y6p-Gc-PJ7"/>
                                     <constraint firstAttribute="width" constant="160" id="bLN-eJ-K5z"/>
                                     <constraint firstAttribute="height" constant="180" id="hox-pz-ASc"/>
+                                    <constraint firstItem="Sua-Rd-PMu" firstAttribute="top" secondItem="xBs-LC-TRB" secondAttribute="top" constant="14" id="tFD-gj-lGw"/>
                                 </constraints>
                             </view>
                         </subviews>
