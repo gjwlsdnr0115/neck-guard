@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hi, Justin!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAd-jI-a9P">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAd-jI-a9P">
                                 <rect key="frame" x="40" y="84" width="137.33333333333334" height="36"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
                                 <nil key="textColor"/>
@@ -303,15 +303,18 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-9M-M4s" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
                                 <rect key="frame" x="20" y="193" width="350" height="268"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weekly Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzf-Lr-6uw">
-                                        <rect key="frame" x="8" y="8" width="116" height="22"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzf-Lr-6uw">
+                                        <rect key="frame" x="12.000000000000007" y="13.999999999999998" width="109.66666666666669" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Nzf-Lr-6uw" firstAttribute="top" secondItem="V2b-9M-M4s" secondAttribute="top" constant="14" id="7Fh-oX-AmY"/>
+                                    <constraint firstItem="Nzf-Lr-6uw" firstAttribute="leading" secondItem="V2b-9M-M4s" secondAttribute="leading" constant="12" id="yoU-HF-n4H"/>
+                                </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMp-St-pU8">
                                 <rect key="frame" x="20.000000000000004" y="501" width="56.333333333333343" height="24"/>
@@ -320,19 +323,55 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mac-xq-jDK" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                                <rect key="frame" x="20" y="545" width="160" height="160"/>
+                                <rect key="frame" x="20" y="545" width="160" height="180"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2m-dE-iYP">
+                                        <rect key="frame" x="12.000000000000004" y="13.999999999999998" width="47.333333333333343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-JQ-3k3">
+                                        <rect key="frame" x="45" y="55" width="70" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="Q3x-Pf-jvQ"/>
+                                            <constraint firstAttribute="width" constant="70" id="STG-iv-a0J"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="78%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="982-c2-Xre">
+                                        <rect key="frame" x="12.000000000000002" y="135" width="29.666666666666671" height="17"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good Posture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gi8-6L-MfN">
+                                        <rect key="frame" x="12" y="152" width="77" height="14.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="12"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.38431372549019605" green="0.12156862745098039" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="160" id="GBt-JX-3ep"/>
+                                    <constraint firstAttribute="height" constant="180" id="GBt-JX-3ep"/>
                                     <constraint firstAttribute="width" constant="160" id="UfI-b0-hfl"/>
+                                    <constraint firstItem="f2m-dE-iYP" firstAttribute="leading" secondItem="mac-xq-jDK" secondAttribute="leading" constant="12" id="UjM-pW-qcv"/>
+                                    <constraint firstItem="f2m-dE-iYP" firstAttribute="top" secondItem="mac-xq-jDK" secondAttribute="top" constant="14" id="Yqo-Q1-sdY"/>
+                                    <constraint firstItem="Gi8-6L-MfN" firstAttribute="top" secondItem="982-c2-Xre" secondAttribute="bottom" id="ZFS-1n-0yh"/>
+                                    <constraint firstItem="982-c2-Xre" firstAttribute="leading" secondItem="f2m-dE-iYP" secondAttribute="leading" id="cm9-Cf-DcJ"/>
+                                    <constraint firstItem="982-c2-Xre" firstAttribute="top" secondItem="LYO-JQ-3k3" secondAttribute="bottom" constant="10" id="h2U-pa-9rv"/>
+                                    <constraint firstItem="Gi8-6L-MfN" firstAttribute="leading" secondItem="982-c2-Xre" secondAttribute="leading" id="hKE-Se-D4s"/>
+                                    <constraint firstItem="LYO-JQ-3k3" firstAttribute="centerY" secondItem="mac-xq-jDK" secondAttribute="centerY" id="n9S-kM-GnK"/>
+                                    <constraint firstItem="LYO-JQ-3k3" firstAttribute="centerX" secondItem="mac-xq-jDK" secondAttribute="centerX" id="o7L-QW-45b"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-LC-TRB" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                                <rect key="frame" x="210" y="545" width="160" height="160"/>
+                                <rect key="frame" x="210" y="545" width="160" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="bLN-eJ-K5z"/>
-                                    <constraint firstAttribute="height" constant="160" id="hox-pz-ASc"/>
+                                    <constraint firstAttribute="height" constant="180" id="hox-pz-ASc"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -356,6 +395,7 @@
                     <navigationItem key="navigationItem" title="History" id="y8a-Gi-0qK"/>
                     <connections>
                         <outlet property="monthlyButton" destination="VUe-sC-tfQ" id="dg8-Lg-az4"/>
+                        <outlet property="todayScoreCircleChartView" destination="LYO-JQ-3k3" id="oo2-u0-IIe"/>
                         <outlet property="weeklyButton" destination="8ir-L1-edx" id="YLJ-8Z-5AG"/>
                     </connections>
                 </viewController>
