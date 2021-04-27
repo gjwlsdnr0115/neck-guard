@@ -1,0 +1,949 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04FF68DA70D573A8868F152EF83AC7CE /* Pods-TextNeck-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63D351F61C90E888FDB6A789B0FA6889 /* Pods-TextNeck-dummy.m */; };
+		09696776C522881659E1F59C8FE19B10 /* Pods-TextNeck-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30D783306499E79540C43BA607093B44 /* Pods-TextNeck-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E2D057C0C7D3BDC20F9D55ED01EB965 /* ConcentricProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6844A5B2C6F30FC5A10540A069ACF36 /* ConcentricProgressRing.swift */; };
+		0E3686F6A707A3F89F6D65CFA401732C /* UIAlertController+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF798CBB51CA714B18FB97855F0995 /* UIAlertController+LionheartExtensions.swift */; };
+		13CEF424703726630E0063E4C3C2E114 /* UIImage+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7166E3C176D57FE47557DF2C39EFFA /* UIImage+LionheartExtensions.swift */; };
+		14138FA5BA2C95CBD065CFE7F1CB4BEC /* Any+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C15D511D7AF14302635AEA8273BDA8 /* Any+LionheartExtensions.swift */; };
+		16E2D963A00AA2ACB6616D619CF48FEB /* Array+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942652A40545CF86CFFCCB65E83C486D /* Array+LionheartExtensions.swift */; };
+		1920C80542EDA5118F53D10A06860E1A /* ConcentricProgressRingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB534EFEAD43D5BC0D099DA76EA366D8 /* ConcentricProgressRingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1CB453871578F8B77BBE2B797F15D2D6 /* Bundle+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23030B7C0AD5730E7D15A085164F32F8 /* Bundle+LionheartExtensions.swift */; };
+		1DC7471E819EE1D4375B634041231B8D /* UIColor+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CCD4BBA6E43CE3E5BD7D1861B917F6 /* UIColor+LionheartExtensions.swift */; };
+		272338D5FC0D3DAE8824D61FBA155E7F /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9017AE3D2B69C2333221BF0F333034E /* Functional.swift */; };
+		2B8DB4B5C90E835365F7533E0970437C /* FileManager+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0261CF62C177ED8C8884A42899B5308 /* FileManager+LionheartExtensions.swift */; };
+		30ED584BA84E3F1E44455421E1F9EBD0 /* UIScreen+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A21B1AA60330F6EB580F62F0B0A91D54 /* UIScreen+LionheartExtensions.swift */; };
+		35285139EC6BCDB04C538AF66BADE67F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D0C6B17C055168630D4EC0060E2D54 /* Foundation.framework */; };
+		38B2D24690629B05EB01870AE9B7A749 /* ConcentricProgressRingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A99BCDF174FE70F37D842B32211957D1 /* ConcentricProgressRingView-dummy.m */; };
+		3FABD5623FF879263F076ACE37E9D659 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D0C6B17C055168630D4EC0060E2D54 /* Foundation.framework */; };
+		407E2248F7C0E5C89D212B5916AFE16D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716590DB0C9DD44C78DA2057F1BCC66F /* File.swift */; };
+		47DE2A7BD830E3E9EF3E696B38C991CA /* LionheartExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AEF8F3A659FE95B358E1BCBCDF4388E6 /* LionheartExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		50C661349B7D33D85A7FBDC90C16C7A3 /* UIWindow+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E77FB5535BD55457852229C966C32A /* UIWindow+LionheartExtensions.swift */; };
+		54D5F048D5E8E1C3EBD5231B6F0792D9 /* Optional+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A15D59902D4947DC15D2C9A2909368 /* Optional+LionheartExtensions.swift */; };
+		61AD232C78C4F032669DB221A747435F /* IndexPath+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392FBE6ED432306D73DD7E074B09892 /* IndexPath+LionheartExtensions.swift */; };
+		63C15E632755818ED4EA36EE9F8A00C0 /* WKWebView+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C86BEE9445BBDBA00F29CD23D7D65E /* WKWebView+LionheartExtensions.swift */; };
+		6D5DB33A4B94E3E3338C5A2D1C72DD29 /* Int+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A121E0FEF0AA527211D1C7AFCB6AB9C /* Int+LionheartExtensions.swift */; };
+		7F8896382D72E6DF6B486E40C1A87A2E /* LionheartExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 283A82ECA380F1E7E4A078DF043FE23F /* LionheartExtensions-dummy.m */; };
+		95D4588B78489D2BA154B3FCBCD3DCE4 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404D215ED5C7E86555EE4604163B241C /* TitleButton.swift */; };
+		965684501E8E351637B6602BA5D8A191 /* CIImage+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B93E2662BBE21A600BA755F9A7BC24 /* CIImage+LionheartExtensions.swift */; };
+		9FDCD965897FDF042709B0FEBDFF37C3 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416F06772CDC0277E22154350B431B7 /* Main.swift */; };
+		AE21F8DFD4FC062098C97EC9C539EFDE /* DateFormatter+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC57F8EC45931F4E6D01EF9A9F98F9A /* DateFormatter+LionheartExtensions.swift */; };
+		BA2894E75A10334196B1868B670FCEC5 /* ColorRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C15E26BEE2820DCAD7E618922A01BFE /* ColorRepresentation.swift */; };
+		C43DC15C64682BC8530CF8A862FED1F5 /* UIFont+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02C1470477E1E74E4FC5EE7AF692D97 /* UIFont+LionheartExtensions.swift */; };
+		C6B75374961B596AFBAB3AAE476201AD /* NSRegularExpression+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4685970A41DC770F504BE3662E1DE0CC /* NSRegularExpression+LionheartExtensions.swift */; };
+		CCAA64C158547C71AC48763D577849F3 /* LionheartExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF783CF084F45AF822B2EEDB7EEFD1B0 /* LionheartExtensions.framework */; };
+		CD278415356EDA7FB0D972F1E39BB84B /* UIDevice+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E120CE1FD0FFCC4D07060DC90135F260 /* UIDevice+LionheartExtensions.swift */; };
+		D2A0B22D7EE0A920C20332FC3F868A6C /* UIApplicationDelegate+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80208BDB44290ABDC632627581C039DA /* UIApplicationDelegate+LionheartExtensions.swift */; };
+		D649EA3A9E28E8170DC1607AB5D571F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1D0C6B17C055168630D4EC0060E2D54 /* Foundation.framework */; };
+		E5BF8BA54E7343A7D1BCE90E7A4047DD /* NSURLSession+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DF75B0D46E390B23716ADBAC200D81 /* NSURLSession+LionheartExtensions.swift */; };
+		E651BE097EA8F45312FBE56D1EFDF061 /* CustomButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD598ED2EEB0311CC556E3A5FDA9086 /* CustomButtonType.swift */; };
+		E6B024D253CCB337B84CF48BB364EC30 /* ActivityIndicatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 163E14C2F888BBC28630E2D581186D5C /* ActivityIndicatorButton.swift */; };
+		E9FCFFDE8A1871D981AFE1BB98E67B07 /* String+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD44891FC184CB2537A5326C73A377A /* String+LionheartExtensions.swift */; };
+		EADE62C38CDD4DAA72B052818E771793 /* NSDecimalNumber+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A926665F7E000E0EAD8F599C9B9BE56D /* NSDecimalNumber+LionheartExtensions.swift */; };
+		EB2BAF4B15A1BF1988D17E3FBA5985E2 /* UITextField+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEA02610D30E11B13220CBFD4C8704B /* UITextField+LionheartExtensions.swift */; };
+		EC09BC121436DF7A5D0A9D10850DAB28 /* UIView+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C036C540CEAD5D3097BF53E7209B5 /* UIView+LionheartExtensions.swift */; };
+		EE2EBE5FAB3A156AAB51E9472A642958 /* Summable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329F5D3493D2B1B40FD0ED6746EFC11F /* Summable.swift */; };
+		F7BD6421D286F019E2B50AF25257E455 /* UIViewController+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E898072D337AF5935506BA5D58C1C5F4 /* UIViewController+LionheartExtensions.swift */; };
+		F8D421A54DE3DBB5FEC2672041E54439 /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5487FA5EDA9CAF7E91A5854B95F579CF /* UIPrintPageRenderer+LionheartExtensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		08FB3B5A6A80E534370CD7C07B207377 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F4A96A89FB295E15665620AFFCE1DDE;
+			remoteInfo = LionheartExtensions;
+		};
+		3343A98E97E3424F024D5FC47E1E7555 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F4A96A89FB295E15665620AFFCE1DDE;
+			remoteInfo = LionheartExtensions;
+		};
+		D8E159B41B5B70F42D117F2AE5891548 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7F9F152482955A392E61D7014E6D153E;
+			remoteInfo = ConcentricProgressRingView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00C3E0C5C2A5A4FC908F2C2297151FCA /* LionheartExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LionheartExtensions.debug.xcconfig; sourceTree = "<group>"; };
+		0A84B611E03114C8FBBEE08EA0A3330C /* Pods-TextNeck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextNeck.release.xcconfig"; sourceTree = "<group>"; };
+		0D9054E80BC10B16282265A2A4171374 /* ConcentricProgressRingView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ConcentricProgressRingView.debug.xcconfig; sourceTree = "<group>"; };
+		0F03DDAE2F21B0A40D3087D8B4CB7B41 /* LionheartExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LionheartExtensions.modulemap; sourceTree = "<group>"; };
+		163E14C2F888BBC28630E2D581186D5C /* ActivityIndicatorButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorButton.swift; path = Pod/Classes/ActivityIndicatorButton.swift; sourceTree = "<group>"; };
+		163EAEC4E59D6B7FE5AA85CCDF54EC2A /* Pods-TextNeck-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TextNeck-Info.plist"; sourceTree = "<group>"; };
+		1EEA02610D30E11B13220CBFD4C8704B /* UITextField+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+LionheartExtensions.swift"; path = "Pod/Classes/Core/UITextField+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LionheartExtensions.framework; path = LionheartExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		23030B7C0AD5730E7D15A085164F32F8 /* Bundle+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+LionheartExtensions.swift"; path = "Pod/Classes/Core/Bundle+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		283A82ECA380F1E7E4A078DF043FE23F /* LionheartExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LionheartExtensions-dummy.m"; sourceTree = "<group>"; };
+		29E77FB5535BD55457852229C966C32A /* UIWindow+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIWindow+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		2C15E26BEE2820DCAD7E618922A01BFE /* ColorRepresentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorRepresentation.swift; path = Pod/Classes/ColorRepresentation.swift; sourceTree = "<group>"; };
+		30D783306499E79540C43BA607093B44 /* Pods-TextNeck-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TextNeck-umbrella.h"; sourceTree = "<group>"; };
+		329F5D3493D2B1B40FD0ED6746EFC11F /* Summable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Summable.swift; path = Pod/Classes/Summable.swift; sourceTree = "<group>"; };
+		384880E461B89C3439A0E9FCA2B5AECD /* Pods-TextNeck-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TextNeck-acknowledgements.plist"; sourceTree = "<group>"; };
+		3D74C9B8A102ACF7641C3069243E40B9 /* LionheartExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LionheartExtensions-Info.plist"; sourceTree = "<group>"; };
+		404D215ED5C7E86555EE4604163B241C /* TitleButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TitleButton.swift; path = Pod/Classes/TitleButton.swift; sourceTree = "<group>"; };
+		4685970A41DC770F504BE3662E1DE0CC /* NSRegularExpression+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSRegularExpression+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSRegularExpression+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ConcentricProgressRingView.framework; path = ConcentricProgressRingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5487FA5EDA9CAF7E91A5854B95F579CF /* UIPrintPageRenderer+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPrintPageRenderer+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIPrintPageRenderer+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		57C750775366ACC16A4A3321C36739D0 /* Pods-TextNeck-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TextNeck-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5A121E0FEF0AA527211D1C7AFCB6AB9C /* Int+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+LionheartExtensions.swift"; path = "Pod/Classes/Core/Int+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		6392FBE6ED432306D73DD7E074B09892 /* IndexPath+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IndexPath+LionheartExtensions.swift"; path = "Pod/Classes/Core/IndexPath+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		63D351F61C90E888FDB6A789B0FA6889 /* Pods-TextNeck-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TextNeck-dummy.m"; sourceTree = "<group>"; };
+		657A9675E30719F1F5AEB2178969D103 /* Pods-TextNeck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TextNeck.debug.xcconfig"; sourceTree = "<group>"; };
+		661C036C540CEAD5D3097BF53E7209B5 /* UIView+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIView+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		677F34403BE4DECFC5608058FD10A50C /* ConcentricProgressRingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ConcentricProgressRingView.modulemap; sourceTree = "<group>"; };
+		696C26CC83E894BA438E52A34C406A50 /* ConcentricProgressRingView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ConcentricProgressRingView.release.xcconfig; sourceTree = "<group>"; };
+		6CD598ED2EEB0311CC556E3A5FDA9086 /* CustomButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomButtonType.swift; path = Pod/Classes/CustomButtonType.swift; sourceTree = "<group>"; };
+		716590DB0C9DD44C78DA2057F1BCC66F /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = File.swift; path = Pod/Classes/File.swift; sourceTree = "<group>"; };
+		7416F06772CDC0277E22154350B431B7 /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Main.swift; path = Pod/Classes/Main.swift; sourceTree = "<group>"; };
+		7913ACD78D997F15199C90364FA38B39 /* LionheartExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LionheartExtensions-prefix.pch"; sourceTree = "<group>"; };
+		80208BDB44290ABDC632627581C039DA /* UIApplicationDelegate+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplicationDelegate+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIApplicationDelegate+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		84B93E2662BBE21A600BA755F9A7BC24 /* CIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIImage+LionheartExtensions.swift"; path = "Pod/Classes/Core/CIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		88A15D59902D4947DC15D2C9A2909368 /* Optional+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optional+LionheartExtensions.swift"; path = "Pod/Classes/Core/Optional+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		91CCD4BBA6E43CE3E5BD7D1861B917F6 /* UIColor+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIColor+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		942652A40545CF86CFFCCB65E83C486D /* Array+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+LionheartExtensions.swift"; path = "Pod/Classes/Core/Array+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		9D4644405A664B0D52FF10B800B50B98 /* ConcentricProgressRingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConcentricProgressRingView-prefix.pch"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A21B1AA60330F6EB580F62F0B0A91D54 /* UIScreen+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScreen+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIScreen+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		A6DF75B0D46E390B23716ADBAC200D81 /* NSURLSession+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSURLSession+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		A926665F7E000E0EAD8F599C9B9BE56D /* NSDecimalNumber+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDecimalNumber+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		A99BCDF174FE70F37D842B32211957D1 /* ConcentricProgressRingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ConcentricProgressRingView-dummy.m"; sourceTree = "<group>"; };
+		A9FF798CBB51CA714B18FB97855F0995 /* UIAlertController+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIAlertController+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		ABE871CF94415133C9D671AFC7CF1EE1 /* LionheartExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LionheartExtensions.release.xcconfig; sourceTree = "<group>"; };
+		AC7166E3C176D57FE47557DF2C39EFFA /* UIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		AEF8F3A659FE95B358E1BCBCDF4388E6 /* LionheartExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LionheartExtensions-umbrella.h"; sourceTree = "<group>"; };
+		B0261CF62C177ED8C8884A42899B5308 /* FileManager+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+LionheartExtensions.swift"; path = "Pod/Classes/Core/FileManager+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		B02C1470477E1E74E4FC5EE7AF692D97 /* UIFont+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIFont+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		B34445AC4366902D3D65AA2E7070798B /* ConcentricProgressRingView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ConcentricProgressRingView-Info.plist"; sourceTree = "<group>"; };
+		BF783CF084F45AF822B2EEDB7EEFD1B0 /* LionheartExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LionheartExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3FC0659B4FEE4656475F9CF388F618B /* Pods-TextNeck-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TextNeck-frameworks.sh"; sourceTree = "<group>"; };
+		C9391ECCD7E2EF3CD7D70A7B094B9E85 /* Pods_TextNeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TextNeck.framework; path = "Pods-TextNeck.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDD44891FC184CB2537A5326C73A377A /* String+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+LionheartExtensions.swift"; path = "Pod/Classes/Core/String+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		D1D0C6B17C055168630D4EC0060E2D54 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D6844A5B2C6F30FC5A10540A069ACF36 /* ConcentricProgressRing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcentricProgressRing.swift; path = ConcentricProgressRingView/Classes/ConcentricProgressRing.swift; sourceTree = "<group>"; };
+		D7C15D511D7AF14302635AEA8273BDA8 /* Any+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Any+LionheartExtensions.swift"; path = "Pod/Classes/Core/Any+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		DA54E95DFF39D643E254DA3AAD859310 /* Pods-TextNeck.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TextNeck.modulemap"; sourceTree = "<group>"; };
+		DB534EFEAD43D5BC0D099DA76EA366D8 /* ConcentricProgressRingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConcentricProgressRingView-umbrella.h"; sourceTree = "<group>"; };
+		DDC57F8EC45931F4E6D01EF9A9F98F9A /* DateFormatter+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+LionheartExtensions.swift"; path = "Pod/Classes/Core/DateFormatter+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		E0C86BEE9445BBDBA00F29CD23D7D65E /* WKWebView+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+LionheartExtensions.swift"; path = "Pod/Classes/Core/WKWebView+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		E120CE1FD0FFCC4D07060DC90135F260 /* UIDevice+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIDevice+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		E898072D337AF5935506BA5D58C1C5F4 /* UIViewController+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIViewController+LionheartExtensions.swift"; sourceTree = "<group>"; };
+		E9017AE3D2B69C2333221BF0F333034E /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Pod/Classes/Functional.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8C2A1E643F9A1DB2BCAFABB50764777C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D649EA3A9E28E8170DC1607AB5D571F9 /* Foundation.framework in Frameworks */,
+				CCAA64C158547C71AC48763D577849F3 /* LionheartExtensions.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E0D1288BD96C9F56CAA5EAF49E0F06D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				35285139EC6BCDB04C538AF66BADE67F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1B958040CAD797B6B9CBD5CE634EF8B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FABD5623FF879263F076ACE37E9D659 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		022C6AEA73DB4E2E9D52D4FCCFD4079B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				272A7254AF2BFE9D9899857D60448868 /* Pods-TextNeck */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		0605297EC1B6B596A53C9965F680195E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				620356257CD823D94B1A37BC68D4235F /* ConcentricProgressRingView */,
+				1CD6ED0F0779C720BE399A99A2ED28D7 /* LionheartExtensions */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1CD6ED0F0779C720BE399A99A2ED28D7 /* LionheartExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				C18408D2EAC75AE1AC23C3C4F05A6A9D /* Core */,
+				1EFEB73C0A2E5662FA61A4FB72B234DE /* Support Files */,
+			);
+			name = LionheartExtensions;
+			path = LionheartExtensions;
+			sourceTree = "<group>";
+		};
+		1EFEB73C0A2E5662FA61A4FB72B234DE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F03DDAE2F21B0A40D3087D8B4CB7B41 /* LionheartExtensions.modulemap */,
+				283A82ECA380F1E7E4A078DF043FE23F /* LionheartExtensions-dummy.m */,
+				3D74C9B8A102ACF7641C3069243E40B9 /* LionheartExtensions-Info.plist */,
+				7913ACD78D997F15199C90364FA38B39 /* LionheartExtensions-prefix.pch */,
+				AEF8F3A659FE95B358E1BCBCDF4388E6 /* LionheartExtensions-umbrella.h */,
+				00C3E0C5C2A5A4FC908F2C2297151FCA /* LionheartExtensions.debug.xcconfig */,
+				ABE871CF94415133C9D671AFC7CF1EE1 /* LionheartExtensions.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LionheartExtensions";
+			sourceTree = "<group>";
+		};
+		272A7254AF2BFE9D9899857D60448868 /* Pods-TextNeck */ = {
+			isa = PBXGroup;
+			children = (
+				DA54E95DFF39D643E254DA3AAD859310 /* Pods-TextNeck.modulemap */,
+				57C750775366ACC16A4A3321C36739D0 /* Pods-TextNeck-acknowledgements.markdown */,
+				384880E461B89C3439A0E9FCA2B5AECD /* Pods-TextNeck-acknowledgements.plist */,
+				63D351F61C90E888FDB6A789B0FA6889 /* Pods-TextNeck-dummy.m */,
+				C3FC0659B4FEE4656475F9CF388F618B /* Pods-TextNeck-frameworks.sh */,
+				163EAEC4E59D6B7FE5AA85CCDF54EC2A /* Pods-TextNeck-Info.plist */,
+				30D783306499E79540C43BA607093B44 /* Pods-TextNeck-umbrella.h */,
+				657A9675E30719F1F5AEB2178969D103 /* Pods-TextNeck.debug.xcconfig */,
+				0A84B611E03114C8FBBEE08EA0A3330C /* Pods-TextNeck.release.xcconfig */,
+			);
+			name = "Pods-TextNeck";
+			path = "Target Support Files/Pods-TextNeck";
+			sourceTree = "<group>";
+		};
+		3C710133C5F8E78B1705C6110DCC61B8 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D1D0C6B17C055168630D4EC0060E2D54 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		620356257CD823D94B1A37BC68D4235F /* ConcentricProgressRingView */ = {
+			isa = PBXGroup;
+			children = (
+				D6844A5B2C6F30FC5A10540A069ACF36 /* ConcentricProgressRing.swift */,
+				72E6C5AA820D43B40C44D81F067ACC96 /* Support Files */,
+			);
+			name = ConcentricProgressRingView;
+			path = ConcentricProgressRingView;
+			sourceTree = "<group>";
+		};
+		72E6C5AA820D43B40C44D81F067ACC96 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				677F34403BE4DECFC5608058FD10A50C /* ConcentricProgressRingView.modulemap */,
+				A99BCDF174FE70F37D842B32211957D1 /* ConcentricProgressRingView-dummy.m */,
+				B34445AC4366902D3D65AA2E7070798B /* ConcentricProgressRingView-Info.plist */,
+				9D4644405A664B0D52FF10B800B50B98 /* ConcentricProgressRingView-prefix.pch */,
+				DB534EFEAD43D5BC0D099DA76EA366D8 /* ConcentricProgressRingView-umbrella.h */,
+				0D9054E80BC10B16282265A2A4171374 /* ConcentricProgressRingView.debug.xcconfig */,
+				696C26CC83E894BA438E52A34C406A50 /* ConcentricProgressRingView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ConcentricProgressRingView";
+			sourceTree = "<group>";
+		};
+		959A7FBBAF79D082F8A38A3727360DE2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF783CF084F45AF822B2EEDB7EEFD1B0 /* LionheartExtensions.framework */,
+				3C710133C5F8E78B1705C6110DCC61B8 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C18408D2EAC75AE1AC23C3C4F05A6A9D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				163E14C2F888BBC28630E2D581186D5C /* ActivityIndicatorButton.swift */,
+				D7C15D511D7AF14302635AEA8273BDA8 /* Any+LionheartExtensions.swift */,
+				942652A40545CF86CFFCCB65E83C486D /* Array+LionheartExtensions.swift */,
+				23030B7C0AD5730E7D15A085164F32F8 /* Bundle+LionheartExtensions.swift */,
+				84B93E2662BBE21A600BA755F9A7BC24 /* CIImage+LionheartExtensions.swift */,
+				2C15E26BEE2820DCAD7E618922A01BFE /* ColorRepresentation.swift */,
+				6CD598ED2EEB0311CC556E3A5FDA9086 /* CustomButtonType.swift */,
+				DDC57F8EC45931F4E6D01EF9A9F98F9A /* DateFormatter+LionheartExtensions.swift */,
+				716590DB0C9DD44C78DA2057F1BCC66F /* File.swift */,
+				B0261CF62C177ED8C8884A42899B5308 /* FileManager+LionheartExtensions.swift */,
+				E9017AE3D2B69C2333221BF0F333034E /* Functional.swift */,
+				6392FBE6ED432306D73DD7E074B09892 /* IndexPath+LionheartExtensions.swift */,
+				5A121E0FEF0AA527211D1C7AFCB6AB9C /* Int+LionheartExtensions.swift */,
+				7416F06772CDC0277E22154350B431B7 /* Main.swift */,
+				A926665F7E000E0EAD8F599C9B9BE56D /* NSDecimalNumber+LionheartExtensions.swift */,
+				4685970A41DC770F504BE3662E1DE0CC /* NSRegularExpression+LionheartExtensions.swift */,
+				A6DF75B0D46E390B23716ADBAC200D81 /* NSURLSession+LionheartExtensions.swift */,
+				88A15D59902D4947DC15D2C9A2909368 /* Optional+LionheartExtensions.swift */,
+				CDD44891FC184CB2537A5326C73A377A /* String+LionheartExtensions.swift */,
+				329F5D3493D2B1B40FD0ED6746EFC11F /* Summable.swift */,
+				404D215ED5C7E86555EE4604163B241C /* TitleButton.swift */,
+				A9FF798CBB51CA714B18FB97855F0995 /* UIAlertController+LionheartExtensions.swift */,
+				80208BDB44290ABDC632627581C039DA /* UIApplicationDelegate+LionheartExtensions.swift */,
+				91CCD4BBA6E43CE3E5BD7D1861B917F6 /* UIColor+LionheartExtensions.swift */,
+				E120CE1FD0FFCC4D07060DC90135F260 /* UIDevice+LionheartExtensions.swift */,
+				B02C1470477E1E74E4FC5EE7AF692D97 /* UIFont+LionheartExtensions.swift */,
+				AC7166E3C176D57FE47557DF2C39EFFA /* UIImage+LionheartExtensions.swift */,
+				5487FA5EDA9CAF7E91A5854B95F579CF /* UIPrintPageRenderer+LionheartExtensions.swift */,
+				A21B1AA60330F6EB580F62F0B0A91D54 /* UIScreen+LionheartExtensions.swift */,
+				1EEA02610D30E11B13220CBFD4C8704B /* UITextField+LionheartExtensions.swift */,
+				661C036C540CEAD5D3097BF53E7209B5 /* UIView+LionheartExtensions.swift */,
+				E898072D337AF5935506BA5D58C1C5F4 /* UIViewController+LionheartExtensions.swift */,
+				29E77FB5535BD55457852229C966C32A /* UIWindow+LionheartExtensions.swift */,
+				E0C86BEE9445BBDBA00F29CD23D7D65E /* WKWebView+LionheartExtensions.swift */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		C410D6E15FAEE63A1AA7AA1D84C27B1D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView.framework */,
+				2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions.framework */,
+				C9391ECCD7E2EF3CD7D70A7B094B9E85 /* Pods_TextNeck.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				959A7FBBAF79D082F8A38A3727360DE2 /* Frameworks */,
+				0605297EC1B6B596A53C9965F680195E /* Pods */,
+				C410D6E15FAEE63A1AA7AA1D84C27B1D /* Products */,
+				022C6AEA73DB4E2E9D52D4FCCFD4079B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		70D625A5869F572023CFE1425E28725A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1920C80542EDA5118F53D10A06860E1A /* ConcentricProgressRingView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AA94BA93BC9F0BC2D7A2505F7B7E5D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09696776C522881659E1F59C8FE19B10 /* Pods-TextNeck-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D64889F79DFFD5219FA58628D2A59D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				47DE2A7BD830E3E9EF3E696B38C991CA /* LionheartExtensions-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		7F9F152482955A392E61D7014E6D153E /* ConcentricProgressRingView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11F0A364922908A51EDEB3BDFC63EC05 /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView" */;
+			buildPhases = (
+				70D625A5869F572023CFE1425E28725A /* Headers */,
+				F3583AE12D4BB0199AD51950DF30CD3C /* Sources */,
+				8C2A1E643F9A1DB2BCAFABB50764777C /* Frameworks */,
+				2B7159098E4F42823CBAE77156825EE3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F25A6C0875F734921F3E8787A1EB83A5 /* PBXTargetDependency */,
+			);
+			name = ConcentricProgressRingView;
+			productName = ConcentricProgressRingView;
+			productReference = 52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DDC1F5E4F4AF22DE0A0322A5A59529E /* Build configuration list for PBXNativeTarget "LionheartExtensions" */;
+			buildPhases = (
+				9D64889F79DFFD5219FA58628D2A59D0 /* Headers */,
+				31E248ED494F6A006DA188D62A484D39 /* Sources */,
+				E0D1288BD96C9F56CAA5EAF49E0F06D8 /* Frameworks */,
+				C0AB025F10EEAB823B65AF995FB35F17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LionheartExtensions;
+			productName = LionheartExtensions;
+			productReference = 2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E247F9D53A763FBECCCE4134E5F58876 /* Pods-TextNeck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B7F0C32769742D0E0389FE9731EF49F /* Build configuration list for PBXNativeTarget "Pods-TextNeck" */;
+			buildPhases = (
+				9AA94BA93BC9F0BC2D7A2505F7B7E5D0 /* Headers */,
+				16FD2B123E557DE1F476B4E1BC77C6FD /* Sources */,
+				E1B958040CAD797B6B9CBD5CE634EF8B /* Frameworks */,
+				B17A683151D567AC606837113B8AA1B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18B59948B711DBB5E7675AB6829D3D42 /* PBXTargetDependency */,
+				9F3AFCA5061B1783EDFEB003230CEF8E /* PBXTargetDependency */,
+			);
+			name = "Pods-TextNeck";
+			productName = "Pods-TextNeck";
+			productReference = C9391ECCD7E2EF3CD7D70A7B094B9E85 /* Pods_TextNeck.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = C410D6E15FAEE63A1AA7AA1D84C27B1D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F9F152482955A392E61D7014E6D153E /* ConcentricProgressRingView */,
+				8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */,
+				E247F9D53A763FBECCCE4134E5F58876 /* Pods-TextNeck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2B7159098E4F42823CBAE77156825EE3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B17A683151D567AC606837113B8AA1B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0AB025F10EEAB823B65AF995FB35F17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16FD2B123E557DE1F476B4E1BC77C6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04FF68DA70D573A8868F152EF83AC7CE /* Pods-TextNeck-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		31E248ED494F6A006DA188D62A484D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6B024D253CCB337B84CF48BB364EC30 /* ActivityIndicatorButton.swift in Sources */,
+				14138FA5BA2C95CBD065CFE7F1CB4BEC /* Any+LionheartExtensions.swift in Sources */,
+				16E2D963A00AA2ACB6616D619CF48FEB /* Array+LionheartExtensions.swift in Sources */,
+				1CB453871578F8B77BBE2B797F15D2D6 /* Bundle+LionheartExtensions.swift in Sources */,
+				965684501E8E351637B6602BA5D8A191 /* CIImage+LionheartExtensions.swift in Sources */,
+				BA2894E75A10334196B1868B670FCEC5 /* ColorRepresentation.swift in Sources */,
+				E651BE097EA8F45312FBE56D1EFDF061 /* CustomButtonType.swift in Sources */,
+				AE21F8DFD4FC062098C97EC9C539EFDE /* DateFormatter+LionheartExtensions.swift in Sources */,
+				407E2248F7C0E5C89D212B5916AFE16D /* File.swift in Sources */,
+				2B8DB4B5C90E835365F7533E0970437C /* FileManager+LionheartExtensions.swift in Sources */,
+				272338D5FC0D3DAE8824D61FBA155E7F /* Functional.swift in Sources */,
+				61AD232C78C4F032669DB221A747435F /* IndexPath+LionheartExtensions.swift in Sources */,
+				6D5DB33A4B94E3E3338C5A2D1C72DD29 /* Int+LionheartExtensions.swift in Sources */,
+				7F8896382D72E6DF6B486E40C1A87A2E /* LionheartExtensions-dummy.m in Sources */,
+				9FDCD965897FDF042709B0FEBDFF37C3 /* Main.swift in Sources */,
+				EADE62C38CDD4DAA72B052818E771793 /* NSDecimalNumber+LionheartExtensions.swift in Sources */,
+				C6B75374961B596AFBAB3AAE476201AD /* NSRegularExpression+LionheartExtensions.swift in Sources */,
+				E5BF8BA54E7343A7D1BCE90E7A4047DD /* NSURLSession+LionheartExtensions.swift in Sources */,
+				54D5F048D5E8E1C3EBD5231B6F0792D9 /* Optional+LionheartExtensions.swift in Sources */,
+				E9FCFFDE8A1871D981AFE1BB98E67B07 /* String+LionheartExtensions.swift in Sources */,
+				EE2EBE5FAB3A156AAB51E9472A642958 /* Summable.swift in Sources */,
+				95D4588B78489D2BA154B3FCBCD3DCE4 /* TitleButton.swift in Sources */,
+				0E3686F6A707A3F89F6D65CFA401732C /* UIAlertController+LionheartExtensions.swift in Sources */,
+				D2A0B22D7EE0A920C20332FC3F868A6C /* UIApplicationDelegate+LionheartExtensions.swift in Sources */,
+				1DC7471E819EE1D4375B634041231B8D /* UIColor+LionheartExtensions.swift in Sources */,
+				CD278415356EDA7FB0D972F1E39BB84B /* UIDevice+LionheartExtensions.swift in Sources */,
+				C43DC15C64682BC8530CF8A862FED1F5 /* UIFont+LionheartExtensions.swift in Sources */,
+				13CEF424703726630E0063E4C3C2E114 /* UIImage+LionheartExtensions.swift in Sources */,
+				F8D421A54DE3DBB5FEC2672041E54439 /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */,
+				30ED584BA84E3F1E44455421E1F9EBD0 /* UIScreen+LionheartExtensions.swift in Sources */,
+				EB2BAF4B15A1BF1988D17E3FBA5985E2 /* UITextField+LionheartExtensions.swift in Sources */,
+				EC09BC121436DF7A5D0A9D10850DAB28 /* UIView+LionheartExtensions.swift in Sources */,
+				F7BD6421D286F019E2B50AF25257E455 /* UIViewController+LionheartExtensions.swift in Sources */,
+				50C661349B7D33D85A7FBDC90C16C7A3 /* UIWindow+LionheartExtensions.swift in Sources */,
+				63C15E632755818ED4EA36EE9F8A00C0 /* WKWebView+LionheartExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3583AE12D4BB0199AD51950DF30CD3C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E2D057C0C7D3BDC20F9D55ED01EB965 /* ConcentricProgressRing.swift in Sources */,
+				38B2D24690629B05EB01870AE9B7A749 /* ConcentricProgressRingView-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18B59948B711DBB5E7675AB6829D3D42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ConcentricProgressRingView;
+			target = 7F9F152482955A392E61D7014E6D153E /* ConcentricProgressRingView */;
+			targetProxy = D8E159B41B5B70F42D117F2AE5891548 /* PBXContainerItemProxy */;
+		};
+		9F3AFCA5061B1783EDFEB003230CEF8E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LionheartExtensions;
+			target = 8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */;
+			targetProxy = 3343A98E97E3424F024D5FC47E1E7555 /* PBXContainerItemProxy */;
+		};
+		F25A6C0875F734921F3E8787A1EB83A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LionheartExtensions;
+			target = 8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */;
+			targetProxy = 08FB3B5A6A80E534370CD7C07B207377 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E67CF05F6B353A5C336E4C01E69AE83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A84B611E03114C8FBBEE08EA0A3330C /* Pods-TextNeck.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TextNeck/Pods-TextNeck-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TextNeck/Pods-TextNeck.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		36249D97657BD5F6813DD2057C4EFAA8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696C26CC83E894BA438E52A34C406A50 /* ConcentricProgressRingView.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
+				PRODUCT_MODULE_NAME = ConcentricProgressRingView;
+				PRODUCT_NAME = ConcentricProgressRingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4B469BC3236E574B8C0B86968D7D88E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9054E80BC10B16282265A2A4171374 /* ConcentricProgressRingView.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
+				PRODUCT_MODULE_NAME = ConcentricProgressRingView;
+				PRODUCT_NAME = ConcentricProgressRingView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8187D37E6A6836EF8E25B3C614D90A9B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00C3E0C5C2A5A4FC908F2C2297151FCA /* LionheartExtensions.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
+				PRODUCT_MODULE_NAME = LionheartExtensions;
+				PRODUCT_NAME = LionheartExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9D930CA041DF34FB0B4274B224E31995 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ABE871CF94415133C9D671AFC7CF1EE1 /* LionheartExtensions.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
+				PRODUCT_MODULE_NAME = LionheartExtensions;
+				PRODUCT_NAME = LionheartExtensions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B4CB65DE9AD6937F9E99CCB6711B8B95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 657A9675E30719F1F5AEB2178969D103 /* Pods-TextNeck.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TextNeck/Pods-TextNeck-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TextNeck/Pods-TextNeck.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11F0A364922908A51EDEB3BDFC63EC05 /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B469BC3236E574B8C0B86968D7D88E5 /* Debug */,
+				36249D97657BD5F6813DD2057C4EFAA8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B7F0C32769742D0E0389FE9731EF49F /* Build configuration list for PBXNativeTarget "Pods-TextNeck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4CB65DE9AD6937F9E99CCB6711B8B95 /* Debug */,
+				0E67CF05F6B353A5C336E4C01E69AE83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DDC1F5E4F4AF22DE0A0322A5A59529E /* Build configuration list for PBXNativeTarget "LionheartExtensions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8187D37E6A6836EF8E25B3C614D90A9B /* Debug */,
+				9D930CA041DF34FB0B4274B224E31995 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

@@ -1,0 +1,22 @@
+PODS:
+  - ConcentricProgressRingView (2.0.1):
+    - LionheartExtensions
+  - LionheartExtensions (5.0.2):
+    - LionheartExtensions/Core (= 5.0.2)
+  - LionheartExtensions/Core (5.0.2)
+
+DEPENDENCIES:
+  - ConcentricProgressRingView
+
+SPEC REPOS:
+  trunk:
+    - ConcentricProgressRingView
+    - LionheartExtensions
+
+SPEC CHECKSUMS:
+  ConcentricProgressRingView: 00a180e1eead909ffa4463a623220fe7aa2634cf
+  LionheartExtensions: 09fa816d98176012c8f9adf7f21774f528dbc90e
+
+PODFILE CHECKSUM: 151887f6b59c4df1276359bce11699b37b3eb8e7
+
+COCOAPODS: 1.10.1
