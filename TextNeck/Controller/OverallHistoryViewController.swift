@@ -26,6 +26,7 @@ class OverallHistoryViewController: UIViewController {
     
     
     
+    
     let values = [0.8]
     let chartColor = [UIColor(displayP3Red: 124/255.0, green: 225/255.0, blue: 238/255.0, alpha: 1.0),
                       UIColor(displayP3Red: 73/255.0, green: 60/255.0, blue: 199/255.0, alpha: 1.0),]
@@ -52,6 +53,8 @@ class OverallHistoryViewController: UIViewController {
             weeklyButton.isSelected = false
         }
     }
+    
+
     
     
     func updateScoreTab() {

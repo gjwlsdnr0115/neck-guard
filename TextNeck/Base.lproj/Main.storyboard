@@ -424,6 +424,9 @@
                                         <state key="normal" image="chevron.right" catalog="system">
                                             <color key="titleColor" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="qaK-ba-Dij" kind="show" id="pIj-ni-scX"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -460,7 +463,9 @@
                             <constraint firstItem="sMp-St-pU8" firstAttribute="top" secondItem="V2b-9M-M4s" secondAttribute="bottom" constant="40" id="teP-b8-RiA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="History" id="y8a-Gi-0qK"/>
+                    <navigationItem key="navigationItem" title="History" id="y8a-Gi-0qK">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="nvD-9W-KOQ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="monthlyButton" destination="VUe-sC-tfQ" id="dg8-Lg-az4"/>
                         <outlet property="todayScoreCircleChartView" destination="LYO-JQ-3k3" id="oo2-u0-IIe"/>
@@ -470,6 +475,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOs-yj-7gU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1783.0769230769231" y="478.43601895734594"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="YaJ-2J-uog">
+            <objects>
+                <viewController id="qaK-ba-Dij" customClass="ExerciseHistoryViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yFp-bq-4uR">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ojD-iJ-Fw7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="History" id="jcg-0t-dpM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZ1-nJ-hr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2646" y="478"/>
         </scene>
         <!--Exercise-->
         <scene sceneID="6yN-Jd-gDu">
@@ -496,6 +517,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKV-zR-NMf">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
