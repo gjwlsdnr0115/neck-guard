@@ -2,7 +2,7 @@
 //  ExerciseHistoryViewController.swift
 //  TextNeck
 //
-//  Created by 허진욱 on 2021/04/27.
+//  Created by Jinwook Huh on 2021/04/27.
 //
 
 import UIKit
