@@ -1,22 +1,26 @@
 PODS:
   - ConcentricProgressRingView (2.0.1):
     - LionheartExtensions
+  - FSCalendar (2.8.2)
   - LionheartExtensions (5.0.2):
     - LionheartExtensions/Core (= 5.0.2)
   - LionheartExtensions/Core (5.0.2)
 
 DEPENDENCIES:
   - ConcentricProgressRingView
+  - FSCalendar
 
 SPEC REPOS:
   trunk:
     - ConcentricProgressRingView
+    - FSCalendar
     - LionheartExtensions
 
 SPEC CHECKSUMS:
   ConcentricProgressRingView: 00a180e1eead909ffa4463a623220fe7aa2634cf
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   LionheartExtensions: 09fa816d98176012c8f9adf7f21774f528dbc90e
 
-PODFILE CHECKSUM: 151887f6b59c4df1276359bce11699b37b3eb8e7
+PODFILE CHECKSUM: f01d5eb98db38bfd8ff01f300d2465d4f7b8e101
 
 COCOAPODS: 1.10.1

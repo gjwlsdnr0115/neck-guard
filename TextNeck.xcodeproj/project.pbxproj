@@ -15,6 +15,7 @@
 		0E6182CF26255FB700359CAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6182CE26255FB700359CAB /* HomeViewController.swift */; };
 		0E66F06226256999006F4C87 /* CircleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66F06126256999006F4C87 /* CircleChart.swift */; };
 		0E66F06926258346006F4C87 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66F06826258346006F4C87 /* ProgressBar.swift */; };
+		0E87982526400FB300BFD094 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87982426400FB300BFD094 /* LocationViewController.swift */; };
 		0EE7B4242637C9080051BD36 /* OverallHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7B4232637C9080051BD36 /* OverallHistoryViewController.swift */; };
 		0EE7B4282637C9310051BD36 /* ExerciseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7B4272637C9310051BD36 /* ExerciseHistoryViewController.swift */; };
 		0EF4B5F12637FB7700B53CF0 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4B5F02637FB7700B53CF0 /* RoundedUIView.swift */; };
@@ -32,6 +33,7 @@
 		0E6182CE26255FB700359CAB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E66F06126256999006F4C87 /* CircleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChart.swift; sourceTree = "<group>"; };
 		0E66F06826258346006F4C87 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		0E87982426400FB300BFD094 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		0EE7B4232637C9080051BD36 /* OverallHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallHistoryViewController.swift; sourceTree = "<group>"; };
 		0EE7B4272637C9310051BD36 /* ExerciseHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryViewController.swift; sourceTree = "<group>"; };
 		0EF4B5F02637FB7700B53CF0 /* RoundedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				0E6182CE26255FB700359CAB /* HomeViewController.swift */,
 				0EE7B4232637C9080051BD36 /* OverallHistoryViewController.swift */,
 				0EE7B4272637C9310051BD36 /* ExerciseHistoryViewController.swift */,
+				0E87982426400FB300BFD094 /* LocationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				0E6182B826255F8200359CAB /* AppDelegate.swift in Sources */,
 				0EE7B4282637C9310051BD36 /* ExerciseHistoryViewController.swift in Sources */,
 				0E6182BA26255F8200359CAB /* SceneDelegate.swift in Sources */,
+				0E87982526400FB300BFD094 /* LocationViewController.swift in Sources */,
 				0E66F06926258346006F4C87 /* ProgressBar.swift in Sources */,
 				0E6182CF26255FB700359CAB /* HomeViewController.swift in Sources */,
 			);

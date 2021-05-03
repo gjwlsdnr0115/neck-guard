@@ -68,10 +68,16 @@ class HomeViewController: UIViewController {
                     }
                 }
             }
-            print("Device motion started")
+            print("HomeVC motion started")
         } else {
-            print("Device motion unavailable")
+            print("HomeVC motion unavailable")
         }
     }
+    
+    
+    @IBAction func showLocationVC(_ sender: Any) {
+        tabBarController?.selectedIndex = 3
+    }
+    
     
 }

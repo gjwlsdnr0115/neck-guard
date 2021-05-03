@@ -7,5 +7,6 @@ target 'TextNeck' do
 
   # Pods for TextNeck
   pod 'ConcentricProgressRingView'
+  pod 'FSCalendar'
 
 end
