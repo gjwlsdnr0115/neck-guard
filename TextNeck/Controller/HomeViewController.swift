@@ -75,9 +75,5 @@ class HomeViewController: UIViewController {
     }
     
     
-    @IBAction func showLocationVC(_ sender: Any) {
-        tabBarController?.selectedIndex = 3
-    }
-    
     
 }

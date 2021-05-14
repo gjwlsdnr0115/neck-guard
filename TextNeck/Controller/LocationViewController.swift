@@ -2,7 +2,7 @@
 //  LocationViewController.swift
 //  TextNeck
 //
-//  Created by Jinwook Huhon 2021/05/03.
+//  Created by Jinwook Huh on 2021/05/03.
 //
 
 import UIKit

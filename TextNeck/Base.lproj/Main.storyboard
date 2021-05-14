@@ -198,14 +198,6 @@
                                     <constraint firstAttribute="height" constant="24" id="NJS-tG-ds3"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6iR-xL-87v">
-                                <rect key="frame" x="326" y="279" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="showLocationVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Lp-aA-ShS"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -273,7 +265,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1PQ-ou-1ix"/>
                         <segue destination="eAG-K2-00u" kind="relationship" relationship="viewControllers" id="FnV-7D-vO4"/>
                         <segue destination="Ef4-EI-r3l" kind="relationship" relationship="viewControllers" id="Jk5-ef-2zL"/>
-                        <segue destination="WoX-FG-fA7" kind="relationship" relationship="viewControllers" id="L4I-pc-0vf"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAg-3b-4Pe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -627,44 +618,6 @@
             </objects>
             <point key="canvasLocation" x="874" y="1189"/>
         </scene>
-        <!--Location-->
-        <scene sceneID="6Dx-VA-JkZ">
-            <objects>
-                <viewController id="WoX-FG-fA7" customClass="LocationViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bqj-3W-vJM">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9kt-Tq-iVT">
-                                <rect key="frame" x="0.0" y="105" width="390" height="656"/>
-                            </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recent Locations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meB-gT-aah">
-                                <rect key="frame" x="123.66666666666669" y="64" width="143" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="s7P-cA-UWA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="meB-gT-aah" firstAttribute="top" secondItem="s7P-cA-UWA" secondAttribute="top" constant="20" id="Jm6-Ct-tOQ"/>
-                            <constraint firstItem="meB-gT-aah" firstAttribute="centerX" secondItem="bqj-3W-vJM" secondAttribute="centerX" id="Rdn-t8-qvQ"/>
-                            <constraint firstItem="9kt-Tq-iVT" firstAttribute="leading" secondItem="s7P-cA-UWA" secondAttribute="leading" id="aPS-mG-NXr"/>
-                            <constraint firstItem="9kt-Tq-iVT" firstAttribute="bottom" secondItem="s7P-cA-UWA" secondAttribute="bottom" id="eg9-sh-U9z"/>
-                            <constraint firstItem="9kt-Tq-iVT" firstAttribute="trailing" secondItem="s7P-cA-UWA" secondAttribute="trailing" id="oQG-YB-FST"/>
-                            <constraint firstItem="9kt-Tq-iVT" firstAttribute="top" secondItem="meB-gT-aah" secondAttribute="bottom" constant="20" id="oab-IY-npN"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Location" image="map" catalog="system" id="3ej-GT-Dc9"/>
-                    <connections>
-                        <outlet property="mapView" destination="9kt-Tq-iVT" id="kEq-kb-FeL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6we-AF-FHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="873.84615384615381" y="1894.5497630331752"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Monthly" width="88" height="45"/>
@@ -678,7 +631,6 @@
         <image name="good" width="25.666666030883789" height="22"/>
         <image name="gray_star" width="27.333333969116211" height="26"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
-        <image name="map" catalog="system" width="128" height="110"/>
         <image name="monthly_selected" width="88" height="45"/>
         <image name="star" width="27.333333969116211" height="26"/>
         <image name="timer" catalog="system" width="128" height="121"/>
