@@ -43,7 +43,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reloadData()
-        getGyroMotion()
+//        getGyroMotion()
     }
     
     func reloadData() {

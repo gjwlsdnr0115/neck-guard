@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E40C1D2264E534C0028FFDC /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40C1D1264E534C0028FFDC /* DailyViewController.swift */; };
+		0E40C1DC264E54B10028FFDC /* DailyStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E40C1DB264E54B10028FFDC /* DailyStatsView.xib */; };
+		0E40C1DF264E54DA0028FFDC /* DailyStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40C1DE264E54DA0028FFDC /* DailyStatsView.swift */; };
 		0E6182B826255F8200359CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6182B726255F8200359CAB /* AppDelegate.swift */; };
 		0E6182BA26255F8200359CAB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6182B926255F8200359CAB /* SceneDelegate.swift */; };
 		0E6182BF26255F8200359CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E6182BD26255F8200359CAB /* Main.storyboard */; };
@@ -15,7 +18,8 @@
 		0E6182CF26255FB700359CAB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6182CE26255FB700359CAB /* HomeViewController.swift */; };
 		0E66F06226256999006F4C87 /* CircleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66F06126256999006F4C87 /* CircleChart.swift */; };
 		0E66F06926258346006F4C87 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66F06826258346006F4C87 /* ProgressBar.swift */; };
-		0E87982526400FB300BFD094 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E87982426400FB300BFD094 /* LocationViewController.swift */; };
+		0E8E0D97264E5B9800E06174 /* ExerciseStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E0D96264E5B9800E06174 /* ExerciseStatsView.swift */; };
+		0E8E0D9A264E5BDD00E06174 /* ExerciseStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E0D99264E5BDD00E06174 /* ExerciseStatsView.xib */; };
 		0EE7B4242637C9080051BD36 /* OverallHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7B4232637C9080051BD36 /* OverallHistoryViewController.swift */; };
 		0EE7B4282637C9310051BD36 /* ExerciseHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7B4272637C9310051BD36 /* ExerciseHistoryViewController.swift */; };
 		0EF4B5F12637FB7700B53CF0 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4B5F02637FB7700B53CF0 /* RoundedUIView.swift */; };
@@ -23,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E40C1D1264E534C0028FFDC /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		0E40C1DB264E54B10028FFDC /* DailyStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyStatsView.xib; sourceTree = "<group>"; };
+		0E40C1DE264E54DA0028FFDC /* DailyStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatsView.swift; sourceTree = "<group>"; };
 		0E6182B426255F8200359CAB /* TextNeck.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextNeck.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6182B726255F8200359CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0E6182B926255F8200359CAB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +40,8 @@
 		0E6182CE26255FB700359CAB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		0E66F06126256999006F4C87 /* CircleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleChart.swift; sourceTree = "<group>"; };
 		0E66F06826258346006F4C87 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		0E87982426400FB300BFD094 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
+		0E8E0D96264E5B9800E06174 /* ExerciseStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStatsView.swift; sourceTree = "<group>"; };
+		0E8E0D99264E5BDD00E06174 /* ExerciseStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseStatsView.xib; sourceTree = "<group>"; };
 		0EE7B4232637C9080051BD36 /* OverallHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallHistoryViewController.swift; sourceTree = "<group>"; };
 		0EE7B4272637C9310051BD36 /* ExerciseHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseHistoryViewController.swift; sourceTree = "<group>"; };
 		0EF4B5F02637FB7700B53CF0 /* RoundedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
@@ -93,6 +101,10 @@
 				0E6182C026255F8400359CAB /* Assets.xcassets */,
 				0E6182C226255F8400359CAB /* LaunchScreen.storyboard */,
 				0E6182C526255F8400359CAB /* Info.plist */,
+				0E40C1DB264E54B10028FFDC /* DailyStatsView.xib */,
+				0E40C1DE264E54DA0028FFDC /* DailyStatsView.swift */,
+				0E8E0D96264E5B9800E06174 /* ExerciseStatsView.swift */,
+				0E8E0D99264E5BDD00E06174 /* ExerciseStatsView.xib */,
 			);
 			path = TextNeck;
 			sourceTree = "<group>";
@@ -103,7 +115,7 @@
 				0E6182CE26255FB700359CAB /* HomeViewController.swift */,
 				0EE7B4232637C9080051BD36 /* OverallHistoryViewController.swift */,
 				0EE7B4272637C9310051BD36 /* ExerciseHistoryViewController.swift */,
-				0E87982426400FB300BFD094 /* LocationViewController.swift */,
+				0E40C1D1264E534C0028FFDC /* DailyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,9 +204,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E40C1DC264E54B10028FFDC /* DailyStatsView.xib in Resources */,
 				0E6182C426255F8400359CAB /* LaunchScreen.storyboard in Resources */,
 				0E6182C126255F8400359CAB /* Assets.xcassets in Resources */,
 				0E6182BF26255F8200359CAB /* Main.storyboard in Resources */,
+				0E8E0D9A264E5BDD00E06174 /* ExerciseStatsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,12 +263,14 @@
 			files = (
 				0EF4B5F12637FB7700B53CF0 /* RoundedUIView.swift in Sources */,
 				0E66F06226256999006F4C87 /* CircleChart.swift in Sources */,
+				0E40C1D2264E534C0028FFDC /* DailyViewController.swift in Sources */,
 				0EE7B4242637C9080051BD36 /* OverallHistoryViewController.swift in Sources */,
 				0E6182B826255F8200359CAB /* AppDelegate.swift in Sources */,
 				0EE7B4282637C9310051BD36 /* ExerciseHistoryViewController.swift in Sources */,
 				0E6182BA26255F8200359CAB /* SceneDelegate.swift in Sources */,
-				0E87982526400FB300BFD094 /* LocationViewController.swift in Sources */,
+				0E8E0D97264E5B9800E06174 /* ExerciseStatsView.swift in Sources */,
 				0E66F06926258346006F4C87 /* ProgressBar.swift in Sources */,
+				0E40C1DF264E54DA0028FFDC /* DailyStatsView.swift in Sources */,
 				0E6182CF26255FB700359CAB /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

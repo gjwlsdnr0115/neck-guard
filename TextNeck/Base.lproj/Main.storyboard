@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home-->
+        <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
@@ -232,7 +232,7 @@
                             <constraint firstItem="2oE-Er-es7" firstAttribute="centerX" secondItem="6NV-dr-7jg" secondAttribute="centerX" id="y2C-pk-39E"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="0l6-vD-lmp"/>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="0l6-vD-lmp"/>
                     <connections>
                         <outlet property="badCircleChartView" destination="Jao-Ez-B3N" id="fua-cR-Mgn"/>
                         <outlet property="badLabel" destination="vek-o3-pmR" id="Igj-5H-D8g"/>
@@ -263,15 +263,45 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="1PQ-ou-1ix"/>
-                        <segue destination="eAG-K2-00u" kind="relationship" relationship="viewControllers" id="FnV-7D-vO4"/>
-                        <segue destination="Ef4-EI-r3l" kind="relationship" relationship="viewControllers" id="Jk5-ef-2zL"/>
+                        <segue destination="lpq-2y-5mw" kind="relationship" relationship="viewControllers" id="EVZ-lY-rmQ"/>
+                        <segue destination="xmW-IB-23I" kind="relationship" relationship="viewControllers" id="jYa-kf-TAb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAg-3b-4Pe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-417" y="478"/>
         </scene>
-        <!--Stats-->
+        <!--Daily-->
+        <scene sceneID="cLY-sz-OAW">
+            <objects>
+                <viewController id="lCE-0J-ZxD" customClass="DailyViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9pt-aP-a7K">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yrj-rv-gYQ">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1aO-zY-llw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Yrj-rv-gYQ" firstAttribute="centerX" secondItem="9pt-aP-a7K" secondAttribute="centerX" id="Bdm-qe-DPG"/>
+                            <constraint firstItem="Yrj-rv-gYQ" firstAttribute="width" secondItem="9pt-aP-a7K" secondAttribute="width" id="Ifk-5x-ns7"/>
+                            <constraint firstItem="Yrj-rv-gYQ" firstAttribute="centerY" secondItem="9pt-aP-a7K" secondAttribute="centerY" id="uJR-i5-yw7"/>
+                            <constraint firstItem="Yrj-rv-gYQ" firstAttribute="height" secondItem="9pt-aP-a7K" secondAttribute="height" id="zgF-b5-072"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Daily" id="O4n-rG-DXr"/>
+                    <connections>
+                        <outlet property="scrollView" destination="Yrj-rv-gYQ" id="Ncd-v9-FiW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a8n-bX-z62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1803.0769230769231" y="494.78672985781986"/>
+        </scene>
+        <!--Daily-->
         <scene sceneID="63R-BN-AjA">
             <objects>
                 <viewController id="O32-tz-fZG" customClass="OverallHistoryViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
@@ -301,7 +331,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2b-9M-M4s" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                                <rect key="frame" x="20" y="193" width="350" height="268"/>
+                                <rect key="frame" x="20" y="193" width="350" height="317"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nzf-Lr-6uw">
                                         <rect key="frame" x="12.000000000000007" y="13.999999999999998" width="109.66666666666669" height="20.333333333333329"/>
@@ -317,13 +347,13 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMp-St-pU8">
-                                <rect key="frame" x="20.000000000000004" y="481" width="56.333333333333343" height="24"/>
+                                <rect key="frame" x="20.000000000000004" y="530" width="56.333333333333343" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mac-xq-jDK" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                                <rect key="frame" x="20" y="515" width="160" height="180"/>
+                                <rect key="frame" x="20" y="564" width="160" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f2m-dE-iYP">
                                         <rect key="frame" x="12.000000000000004" y="13.999999999999998" width="47.333333333333343" height="20.333333333333329"/>
@@ -367,7 +397,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xBs-LC-TRB" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                                <rect key="frame" x="210" y="515" width="160" height="180"/>
+                                <rect key="frame" x="210" y="564" width="160" height="180"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sua-Rd-PMu">
                                         <rect key="frame" x="12" y="13.999999999999998" width="69.333333333333329" height="20.333333333333329"/>
@@ -467,7 +497,7 @@
                             <constraint firstItem="sMp-St-pU8" firstAttribute="top" secondItem="V2b-9M-M4s" secondAttribute="bottom" constant="20" id="teP-b8-RiA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Stats" id="y8a-Gi-0qK">
+                    <navigationItem key="navigationItem" title="Daily" id="y8a-Gi-0qK">
                         <barButtonItem key="backBarButtonItem" title="Back" id="nvD-9W-KOQ"/>
                     </navigationItem>
                     <connections>
@@ -478,7 +508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOs-yj-7gU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783.0769230769231" y="478.43601895734594"/>
+            <point key="canvasLocation" x="4526.1538461538457" y="510.42654028436016"/>
         </scene>
         <!--Exercise-->
         <scene sceneID="YaJ-2J-uog">
@@ -514,7 +544,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="faC-5P-vsv" customClass="FSCalendar">
-                                <rect key="frame" x="20" y="408" width="350" height="333"/>
+                                <rect key="frame" x="20" y="408" width="350" height="382"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="NO"/>
@@ -553,7 +583,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WZ1-nJ-hr1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2643.0769230769229" y="477.7251184834123"/>
+            <point key="canvasLocation" x="5386.1538461538457" y="509.71563981042652"/>
         </scene>
         <!--Blank-->
         <scene sceneID="6yN-Jd-gDu">
@@ -569,13 +599,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnh-ra-dfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1783" y="1189"/>
+            <point key="canvasLocation" x="2729" y="1225"/>
         </scene>
-        <!--Stats-->
+        <!--Daily-->
         <scene sceneID="uRk-K5-E0B">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eAG-K2-00u" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stats" image="chart.bar.xaxis" catalog="system" id="phe-US-1Kw"/>
+                    <tabBarItem key="tabBarItem" title="Daily" image="chart.bar.xaxis" catalog="system" id="phe-US-1Kw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="rKV-zR-NMf">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
@@ -593,15 +623,39 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="trE-LZ-bed" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873.91304347826099" y="478.79464285714283"/>
+            <point key="canvasLocation" x="3616.9230769230767" y="510.42654028436016"/>
         </scene>
-        <!--Exercise-->
-        <scene sceneID="uzG-HJ-Rba">
+        <!--Navigation Controller-->
+        <scene sceneID="1C9-9l-UyS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ef4-EI-r3l" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Exercise" image="timer" catalog="system" id="1OF-kn-G0R"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lpq-2y-5mw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="calendar" catalog="system" id="U8q-bw-yoE"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gka-5m-TBD">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e4H-lD-TJK">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="lCE-0J-ZxD" kind="relationship" relationship="rootViewController" id="a3H-YO-nHC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwl-dR-Gc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="873.84615384615381" y="494.78672985781986"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="diS-fe-HCS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xmW-IB-23I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="timer" catalog="system" id="N5a-BL-Sn4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8s1-6V-VPH">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -611,18 +665,19 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ucb-4i-bos" kind="relationship" relationship="rootViewController" id="kCd-Dx-pOI"/>
+                        <segue destination="Ucb-4i-bos" kind="relationship" relationship="rootViewController" id="mxB-TW-miQ"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fwB-na-ayE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Vq-ih-Zcu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="1189"/>
+            <point key="canvasLocation" x="1781.5384615384614" y="1188.6255924170616"/>
         </scene>
     </scenes>
     <resources>
         <image name="Monthly" width="88" height="45"/>
         <image name="arrowtriangle.down.fill" catalog="system" width="128" height="124"/>
         <image name="bad" width="24.666666030883789" height="21"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="circleRing" width="147.66667175292969" height="147.66667175292969"/>

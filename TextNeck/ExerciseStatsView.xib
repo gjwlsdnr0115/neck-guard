@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ExerciseStatsView" customModule="TextNeck" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UjM-U1-ybX">
+                    <rect key="frame" x="0.0" y="44" width="414" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Overall" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcU-f2-4t6">
+                            <rect key="frame" x="20" y="30" width="67.5" height="24"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FDR-Cq-9I0" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
+                            <rect key="frame" x="40" y="74" width="334" height="196"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.96862745100000003" green="0.95686274510000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="VcU-f2-4t6" firstAttribute="top" secondItem="UjM-U1-ybX" secondAttribute="top" constant="30" id="9f2-2u-aPa"/>
+                        <constraint firstAttribute="trailing" secondItem="FDR-Cq-9I0" secondAttribute="trailing" constant="40" id="CSu-Cp-LKk"/>
+                        <constraint firstAttribute="height" constant="300" id="RmM-Zy-R3G"/>
+                        <constraint firstItem="VcU-f2-4t6" firstAttribute="leading" secondItem="UjM-U1-ybX" secondAttribute="leading" constant="20" id="bc0-U6-Shl"/>
+                        <constraint firstItem="FDR-Cq-9I0" firstAttribute="top" secondItem="VcU-f2-4t6" secondAttribute="bottom" constant="20" id="kC8-Y1-lcb"/>
+                        <constraint firstItem="FDR-Cq-9I0" firstAttribute="leading" secondItem="UjM-U1-ybX" secondAttribute="leading" constant="40" id="l9P-CZ-W76"/>
+                        <constraint firstAttribute="bottom" secondItem="FDR-Cq-9I0" secondAttribute="bottom" constant="30" id="w0Y-Bh-AYr"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fT8-PN-PGq" customClass="FSCalendar">
+                    <rect key="frame" x="20" y="364" width="374" height="300"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="5XP-pg-5yk"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="NO"/>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                            <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                            <color key="value" systemColor="systemGrayColor"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="headerHeight">
+                            <real key="value" value="30"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="weekdayHeight">
+                            <real key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fT8-PN-PGq" firstAttribute="top" secondItem="UjM-U1-ybX" secondAttribute="bottom" constant="20" id="2UP-fB-2Po"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UjM-U1-ybX" secondAttribute="trailing" id="3hO-fJ-ivG"/>
+                <constraint firstItem="UjM-U1-ybX" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="981-fl-r17"/>
+                <constraint firstItem="fT8-PN-PGq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Icu-XE-WYG"/>
+                <constraint firstItem="UjM-U1-ybX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="MFY-GW-zKi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fT8-PN-PGq" secondAttribute="trailing" constant="20" id="mpF-pO-H2i"/>
+            </constraints>
+            <connections>
+                <outlet property="calendar" destination="fT8-PN-PGq" id="e8t-Ne-fBb"/>
+            </connections>
+            <point key="canvasLocation" x="17" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
