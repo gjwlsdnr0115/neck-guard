@@ -11,6 +11,11 @@ import FSCalendar
 class DailyViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var topBarView: UIView!
+    
+    @IBOutlet weak var dailyStatsButton: UIButton!
+    @IBOutlet weak var exerciseStatsButton: UIButton!
+    
     
     var slides: [UIView] = []
     
@@ -21,13 +26,43 @@ class DailyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTitleLabel()
         slides = createSlides()
         setupScrollView(slides: slides)
+        scrollView.delegate = self
 
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        dailyStatsButton.addTarget(self, action: #selector(dailyButtonTapped), for: .touchUpInside)
+        exerciseStatsButton.addTarget(self, action: #selector(exerciseButtonTapped), for: .touchUpInside)
+
     }
     
-
+    func setTitleLabel() {
+        let titleLabel = UILabel()
+        titleLabel.text = "Daily"
+        titleLabel.textColor = UIColor.white
+        titleLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 24)
+        titleLabel.sizeToFit()
+        
+        let leftItem = UIBarButtonItem(customView: titleLabel)
+        self.navigationItem.leftBarButtonItem = leftItem
+    }
+    
+    @objc func dailyButtonTapped() {
+        if scrollView.contentOffset.x > 0 {
+            let newOffset = CGPoint(x: scrollView.contentOffset.x - self.view.bounds.width, y: scrollView.contentOffset.y)
+            scrollView.setContentOffset(newOffset, animated: true)
+            }
+    }
+    
+    @objc func exerciseButtonTapped() {
+        if scrollView.contentOffset.x == 0 {
+            let newOffset = CGPoint(x: scrollView.contentOffset.x + self.view.bounds.width, y: scrollView.contentOffset.y)
+            scrollView.setContentOffset(newOffset, animated: true)
+        }
+    }
+    
     
     func createSlides() -> [UIView] {
         let slide1:DailyStatsView = Bundle.main.loadNibNamed("DailyStatsView", owner: self, options: nil)?.first as! DailyStatsView
@@ -46,10 +81,13 @@ class DailyViewController: UIViewController {
     
     func setupScrollView(slides: [UIView]) {
         
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
+        let window = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+        let statusBarHeight = window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
+        
+        let topBarViewHeight = topBarView.frame.height
         let navigationBarHeight = navigationController?.navigationBar.frame.height ?? 0
         let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0
-        let height = view.frame.height - (statusBarHeight + navigationBarHeight + tabBarHeight)
+        let height = view.frame.height - (statusBarHeight + topBarViewHeight + navigationBarHeight + tabBarHeight)
         
         scrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: height)
         scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: height)
@@ -68,4 +106,18 @@ class DailyViewController: UIViewController {
 
 extension DailyViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
     
+}
+
+extension DailyViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.x == 0 {
+            dailyStatsButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: dailyStatsButton.titleLabel?.font.pointSize ?? 16)
+            exerciseStatsButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: exerciseStatsButton.titleLabel?.font.pointSize ?? 16)
+        }
+        
+        if scrollView.contentOffset.x == self.view.bounds.width {
+            exerciseStatsButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: exerciseStatsButton.titleLabel?.font.pointSize ?? 16)
+            dailyStatsButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: dailyStatsButton.titleLabel?.font.pointSize ?? 16)
+        }
+    }
 }

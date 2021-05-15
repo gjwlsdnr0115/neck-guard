@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,12 +16,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-DS-Can" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                    <rect key="frame" x="20" y="84" width="374" height="300"/>
+                    <rect key="frame" x="20" y="74" width="374" height="300"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4X-2Z-FTC">
                             <rect key="frame" x="12" y="14" width="110" height="20.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                            <color key="textColor" systemColor="systemGrayColor"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -32,14 +32,8 @@
                         <constraint firstItem="o4X-2Z-FTC" firstAttribute="top" secondItem="fUE-DS-Can" secondAttribute="top" constant="14" id="mQc-pm-8lX"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-eW-wrm">
-                    <rect key="frame" x="20" y="404" width="56.5" height="24"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                    <color key="textColor" systemColor="systemGrayColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isG-2c-Wme" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                    <rect key="frame" x="20" y="438" width="160" height="180"/>
+                    <rect key="frame" x="20" y="394" width="160" height="180"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9J-tp-CEV">
                             <rect key="frame" x="12" y="14" width="47.5" height="20.5"/>
@@ -83,7 +77,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlI-RT-PhO" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                    <rect key="frame" x="234" y="438" width="160" height="180"/>
+                    <rect key="frame" x="234" y="394" width="160" height="180"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-1s-Lur">
                             <rect key="frame" x="12" y="14" width="69.5" height="20.5"/>
@@ -151,16 +145,14 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" red="0.96862745100000003" green="0.95686274510000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fUE-DS-Can" secondAttribute="trailing" constant="20" id="0Ty-S2-xLt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MlI-RT-PhO" secondAttribute="trailing" constant="20" id="2Hi-a0-hQz"/>
-                <constraint firstItem="QhQ-eW-wrm" firstAttribute="leading" secondItem="fUE-DS-Can" secondAttribute="leading" id="2kt-LO-tRH"/>
                 <constraint firstItem="fUE-DS-Can" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="4Ah-Zj-1VX"/>
-                <constraint firstItem="fUE-DS-Can" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="ZMZ-Tj-X0C"/>
-                <constraint firstItem="QhQ-eW-wrm" firstAttribute="top" secondItem="fUE-DS-Can" secondAttribute="bottom" constant="20" id="dhB-FH-bdX"/>
+                <constraint firstItem="isG-2c-Wme" firstAttribute="top" secondItem="fUE-DS-Can" secondAttribute="bottom" constant="20" id="Upb-Th-Vpk"/>
+                <constraint firstItem="fUE-DS-Can" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="ZMZ-Tj-X0C"/>
                 <constraint firstItem="isG-2c-Wme" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fSn-n2-Z4E"/>
-                <constraint firstItem="isG-2c-Wme" firstAttribute="top" secondItem="QhQ-eW-wrm" secondAttribute="bottom" constant="10" id="o3O-rq-QW2"/>
                 <constraint firstItem="MlI-RT-PhO" firstAttribute="centerY" secondItem="isG-2c-Wme" secondAttribute="centerY" id="t5e-Bg-ic5"/>
             </constraints>
             <connections>
