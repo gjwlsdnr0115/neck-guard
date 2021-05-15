@@ -16,10 +16,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fUE-DS-Can" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                    <rect key="frame" x="20" y="74" width="374" height="300"/>
+                    <rect key="frame" x="20" y="74" width="374" height="538"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weekly Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4X-2Z-FTC">
-                            <rect key="frame" x="12" y="14" width="110" height="20.5"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This week" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4X-2Z-FTC">
+                            <rect key="frame" x="12" y="14" width="82" height="20.5"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -27,13 +27,12 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="BM8-RN-xjk"/>
                         <constraint firstItem="o4X-2Z-FTC" firstAttribute="leading" secondItem="fUE-DS-Can" secondAttribute="leading" constant="12" id="L3C-0c-uCG"/>
                         <constraint firstItem="o4X-2Z-FTC" firstAttribute="top" secondItem="fUE-DS-Can" secondAttribute="top" constant="14" id="mQc-pm-8lX"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isG-2c-Wme" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                    <rect key="frame" x="20" y="394" width="160" height="180"/>
+                    <rect key="frame" x="20" y="632" width="160" height="180"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9J-tp-CEV">
                             <rect key="frame" x="12" y="14" width="47.5" height="20.5"/>
@@ -77,7 +76,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MlI-RT-PhO" customClass="RoundedUIView" customModule="TextNeck" customModuleProvider="target">
-                    <rect key="frame" x="234" y="394" width="160" height="180"/>
+                    <rect key="frame" x="234" y="632" width="160" height="180"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg4-1s-Lur">
                             <rect key="frame" x="12" y="14" width="69.5" height="20.5"/>
@@ -150,6 +149,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fUE-DS-Can" secondAttribute="trailing" constant="20" id="0Ty-S2-xLt"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MlI-RT-PhO" secondAttribute="trailing" constant="20" id="2Hi-a0-hQz"/>
                 <constraint firstItem="fUE-DS-Can" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="4Ah-Zj-1VX"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="isG-2c-Wme" secondAttribute="bottom" constant="50" id="82h-rL-eqc"/>
                 <constraint firstItem="isG-2c-Wme" firstAttribute="top" secondItem="fUE-DS-Can" secondAttribute="bottom" constant="20" id="Upb-Th-Vpk"/>
                 <constraint firstItem="fUE-DS-Can" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="ZMZ-Tj-X0C"/>
                 <constraint firstItem="isG-2c-Wme" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fSn-n2-Z4E"/>

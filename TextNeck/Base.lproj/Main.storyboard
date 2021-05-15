@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878.46153846153845" y="-196.20853080568719"/>
+            <point key="canvasLocation" x="877" y="-235"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NyU-2Y-Az7">
@@ -346,23 +346,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8n-bX-z62" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1803.0769230769231" y="494.78672985781986"/>
+            <point key="canvasLocation" x="1802" y="478"/>
         </scene>
-        <!--Blank-->
+        <!--Exercise-->
         <scene sceneID="6yN-Jd-gDu">
             <objects>
                 <viewController id="Ucb-4i-bos" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lA5-iR-5CT">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jEv-9Z-NL9">
+                                <rect key="frame" x="115" y="180" width="160" height="40"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="I7n-Tk-St0">
+                                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ayt-5O-VYm"/>
+                                            <constraint firstAttribute="width" constant="40" id="uzr-fr-ULU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="OBY-iT-rdK">
+                                        <rect key="frame" x="60" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8ZO-vE-Qap"/>
+                                            <constraint firstAttribute="width" constant="40" id="P5U-Lg-wPG"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gray_star" translatesAutoresizingMaskIntoConstraints="NO" id="O42-Ma-REX">
+                                        <rect key="frame" x="120" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Uev-QM-Cac"/>
+                                            <constraint firstAttribute="width" constant="40" id="w9X-mT-XHg"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWJ-kD-yO3">
+                                <rect key="frame" x="179" y="329" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <segue destination="Wrc-hg-4u4" kind="show" id="X8j-g0-hNa"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="KxK-5Y-etD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jEv-9Z-NL9" firstAttribute="top" secondItem="KxK-5Y-etD" secondAttribute="top" constant="180" id="FeB-mZ-dN0"/>
+                            <constraint firstItem="CWJ-kD-yO3" firstAttribute="top" secondItem="jEv-9Z-NL9" secondAttribute="bottom" constant="109" id="L6l-bz-4N0"/>
+                            <constraint firstItem="CWJ-kD-yO3" firstAttribute="centerX" secondItem="lA5-iR-5CT" secondAttribute="centerX" id="M6z-bw-CNK"/>
+                            <constraint firstItem="jEv-9Z-NL9" firstAttribute="centerX" secondItem="lA5-iR-5CT" secondAttribute="centerX" id="xMV-Ym-jwJ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Blank" id="yqp-Vh-2h6"/>
+                    <navigationItem key="navigationItem" title="Exercise" id="yqp-Vh-2h6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="rTw-Pg-9YE"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnh-ra-dfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2729" y="1225"/>
+            <point key="canvasLocation" x="1802" y="1216"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rml-fV-TV0">
+            <objects>
+                <viewController id="Wrc-hg-4u4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A2c-e5-jsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TtH-RI-bLd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="MTH-sM-czq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaT-VZ-nbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2709" y="1216"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1C9-9l-UyS">
@@ -386,7 +445,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwl-dR-Gc2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="873.84615384615381" y="494.78672985781986"/>
+            <point key="canvasLocation" x="878" y="478"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="diS-fe-HCS">
@@ -394,12 +453,13 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xmW-IB-23I" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="timer" catalog="system" id="N5a-BL-Sn4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8s1-6V-VPH">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8s1-6V-VPH">
                         <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.38431372549999998" green="0.1215686275" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
-                            <color key="textColor" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -409,7 +469,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Vq-ih-Zcu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1781.5384615384614" y="1188.6255924170616"/>
+            <point key="canvasLocation" x="877" y="1216"/>
         </scene>
     </scenes>
     <resources>
@@ -420,6 +480,7 @@
         <image name="exercise" width="20.333333969116211" height="30.666666030883789"/>
         <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="good" width="25.666666030883789" height="22"/>
+        <image name="gray_star" width="27.333333969116211" height="26"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="star" width="27.333333969116211" height="26"/>
         <image name="timer" catalog="system" width="128" height="121"/>

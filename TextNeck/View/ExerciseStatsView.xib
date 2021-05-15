@@ -82,14 +82,14 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="N0H-75-T68">
                                     <rect key="frame" x="218" y="0.0" width="60" height="60"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WN-Ik-NDq">
-                                            <rect key="frame" x="12.5" y="0.0" width="35" height="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Go" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WN-Ik-NDq">
+                                            <rect key="frame" x="9" y="0.0" width="42.5" height="29"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 391" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-gf-Ggr">
-                                            <rect key="frame" x="10.5" y="31" width="39" height="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 62" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKi-gf-Ggr">
+                                            <rect key="frame" x="16" y="31" width="28" height="29"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                             <color key="textColor" red="0.38431372549999998" green="0.1215686275" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -111,11 +111,8 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fT8-PN-PGq" customClass="FSCalendar">
-                    <rect key="frame" x="20" y="214" width="374" height="400"/>
+                    <rect key="frame" x="20" y="214" width="374" height="598"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="400" id="5XP-pg-5yk"/>
-                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="NO"/>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="allowsMultipleSelection" value="NO"/>
@@ -144,6 +141,7 @@
                 <constraint firstItem="FDR-Cq-9I0" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="JGa-a5-rj7"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="FDR-Cq-9I0" secondAttribute="trailing" constant="20" id="Soa-3e-idg"/>
                 <constraint firstItem="fT8-PN-PGq" firstAttribute="top" secondItem="FDR-Cq-9I0" secondAttribute="bottom" constant="40" id="Xg8-aE-wxi"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fT8-PN-PGq" secondAttribute="bottom" constant="50" id="kIz-zU-qPk"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fT8-PN-PGq" secondAttribute="trailing" constant="20" id="mpF-pO-H2i"/>
                 <constraint firstItem="FDR-Cq-9I0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="30" id="tHk-e9-acE"/>
             </constraints>
