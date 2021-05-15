@@ -2,7 +2,7 @@
 //  ProgressBar.swift
 //  TextNeck
 //
-//  Created by 허진욱 on 2021/04/13.
+//  Created by Jinwook Huh on 2021/04/13.
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  DailyViewController.swift
 //  TextNeck
 //
-//  Created by 허진욱 on 2021/05/14.
+//  Created by Jinwook Huh on 2021/05/14.
 //
 
 import UIKit

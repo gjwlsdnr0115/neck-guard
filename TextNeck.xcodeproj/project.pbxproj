@@ -20,6 +20,8 @@
 		0E66F06926258346006F4C87 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66F06826258346006F4C87 /* ProgressBar.swift */; };
 		0E8E0D97264E5B9800E06174 /* ExerciseStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E0D96264E5B9800E06174 /* ExerciseStatsView.swift */; };
 		0E8E0D9A264E5BDD00E06174 /* ExerciseStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E0D99264E5BDD00E06174 /* ExerciseStatsView.xib */; };
+		0EE7B4E5264FB1DD003708D7 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7B4E4264FB1DD003708D7 /* ExerciseViewController.swift */; };
+		0EE7B4E7264FCE37003708D7 /* ExerciseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE7B4E6264FCE37003708D7 /* ExerciseDetailViewController.swift */; };
 		0EF4B5F12637FB7700B53CF0 /* RoundedUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF4B5F02637FB7700B53CF0 /* RoundedUIView.swift */; };
 		C59B464AA10FC8200103791C /* Pods_TextNeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ED7183CCC858319D07CE5F /* Pods_TextNeck.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +42,8 @@
 		0E66F06826258346006F4C87 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		0E8E0D96264E5B9800E06174 /* ExerciseStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStatsView.swift; sourceTree = "<group>"; };
 		0E8E0D99264E5BDD00E06174 /* ExerciseStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseStatsView.xib; sourceTree = "<group>"; };
+		0EE7B4E4264FB1DD003708D7 /* ExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
+		0EE7B4E6264FCE37003708D7 /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		0EF4B5F02637FB7700B53CF0 /* RoundedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
 		37ED7183CCC858319D07CE5F /* Pods_TextNeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextNeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E671C995B509125A5517548B /* Pods-TextNeck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNeck.release.xcconfig"; path = "Target Support Files/Pods-TextNeck/Pods-TextNeck.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 			children = (
 				0E6182CE26255FB700359CAB /* HomeViewController.swift */,
 				0E40C1D1264E534C0028FFDC /* DailyViewController.swift */,
+				0EE7B4E4264FB1DD003708D7 /* ExerciseViewController.swift */,
+				0EE7B4E6264FCE37003708D7 /* ExerciseDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 				0EF4B5F12637FB7700B53CF0 /* RoundedUIView.swift in Sources */,
 				0E66F06226256999006F4C87 /* CircleChart.swift in Sources */,
 				0E40C1D2264E534C0028FFDC /* DailyViewController.swift in Sources */,
+				0EE7B4E7264FCE37003708D7 /* ExerciseDetailViewController.swift in Sources */,
 				0E6182B826255F8200359CAB /* AppDelegate.swift in Sources */,
 				0E6182BA26255F8200359CAB /* SceneDelegate.swift in Sources */,
 				0E8E0D97264E5B9800E06174 /* ExerciseStatsView.swift in Sources */,
+				0EE7B4E5264FB1DD003708D7 /* ExerciseViewController.swift in Sources */,
 				0E66F06926258346006F4C87 /* ProgressBar.swift in Sources */,
 				0E40C1DF264E54DA0028FFDC /* DailyStatsView.swift in Sources */,
 				0E6182CF26255FB700359CAB /* HomeViewController.swift in Sources */,

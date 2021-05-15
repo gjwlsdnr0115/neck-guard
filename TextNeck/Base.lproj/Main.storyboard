@@ -171,9 +171,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkX-Mu-cku">
-                                <rect key="frame" x="326" y="90.333333333333329" width="24" height="23.666666666666671"/>
+                                <rect key="frame" x="325.33333333333331" y="91" width="24.666666666666686" height="22"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
-                                <state key="normal" image="gearshape.fill" catalog="system">
+                                <state key="normal" image="line.horizontal.3" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20"/>
                                 </state>
                             </button>
@@ -407,21 +407,104 @@
             </objects>
             <point key="canvasLocation" x="1802" y="1216"/>
         </scene>
-        <!--View Controller-->
+        <!--Exercise View Controller-->
         <scene sceneID="rml-fV-TV0">
             <objects>
-                <viewController id="Wrc-hg-4u4" sceneMemberID="viewController">
+                <viewController id="Wrc-hg-4u4" customClass="ExerciseViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A2c-e5-jsZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRe-Jf-kIs">
+                                <rect key="frame" x="130" y="473" width="130" height="70"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="60"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="13Y-gA-vBm">
+                                <rect key="frame" x="60" y="60" width="270" height="325"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyL-Qc-1rX">
+                                <rect key="frame" x="172" y="593" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="test:" destination="Wrc-hg-4u4" eventType="touchUpInside" id="lgi-mJ-myz"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oLa-7o-SLY">
+                                <rect key="frame" x="174" y="425" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oXs-pL-rLg">
+                                <rect key="frame" x="284" y="532" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="teststart:" destination="Wrc-hg-4u4" eventType="touchUpInside" id="LBI-18-6Xs"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TtH-RI-bLd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="13Y-gA-vBm" firstAttribute="leading" secondItem="TtH-RI-bLd" secondAttribute="leading" constant="60" id="66b-rm-xKR"/>
+                            <constraint firstItem="13Y-gA-vBm" firstAttribute="top" secondItem="TtH-RI-bLd" secondAttribute="top" constant="60" id="TUy-Pc-MLW"/>
+                            <constraint firstItem="oLa-7o-SLY" firstAttribute="centerX" secondItem="A2c-e5-jsZ" secondAttribute="centerX" id="Wxt-lv-LOO"/>
+                            <constraint firstItem="bRe-Jf-kIs" firstAttribute="centerX" secondItem="A2c-e5-jsZ" secondAttribute="centerX" id="erL-RH-HYE"/>
+                            <constraint firstItem="oLa-7o-SLY" firstAttribute="top" secondItem="13Y-gA-vBm" secondAttribute="bottom" constant="40" id="h2W-2j-zLL"/>
+                            <constraint firstItem="TtH-RI-bLd" firstAttribute="bottom" secondItem="fyL-Qc-1rX" secondAttribute="bottom" constant="50" id="mbb-K4-SZ2"/>
+                            <constraint firstItem="fyL-Qc-1rX" firstAttribute="centerX" secondItem="A2c-e5-jsZ" secondAttribute="centerX" id="pYy-Go-rSL"/>
+                            <constraint firstItem="bRe-Jf-kIs" firstAttribute="top" secondItem="oLa-7o-SLY" secondAttribute="bottom" constant="27" id="q2R-Kr-Ygm"/>
+                            <constraint firstItem="TtH-RI-bLd" firstAttribute="trailing" secondItem="13Y-gA-vBm" secondAttribute="trailing" constant="60" id="x21-E4-onU"/>
+                            <constraint firstItem="fyL-Qc-1rX" firstAttribute="top" secondItem="bRe-Jf-kIs" secondAttribute="bottom" constant="50" id="zGt-6t-bGb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MTH-sM-czq"/>
+                    <connections>
+                        <outlet property="exerciseButton" destination="fyL-Qc-1rX" id="guy-4e-WIC"/>
+                        <outlet property="exerciseImage" destination="13Y-gA-vBm" id="XCF-Jj-z29"/>
+                        <outlet property="exerciseLabel" destination="oLa-7o-SLY" id="a9r-yj-iTV"/>
+                        <outlet property="timeLabel" destination="bRe-Jf-kIs" id="jWz-fd-pTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gaT-VZ-nbg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2709" y="1216"/>
+            <point key="canvasLocation" x="2707.6923076923076" y="1215.6398104265402"/>
+        </scene>
+        <!--Exercise Detail View Controller-->
+        <scene sceneID="Q6L-tE-Yh6">
+            <objects>
+                <viewController storyboardIdentifier="ExerciseDetailViewController" id="JWS-y1-5MG" customClass="ExerciseDetailViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cO1-e5-RcJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9W-La-ApN">
+                                <rect key="frame" x="174" y="412" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HqR-9m-qsI">
+                                <rect key="frame" x="161" y="600" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Done"/>
+                                <connections>
+                                    <segue destination="Sch-tB-jkn" kind="unwind" unwindAction="unwindToExercise:" id="F5C-bt-ITI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C8Z-Cf-huP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVN-6J-BCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Sch-tB-jkn" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3703" y="1216"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="1C9-9l-UyS">
@@ -478,10 +561,10 @@
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="circleRing" width="147.66667175292969" height="147.66667175292969"/>
         <image name="exercise" width="20.333333969116211" height="30.666666030883789"/>
-        <image name="gearshape.fill" catalog="system" width="128" height="121"/>
         <image name="good" width="25.666666030883789" height="22"/>
         <image name="gray_star" width="27.333333969116211" height="26"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="star" width="27.333333969116211" height="26"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
