@@ -2,13 +2,15 @@
 //  ExerciseDetailViewController.swift
 //  TextNeck
 //
-//  Created by 허진욱 on 2021/05/15.
+//  Created by Jinwook Huh on 2021/05/15.
 //
 
 import UIKit
 
 class ExerciseDetailViewController: UIViewController {
 
+    @IBOutlet weak var exerciseLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -14,9 +14,11 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var exerciseLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var exerciseButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var current = 1
     
     var count = 300
-    
     var timer: Timer?
     
         
@@ -24,11 +26,11 @@ class ExerciseViewController: UIViewController {
         super.viewDidLoad()
 
         resetTimer()
-        showDetailVC()
+        showDetailVC(current: current)
 
     }
     
-    func showDetailVC() {
+    func showDetailVC(current: Int) {
         let detailVC = storyboard?.instantiateViewController(identifier: "ExerciseDetailViewController") as! ExerciseDetailViewController
         detailVC.modalPresentationStyle = .fullScreen
         present(detailVC, animated: true, completion: nil)
@@ -44,18 +46,11 @@ class ExerciseViewController: UIViewController {
     
     func resetTimer() {
         timeLabel.text = "05:00"
-        count = 300
+        count = 10
     }
     
     
     func startTimer() {
-//        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
-//            if self.count > 0 {
-//                self.updateTimer()
-//            } else {
-//                timer.invalidate()
-//            }
-//        }
         guard timer == nil else {
             print("nil")
             return
@@ -65,27 +60,43 @@ class ExerciseViewController: UIViewController {
                 self.updateTimer()
             } else {
                 timer.invalidate()
+                self.current += 1
+                self.nextButton.isSelected = true
+                self.nextButton.isUserInteractionEnabled = true
             }
         })
         
         RunLoop.current.add(timer!, forMode: .default)
     }
 
+    func stopTimer() {
+        timer?.invalidate()
+        timer = nil
+    }
+    
     
     @IBAction func unwindToExercise (_ unwindSegue: UIStoryboardSegue) {
 //        let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
         print("unwinded")
+        resetTimer()
         startTimer()
     }
     
     
-    @IBAction func test(_ sender: Any) {
-        timer?.invalidate()
-        timer = nil
+    @IBAction func exerciseButtonToggled(_ sender: Any) {
+        if exerciseButton.isSelected {
+            exerciseButton.isSelected = false
+            startTimer()
+        } else {
+            exerciseButton.isSelected = true
+            stopTimer()
+        }
+    }
+
+    
+    @IBAction func nextButtonToggled(_ sender: Any) {
+        showDetailVC(current: current)
     }
     
-    @IBAction func teststart(_ sender: Any) {
-        startTimer()
-    }
 }
