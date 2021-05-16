@@ -15,6 +15,9 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var exerciseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var buttonStackView: UIStackView!
+    @IBOutlet weak var doneButton: UIButton!
+    
     
     var exercises: [Exercise]?
     var current = 0
@@ -26,6 +29,7 @@ class ExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         exercises = Exercise.generateData()
+        exerciseLabel.text = exercises![current].name
         resetTimer()
         showDetailVC(current: current)
 
@@ -59,18 +63,20 @@ class ExerciseViewController: UIViewController {
             print("nil")
             return
         }
-        timer = Timer(timeInterval: 1.0, repeats: true, block: { timer in
-            if self.count > 0 {
-                self.updateTimer()
+        timer = Timer(timeInterval: 1.0, repeats: true, block: { [weak self] timer in
+            if self!.count > 0 {
+                self?.updateTimer()
             } else {
                 timer.invalidate()
-                self.current += 1
+                self?.current += 1
+                print(self?.current)
                 
-                if self.current == self.exercises?.count {
-                    print("done")
+                if self?.current == self?.exercises?.count {
+                    self?.buttonStackView.isHidden = true
+                    self?.doneButton.isHidden = false
                 } else {
-                    self.nextButton.isSelected = true
-                    self.nextButton.isUserInteractionEnabled = true
+                    self?.nextButton.isSelected = true
+                    self?.nextButton.isUserInteractionEnabled = true
                 }
             }
         })
@@ -90,8 +96,10 @@ class ExerciseViewController: UIViewController {
         print("unwinded")
         resetTimer()
         startTimer()
+        exerciseButton.isSelected = false
         nextButton.isSelected = false
         nextButton.isUserInteractionEnabled = false
+        exerciseLabel.text = exercises![current].name
     }
     
     
@@ -108,6 +116,16 @@ class ExerciseViewController: UIViewController {
     
     @IBAction func nextButtonToggled(_ sender: Any) {
         showDetailVC(current: current)
+    }
+    
+    @IBAction func doneButtonToggled(_ sender: Any) {
+        print("done")
+    
+    }
+    deinit {
+        print("deinit")
+        timer?.invalidate()
+        timer = nil
     }
     
 }

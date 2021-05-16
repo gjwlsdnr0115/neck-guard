@@ -431,11 +431,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5C-11-bPa">
+                                <rect key="frame" x="92" y="586" width="206" height="37"/>
+                                <state key="normal" image="done"/>
+                                <connections>
+                                    <action selector="doneButtonToggled:" destination="Wrc-hg-4u4" eventType="touchUpInside" id="YYN-uH-j4u"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TtH-RI-bLd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="13Y-gA-vBm" firstAttribute="leading" secondItem="TtH-RI-bLd" secondAttribute="leading" constant="60" id="66b-rm-xKR"/>
+                            <constraint firstItem="Q5C-11-bPa" firstAttribute="centerX" secondItem="A2c-e5-jsZ" secondAttribute="centerX" id="Gcs-AL-rd2"/>
                             <constraint firstItem="TtH-RI-bLd" firstAttribute="bottom" secondItem="gZ3-Xh-uqB" secondAttribute="bottom" constant="50" id="LX7-yi-d7P"/>
                             <constraint firstItem="gZ3-Xh-uqB" firstAttribute="top" secondItem="bRe-Jf-kIs" secondAttribute="bottom" constant="40" id="MaJ-AL-bYU"/>
                             <constraint firstItem="13Y-gA-vBm" firstAttribute="top" secondItem="TtH-RI-bLd" secondAttribute="top" constant="60" id="TUy-Pc-MLW"/>
@@ -444,11 +452,14 @@
                             <constraint firstItem="bRe-Jf-kIs" firstAttribute="centerX" secondItem="A2c-e5-jsZ" secondAttribute="centerX" id="erL-RH-HYE"/>
                             <constraint firstItem="oLa-7o-SLY" firstAttribute="top" secondItem="13Y-gA-vBm" secondAttribute="bottom" constant="40" id="h2W-2j-zLL"/>
                             <constraint firstItem="bRe-Jf-kIs" firstAttribute="top" secondItem="oLa-7o-SLY" secondAttribute="bottom" constant="27" id="q2R-Kr-Ygm"/>
+                            <constraint firstItem="Q5C-11-bPa" firstAttribute="centerY" secondItem="gZ3-Xh-uqB" secondAttribute="centerY" id="wAx-yh-SFD"/>
                             <constraint firstItem="TtH-RI-bLd" firstAttribute="trailing" secondItem="13Y-gA-vBm" secondAttribute="trailing" constant="60" id="x21-E4-onU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MTH-sM-czq"/>
                     <connections>
+                        <outlet property="buttonStackView" destination="gZ3-Xh-uqB" id="UnB-X0-Xtk"/>
+                        <outlet property="doneButton" destination="Q5C-11-bPa" id="KZV-Qa-SAw"/>
                         <outlet property="exerciseButton" destination="fyL-Qc-1rX" id="guy-4e-WIC"/>
                         <outlet property="exerciseImage" destination="13Y-gA-vBm" id="XCF-Jj-z29"/>
                         <outlet property="exerciseLabel" destination="oLa-7o-SLY" id="a9r-yj-iTV"/>
@@ -550,6 +561,7 @@
         <image name="bad" width="24.666666030883789" height="21"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="circleRing" width="147.66667175292969" height="147.66667175292969"/>
+        <image name="done" width="206" height="37"/>
         <image name="exercise" width="20.333333969116211" height="30.666666030883789"/>
         <image name="good" width="25.666666030883789" height="22"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
