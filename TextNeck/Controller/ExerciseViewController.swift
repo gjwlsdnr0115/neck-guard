@@ -16,7 +16,8 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var exerciseButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
-    var current = 1
+    var exercises: [Exercise]?
+    var current = 0
     
     var count = 300
     var timer: Timer?
@@ -24,7 +25,7 @@ class ExerciseViewController: UIViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        exercises = Exercise.generateData()
         resetTimer()
         showDetailVC(current: current)
 
@@ -32,6 +33,8 @@ class ExerciseViewController: UIViewController {
     
     func showDetailVC(current: Int) {
         let detailVC = storyboard?.instantiateViewController(identifier: "ExerciseDetailViewController") as! ExerciseDetailViewController
+        detailVC.exercise = exercises![current]
+        
         detailVC.modalPresentationStyle = .fullScreen
         present(detailVC, animated: true, completion: nil)
     }
@@ -45,6 +48,7 @@ class ExerciseViewController: UIViewController {
     }
     
     func resetTimer() {
+        timer = nil
         timeLabel.text = "05:00"
         count = 10
     }
@@ -61,8 +65,13 @@ class ExerciseViewController: UIViewController {
             } else {
                 timer.invalidate()
                 self.current += 1
-                self.nextButton.isSelected = true
-                self.nextButton.isUserInteractionEnabled = true
+                
+                if self.current == self.exercises?.count {
+                    print("done")
+                } else {
+                    self.nextButton.isSelected = true
+                    self.nextButton.isUserInteractionEnabled = true
+                }
             }
         })
         
@@ -81,6 +90,8 @@ class ExerciseViewController: UIViewController {
         print("unwinded")
         resetTimer()
         startTimer()
+        nextButton.isSelected = false
+        nextButton.isUserInteractionEnabled = false
     }
     
     

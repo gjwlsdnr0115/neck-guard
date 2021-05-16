@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E0F0FD426510E4200652290 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F0FD326510E4200652290 /* Exercise.swift */; };
 		0E40C1D2264E534C0028FFDC /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40C1D1264E534C0028FFDC /* DailyViewController.swift */; };
 		0E40C1DC264E54B10028FFDC /* DailyStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E40C1DB264E54B10028FFDC /* DailyStatsView.xib */; };
 		0E40C1DF264E54DA0028FFDC /* DailyStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40C1DE264E54DA0028FFDC /* DailyStatsView.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E0F0FD326510E4200652290 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		0E40C1D1264E534C0028FFDC /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		0E40C1DB264E54B10028FFDC /* DailyStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyStatsView.xib; sourceTree = "<group>"; };
 		0E40C1DE264E54DA0028FFDC /* DailyStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatsView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		0EE7B41F2637C89B0051BD36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E0F0FD326510E4200652290 /* Exercise.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				0E40C1D2264E534C0028FFDC /* DailyViewController.swift in Sources */,
 				0EE7B4E7264FCE37003708D7 /* ExerciseDetailViewController.swift in Sources */,
 				0E6182B826255F8200359CAB /* AppDelegate.swift in Sources */,
+				0E0F0FD426510E4200652290 /* Exercise.swift in Sources */,
 				0E6182BA26255F8200359CAB /* SceneDelegate.swift in Sources */,
 				0E8E0D97264E5B9800E06174 /* ExerciseStatsView.swift in Sources */,
 				0EE7B4E5264FB1DD003708D7 /* ExerciseViewController.swift in Sources */,
