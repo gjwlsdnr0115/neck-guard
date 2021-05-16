@@ -69,7 +69,7 @@ class ExerciseViewController: UIViewController {
             } else {
                 timer.invalidate()
                 self?.current += 1
-                print(self?.current)
+//                print(self?.current)
                 
                 if self?.current == self?.exercises?.count {
                     self?.buttonStackView.isHidden = true
@@ -118,10 +118,8 @@ class ExerciseViewController: UIViewController {
         showDetailVC(current: current)
     }
     
-    @IBAction func doneButtonToggled(_ sender: Any) {
-        print("done")
+
     
-    }
     deinit {
         print("deinit")
         timer?.invalidate()
