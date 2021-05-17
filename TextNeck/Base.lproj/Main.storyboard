@@ -380,7 +380,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Exercise" id="yqp-Vh-2h6">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="rTw-Pg-9YE"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="87Y-TN-Acd"/>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tnh-ra-dfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
