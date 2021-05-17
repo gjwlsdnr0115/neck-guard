@@ -17,6 +17,7 @@ class ExerciseViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var exerciseNumLabel: UILabel!
     
     
     var exercises: [Exercise]?
@@ -29,7 +30,7 @@ class ExerciseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         exercises = Exercise.generateData()
-        exerciseLabel.text = exercises![current].name
+        setExercise()
         resetTimer()
         showDetailVC(current: current)
 
@@ -89,6 +90,11 @@ class ExerciseViewController: UIViewController {
         timer = nil
     }
     
+    func setExercise() {
+        exerciseNumLabel.text = "Exercise \(current+1)/\(exercises!.count)"
+        exerciseLabel.text = exercises![current].name
+        exerciseImage.image = exercises![current].image
+    }
     
     @IBAction func unwindToExercise (_ unwindSegue: UIStoryboardSegue) {
 //        let sourceViewController = unwindSegue.source
@@ -99,7 +105,7 @@ class ExerciseViewController: UIViewController {
         exerciseButton.isSelected = false
         nextButton.isSelected = false
         nextButton.isUserInteractionEnabled = false
-        exerciseLabel.text = exercises![current].name
+        setExercise()
     }
     
     
