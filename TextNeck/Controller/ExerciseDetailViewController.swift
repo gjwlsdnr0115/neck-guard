@@ -10,24 +10,23 @@ import UIKit
 class ExerciseDetailViewController: UIViewController {
 
     @IBOutlet weak var exerciseLabel: UILabel!
+    @IBOutlet weak var exerciseImage: UIImageView!
+    @IBOutlet weak var exerciseDetailLabel: UILabel!
     
     var exercise: Exercise?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        exerciseLabel.text = exercise?.name
+        setExercise()
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setExercise() {
+        exerciseLabel.text = exercise?.name
+        exerciseImage.image = exercise?.image
+        exerciseDetailLabel.text = exercise?.detail
     }
-    */
+    
 
 }
