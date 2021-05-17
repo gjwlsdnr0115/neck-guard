@@ -23,7 +23,7 @@ class ExerciseViewController: UIViewController {
     var exercises: [Exercise]?
     var current = 0
     
-    var count = 300
+    var count = 180
     var timer: Timer?
     
         
@@ -54,8 +54,8 @@ class ExerciseViewController: UIViewController {
     
     func resetTimer() {
         timer = nil
-        timeLabel.text = "05:00"
-        count = 10
+        timeLabel.text = "03:00"
+        count = 180
     }
     
     
