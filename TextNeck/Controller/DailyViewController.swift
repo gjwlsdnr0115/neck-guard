@@ -70,7 +70,6 @@ class DailyViewController: UIViewController {
         
         let slide2:ExerciseStatsView = Bundle.main.loadNibNamed("ExerciseStatsView", owner: self, options: nil)?.first as! ExerciseStatsView
         slide2.calendar.delegate = self
-
  
         slide2.calendar.dataSource = self
         slide2.calendar.today = nil
