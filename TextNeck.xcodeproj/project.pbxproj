@@ -29,6 +29,7 @@
 		0EFA2FA42655119C00B441DC /* DailyEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA2FA22655119C00B441DC /* DailyEntity+CoreDataClass.swift */; };
 		0EFA2FA52655119C00B441DC /* DailyEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA2FA32655119C00B441DC /* DailyEntity+CoreDataProperties.swift */; };
 		0EFA2FA7265511DE00B441DC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA2FA6265511DE00B441DC /* DataManager.swift */; };
+		0EFA2FA9265515C500B441DC /* DataManager+Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFA2FA8265515C400B441DC /* DataManager+Daily.swift */; };
 		C59B464AA10FC8200103791C /* Pods_TextNeck.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37ED7183CCC858319D07CE5F /* Pods_TextNeck.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		0EFA2FA22655119C00B441DC /* DailyEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		0EFA2FA32655119C00B441DC /* DailyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0EFA2FA6265511DE00B441DC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0EFA2FA8265515C400B441DC /* DataManager+Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Daily.swift"; sourceTree = "<group>"; };
 		37ED7183CCC858319D07CE5F /* Pods_TextNeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextNeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E671C995B509125A5517548B /* Pods-TextNeck.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNeck.release.xcconfig"; path = "Target Support Files/Pods-TextNeck/Pods-TextNeck.release.xcconfig"; sourceTree = "<group>"; };
 		F65F7AE5A592D98F00ECC51F /* Pods-TextNeck.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextNeck.debug.xcconfig"; path = "Target Support Files/Pods-TextNeck/Pods-TextNeck.debug.xcconfig"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				0E0F0FD326510E4200652290 /* Exercise.swift */,
 				0EFA2F9F2655106200B441DC /* DataModel.xcdatamodeld */,
 				0EFA2FA6265511DE00B441DC /* DataManager.swift */,
+				0EFA2FA8265515C400B441DC /* DataManager+Daily.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				0E66F06226256999006F4C87 /* CircleChart.swift in Sources */,
 				0E40C1D2264E534C0028FFDC /* DailyViewController.swift in Sources */,
 				0EFA2FA12655106200B441DC /* DataModel.xcdatamodeld in Sources */,
+				0EFA2FA9265515C500B441DC /* DataManager+Daily.swift in Sources */,
 				0EE7B4E7264FCE37003708D7 /* ExerciseDetailViewController.swift in Sources */,
 				0E0F0FD626511A3000652290 /* StartExerciseViewController.swift in Sources */,
 				0E6182B826255F8200359CAB /* AppDelegate.swift in Sources */,
