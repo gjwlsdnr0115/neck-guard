@@ -19,6 +19,11 @@ class DailyViewController: UIViewController {
     
     var slides: [UIView] = []
     
+    var token: NSObjectProtocol!
+    var list = [DailyEntity]()
+    
+    
+    // dummy data
     let values = [0.8]
     let chartColor = [UIColor(displayP3Red: 124/255.0, green: 225/255.0, blue: 238/255.0, alpha: 1.0),
                       UIColor(displayP3Red: 73/255.0, green: 60/255.0, blue: 199/255.0, alpha: 1.0),]
@@ -26,12 +31,28 @@ class DailyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        print("hi")
+        
+        list = DataManager.shared.fetchDaily()
+        print(list.count)
+        
+        token = NotificationCenter.default.addObserver(forName: NSNotification.Name.NewDataDidInsert, object: nil, queue: .main, using: { [weak self] (noti) in
+            self?.list = DataManager.shared.fetchDaily()
+            self?.slides = (self?.createSlides()) ?? []
+            self?.setupScrollView(slides: self?.slides ?? [])
+            // implement update UI code
+        })
+        
+        
         setTitleLabel()
         slides = createSlides()
         setupScrollView(slides: slides)
         scrollView.delegate = self
 
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        
+        
+        
         
         dailyStatsButton.addTarget(self, action: #selector(dailyButtonTapped), for: .touchUpInside)
         exerciseStatsButton.addTarget(self, action: #selector(exerciseButtonTapped), for: .touchUpInside)
@@ -65,8 +86,35 @@ class DailyViewController: UIViewController {
     
     
     func createSlides() -> [UIView] {
+        
         let slide1:DailyStatsView = Bundle.main.loadNibNamed("DailyStatsView", owner: self, options: nil)?.first as! DailyStatsView
         drawCircleChart(values: values, fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, view: slide1.scoreCircleChart)
+        
+        if list.count != 0 {
+            let sharedFormatter = SharedDateFormatter()
+            let today = sharedFormatter.getToday()
+            let lastData = list.last
+            if lastData?.date == today, let exerciseNum = lastData?.exerciseNum {
+                switch exerciseNum {
+                case 0:
+                    slide1.setNoStars()
+                case 1:
+                    slide1.setOneStar()
+                case 2:
+                    slide1.setTwoStars()
+                case 3:
+                    slide1.setThreeStars()
+                default:
+                    slide1.setThreeStars()
+                    slide1.exercisedNumLabel.text = "\(exerciseNum)"
+                }
+            } else {
+                slide1.setNoStars()
+            }
+
+        } else {
+            slide1.setNoStars()
+        }
         
         let slide2:ExerciseStatsView = Bundle.main.loadNibNamed("ExerciseStatsView", owner: self, options: nil)?.first as! ExerciseStatsView
         slide2.calendar.delegate = self
@@ -100,6 +148,12 @@ class DailyViewController: UIViewController {
         slide2.frame = CGRect(x: view.frame.width, y: 0, width: view.frame.width, height: height)
         scrollView.addSubview(slide2)
     }
+    
+    
+    
+    deinit {
+        NotificationCenter.default.removeObserver(token)
+    }
 
 }
 
@@ -119,4 +173,8 @@ extension DailyViewController: UIScrollViewDelegate {
             dailyStatsButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: dailyStatsButton.titleLabel?.font.pointSize ?? 16)
         }
     }
+}
+
+extension NSNotification.Name {
+    static let NewDataDidInsert = NSNotification.Name("NewDataDidInsertNotification")
 }

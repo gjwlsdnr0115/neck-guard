@@ -156,7 +156,11 @@
                 <constraint firstItem="MlI-RT-PhO" firstAttribute="centerY" secondItem="isG-2c-Wme" secondAttribute="centerY" id="t5e-Bg-ic5"/>
             </constraints>
             <connections>
+                <outlet property="exercisedNumLabel" destination="zBB-f2-YQ7" id="CUD-Ku-HMP"/>
                 <outlet property="scoreCircleChart" destination="Hj1-yc-prV" id="KSJ-bL-Hkh"/>
+                <outlet property="starView1" destination="q5z-3c-beX" id="pHq-Lp-WSa"/>
+                <outlet property="starView2" destination="Vsq-JG-bV6" id="o4E-Mp-ewi"/>
+                <outlet property="starView3" destination="i3R-Fc-kwE" id="UYm-SN-beQ"/>
             </connections>
             <point key="canvasLocation" x="139" y="104"/>
         </view>

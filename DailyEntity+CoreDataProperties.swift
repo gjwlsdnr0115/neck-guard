@@ -16,7 +16,7 @@ extension DailyEntity {
         return NSFetchRequest<DailyEntity>(entityName: "Daily")
     }
 
-    @NSManaged public var date: Date?
+    @NSManaged public var date: String?
     @NSManaged public var goodPostureTime: Double
     @NSManaged public var badPostureTime: Double
     @NSManaged public var exerciseNum: Int16

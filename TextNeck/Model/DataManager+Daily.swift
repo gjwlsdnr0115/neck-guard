@@ -10,7 +10,7 @@ import CoreData
 
 extension DataManager {
     
-    func createDaily(date: Date, goodPostureTime: Double? = nil, badPostureTime: Double? = nil, exerciseNum: Int? = nil) {
+    func createDaily(date: String, goodPostureTime: Double? = nil, badPostureTime: Double? = nil, exerciseNum: Int? = nil, completion: (() -> ())? = nil) {
         mainContext.perform {
             let newDaily = DailyEntity(context: self.mainContext)
             newDaily.date = date
@@ -28,6 +28,7 @@ extension DataManager {
             }
             
             self.saveMainContext()
+            completion?()
         }
     }
     
@@ -49,7 +50,30 @@ extension DataManager {
         return list
     }
     
+    func updateDaily(entity: DailyEntity, goodPostureTime: Double? = nil, badPostureTime: Double? = nil, exerciseNum: Int? = nil, completion: (()-> ())? = nil) {
+        mainContext.perform {
+            if let goodPostureTime = goodPostureTime {
+                entity.goodPostureTime = goodPostureTime
+            }
+            
+            if let badPostureTime = badPostureTime {
+                entity.badPostureTime = badPostureTime
+            }
+            
+            if let exerciseNum = exerciseNum {
+                entity.exerciseNum = Int16(exerciseNum)
+            }
+            self.saveMainContext()
+            completion?()
+        }
+    }
     
+    func delete(entity: DailyEntity) {
+        mainContext.perform {
+            self.mainContext.delete(entity)
+            self.saveMainContext()
+        }
+    }
     
     
     
