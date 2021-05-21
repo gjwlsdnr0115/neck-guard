@@ -157,7 +157,7 @@ class HomeViewController: UIViewController {
         let controller = UIAlertController(title: "Manage Goal Settings", message: nil, preferredStyle: .actionSheet)
         
         let setNewGoalAction = UIAlertAction(title: "Set New Goal", style: .default) { [weak self] (action) in
-            let subController = UIAlertController(title: "Set New Goal", message: "This does not reset your past data.", preferredStyle: .alert)
+            let subController = UIAlertController(title: "Set New Goal", message: "This does not reset your current progress.", preferredStyle: .alert)
             
             subController.addTextField { goalField in
                 goalField.keyboardType = .numberPad
