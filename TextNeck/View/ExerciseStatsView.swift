@@ -13,4 +13,7 @@ class ExerciseStatsView: UIView {
 
     @IBOutlet weak var calendar: FSCalendar!
     
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var goalLabel: UILabel!
+    @IBOutlet weak var toGoLabel: UILabel!
 }

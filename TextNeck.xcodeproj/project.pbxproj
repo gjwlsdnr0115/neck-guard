@@ -57,8 +57,8 @@
 		0EE7B4E6264FCE37003708D7 /* ExerciseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseDetailViewController.swift; sourceTree = "<group>"; };
 		0EF4B5F02637FB7700B53CF0 /* RoundedUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUIView.swift; sourceTree = "<group>"; };
 		0EFA2FA02655106200B441DC /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
-		0EFA2FA22655119C00B441DC /* DailyEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		0EFA2FA32655119C00B441DC /* DailyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		0EFA2FA22655119C00B441DC /* DailyEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DailyEntity+CoreDataClass.swift"; path = "TextNeck/Shared/DailyEntity+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		0EFA2FA32655119C00B441DC /* DailyEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DailyEntity+CoreDataProperties.swift"; path = "TextNeck/Shared/DailyEntity+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		0EFA2FA6265511DE00B441DC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		0EFA2FA8265515C400B441DC /* DataManager+Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataManager+Daily.swift"; sourceTree = "<group>"; };
 		37ED7183CCC858319D07CE5F /* Pods_TextNeck.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextNeck.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +126,11 @@
 			isa = PBXGroup;
 			children = (
 				0ED41B4726569610008EB845 /* SharedDateFormatter.swift */,
+				0EFA2FA22655119C00B441DC /* DailyEntity+CoreDataClass.swift */,
+				0EFA2FA32655119C00B441DC /* DailyEntity+CoreDataProperties.swift */,
+				0EFA2F9F2655106200B441DC /* DataModel.xcdatamodeld */,
+				0EFA2FA6265511DE00B441DC /* DataManager.swift */,
+				0EFA2FA8265515C400B441DC /* DataManager+Daily.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -145,12 +150,7 @@
 		0EE7B41F2637C89B0051BD36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0EFA2FA22655119C00B441DC /* DailyEntity+CoreDataClass.swift */,
-				0EFA2FA32655119C00B441DC /* DailyEntity+CoreDataProperties.swift */,
 				0E0F0FD326510E4200652290 /* Exercise.swift */,
-				0EFA2F9F2655106200B441DC /* DataModel.xcdatamodeld */,
-				0EFA2FA6265511DE00B441DC /* DataManager.swift */,
-				0EFA2FA8265515C400B441DC /* DataManager+Daily.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

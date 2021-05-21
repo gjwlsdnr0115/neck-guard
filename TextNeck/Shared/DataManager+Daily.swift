@@ -27,6 +27,10 @@ extension DataManager {
                 newDaily.exerciseNum = Int16(exerciseNum)
             }
             
+            if newDaily.exerciseNum > 3 {
+                newDaily.moreThanThree = true
+            }
+            
             self.saveMainContext()
             completion?()
         }
@@ -63,6 +67,11 @@ extension DataManager {
             if let exerciseNum = exerciseNum {
                 entity.exerciseNum = Int16(exerciseNum)
             }
+            
+            if entity.exerciseNum > 3 {
+                entity.moreThanThree = true
+            }
+            
             self.saveMainContext()
             completion?()
         }
@@ -75,6 +84,41 @@ extension DataManager {
         }
     }
     
+    
+    func fetchByExerciseNum(num: Int) -> [String] {
+        var list = [DailyEntity]()
+        mainContext.performAndWait {
+            let request: NSFetchRequest<DailyEntity> = DailyEntity.fetchRequest()
+            let predicate = NSPredicate(format: "exerciseNum == \(num)")
+            request.predicate = predicate
+            
+            do {
+                list = try mainContext.fetch(request)
+            } catch {
+                print(error)
+            }
+        }
+        let dates = list.map { $0.date ?? "" }
+        return dates
+        
+    }
+    
+    func fetchMoreThanThree() -> [String] {
+        var list = [DailyEntity]()
+        mainContext.performAndWait {
+            let request: NSFetchRequest<DailyEntity> = DailyEntity.fetchRequest()
+            let predicate = NSPredicate(format: "moreThanThree == \(NSNumber(value:true))")
+            request.predicate = predicate
+            
+            do {
+                list = try mainContext.fetch(request)
+            } catch {
+                print(error)
+            }
+        }
+        let dates = list.map { $0.date ?? "" }
+        return dates
+    }
     
     
 }

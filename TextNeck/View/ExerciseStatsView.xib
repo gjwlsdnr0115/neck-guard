@@ -33,7 +33,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QlH-wv-bhy">
                                             <rect key="frame" x="19" y="31" width="22.5" height="29"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                            <color key="textColor" red="0.38431372549999998" green="0.1215686275" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.52549019610000003" green="0.44705882349999998" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -53,8 +53,8 @@
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="t3j-iF-XgL">
                                     <rect key="frame" x="109" y="0.0" width="60" height="60"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Avg." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azC-Qf-gPD">
-                                            <rect key="frame" x="14" y="0.0" width="32" height="29"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azC-Qf-gPD">
+                                            <rect key="frame" x="13.5" y="0.0" width="33.5" height="29"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2.4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1c-6W-5or">
                                             <rect key="frame" x="16" y="31" width="28" height="29"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                            <color key="textColor" red="0.38431372549999998" green="0.1215686275" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.12549019607843137" green="0.52941176470588236" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -147,6 +147,9 @@
             </constraints>
             <connections>
                 <outlet property="calendar" destination="fT8-PN-PGq" id="e8t-Ne-fBb"/>
+                <outlet property="goalLabel" destination="P1c-6W-5or" id="sh7-d1-ct5"/>
+                <outlet property="toGoLabel" destination="NKi-gf-Ggr" id="NTQ-oU-Npd"/>
+                <outlet property="totalLabel" destination="QlH-wv-bhy" id="QQ9-XA-t2D"/>
             </connections>
             <point key="canvasLocation" x="15.942028985507248" y="103.79464285714285"/>
         </view>

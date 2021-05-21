@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
 
         
     @IBOutlet weak var goalPercentLabel: UILabel!
+    @IBOutlet weak var currentNumLabel: UILabel!
     
     @IBOutlet weak var goalCircleChartView: UIView!
     @IBOutlet weak var goodCircleChartView: UIView!
@@ -30,6 +31,7 @@ class HomeViewController: UIViewController {
     var token: NSObjectProtocol!
     var list = [DailyEntity]()
     
+
     
     
     let values = [0.8]
@@ -61,11 +63,42 @@ class HomeViewController: UIViewController {
     }
     
     func reloadData() {
-        drawCircleChart(values: values, fgColor: chartColor1[0], bgColor: UIColor.systemGray5, width: 10, margin: 2, radius: 90, view: goalCircleChartView)
+        
+        reloadGoalStatusData()
+        reloadGoodPostureData()
+        reloadBadPostureDate()
+        reloadExerciseNumData()
+    }
+    
+    func reloadGoalStatusData() {
+        let goalNum = UserDefaults.standard.integer(forKey: userGoalKey)
+        let currentNum = UserDefaults.standard.integer(forKey: userCurrentKey)
+        var value = Double(currentNum) / Double(goalNum)
+        
+        if value > 1.0 {
+            value = 1.0
+        }
+        
+        print(currentNum)
+        print(goalNum)
+        print(value)
+        
+        let valuePercent = Int(value * 100)
+        currentNumLabel.text = "\(currentNum)"
+        goalPercentLabel.text = "\(valuePercent)%"
+        
+        drawCircleChart(values: [value], fgColor: chartColor1[0], bgColor: UIColor.systemGray5, width: 10, margin: 2, radius: 90, view: goalCircleChartView)
+    }
+    
+    func reloadGoodPostureData() {
         drawCircleChart(values: values2, fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, view: goodCircleChartView)
+    }
+    
+    func reloadBadPostureDate() {
         drawCircleChart(values: values3, fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, view: badCircleChartView)
-        
-        
+    }
+    
+    func reloadExerciseNumData() {
         if list.count != 0 {
             let sharedFormatter = SharedDateFormatter()
             let today = sharedFormatter.getToday()
@@ -120,5 +153,57 @@ class HomeViewController: UIViewController {
     }
     
     
+    @IBAction func setGoalButtonToggled(_ sender: Any) {
+        let controller = UIAlertController(title: "Manage Goal Settings", message: nil, preferredStyle: .actionSheet)
+        
+        let setNewGoalAction = UIAlertAction(title: "Set New Goal", style: .default) { [weak self] (action) in
+            let subController = UIAlertController(title: "Set New Goal", message: "This does not reset your past data.", preferredStyle: .alert)
+            
+            subController.addTextField { goalField in
+                goalField.keyboardType = .numberPad
+                
+            }
+            
+            let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+                if let goalField = subController.textFields?.first {
+                    print("textfound")
+                    if let text = goalField.text {
+                        let newGoal = Int(text)
+                        
+                        if newGoal != 0, newGoal != nil{
+                            UserDefaults.standard.setValue(newGoal!, forKey: userGoalKey)
+                            NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
+                        }
+                    }
+                }
+            }
+            
+            subController.addAction(okAction)
+            
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            subController.addAction(cancelAction)
+            self?.present(subController, animated: true, completion: nil)
+            
+        }
+        controller.addAction(setNewGoalAction)
+        
+        let resetProgressAction = UIAlertAction(title: "Reset Progress", style: .destructive) { [weak self] (action) in
+            let subController = UIAlertController(title: "Delete Progress Data?", message: "Your current progress will be permanently deleted.", preferredStyle: .alert)
+            let deleteAction = UIAlertAction(title: "Delete", style: .default) { (action) in
+                UserDefaults.standard.setValue(0, forKey: userCurrentKey)
+                NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
+            }
+            subController.addAction(deleteAction)
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+            subController.addAction(cancelAction)
+            self?.present(subController, animated: true, completion: nil)
+        }
+        controller.addAction(resetProgressAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        controller.addAction(cancelAction)
+        
+        present(controller, animated: true, completion: nil)
+    }
     
 }

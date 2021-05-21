@@ -16,13 +16,18 @@ class DailyViewController: UIViewController {
     @IBOutlet weak var dailyStatsButton: UIButton!
     @IBOutlet weak var exerciseStatsButton: UIButton!
     
-    
+    let formatter = SharedDateFormatter()
     var slides: [UIView] = []
     
     var token: NSObjectProtocol!
     var list = [DailyEntity]()
     
-    
+    var oneExerciseDates = [String]()
+    var twoExerciseDates = [String]()
+    var threeExerciseDates = [String]()
+    var overThreeExerciseDates = [String]()
+    var allExerciseDates = [String]()
+        
     // dummy data
     let values = [0.8]
     let chartColor = [UIColor(displayP3Red: 124/255.0, green: 225/255.0, blue: 238/255.0, alpha: 1.0),
@@ -31,13 +36,13 @@ class DailyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        print("hi")
         
-        list = DataManager.shared.fetchDaily()
+        reloadData()
         print(list.count)
         
         token = NotificationCenter.default.addObserver(forName: NSNotification.Name.NewDataDidInsert, object: nil, queue: .main, using: { [weak self] (noti) in
-            self?.list = DataManager.shared.fetchDaily()
+            self?.reloadData()
+            
             self?.slides = (self?.createSlides()) ?? []
             self?.setupScrollView(slides: self?.slides ?? [])
             // implement update UI code
@@ -57,6 +62,15 @@ class DailyViewController: UIViewController {
         dailyStatsButton.addTarget(self, action: #selector(dailyButtonTapped), for: .touchUpInside)
         exerciseStatsButton.addTarget(self, action: #selector(exerciseButtonTapped), for: .touchUpInside)
 
+    }
+    
+    func reloadData() {
+        list = DataManager.shared.fetchDaily()
+        oneExerciseDates = DataManager.shared.fetchByExerciseNum(num: 1)
+        twoExerciseDates = DataManager.shared.fetchByExerciseNum(num: 2)
+        threeExerciseDates = DataManager.shared.fetchByExerciseNum(num: 3)
+        overThreeExerciseDates = DataManager.shared.fetchMoreThanThree()
+        allExerciseDates = oneExerciseDates + twoExerciseDates + threeExerciseDates + overThreeExerciseDates
     }
     
     func setTitleLabel() {
@@ -118,10 +132,18 @@ class DailyViewController: UIViewController {
         
         let slide2:ExerciseStatsView = Bundle.main.loadNibNamed("ExerciseStatsView", owner: self, options: nil)?.first as! ExerciseStatsView
         slide2.calendar.delegate = self
- 
         slide2.calendar.dataSource = self
         slide2.calendar.today = nil
         slide2.calendar.placeholderType = .none
+        
+        let userCurrent = UserDefaults.standard.integer(forKey: userCurrentKey)
+        let userGoal = UserDefaults.standard.integer(forKey: userGoalKey)
+        let toGo = userGoal - userCurrent
+        
+        slide2.totalLabel.text = "\(userCurrent)"
+        slide2.goalLabel.text = "\(userGoal)"
+        slide2.toGoLabel.text = "\(toGo)"
+        
         
         return [slide1, slide2]
     }
@@ -158,7 +180,28 @@ class DailyViewController: UIViewController {
 }
 
 extension DailyViewController: FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, fillDefaultColorFor date: Date) -> UIColor? {
+        let dateString = formatter.format(date: date)
+        if oneExerciseDates.contains(dateString) {
+            return UIColor(displayP3Red: 189/255.0, green: 184/255.0, blue: 247/255.0, alpha: 1.0)
+        } else if twoExerciseDates.contains(dateString) {
+            return UIColor(displayP3Red: 123/255.0, green: 110/255.0, blue: 242/255.0, alpha: 1.0)
+        } else if threeExerciseDates.contains(dateString) {
+            return UIColor(displayP3Red: 73/255.0, green: 60/255.0, blue: 199/255.0, alpha: 1.0)
+        } else if overThreeExerciseDates.contains(dateString) {
+            return UIColor(displayP3Red: 73/255.0, green: 60/255.0, blue: 199/255.0, alpha: 1.0)
+        } else {
+            return UIColor.clear
+        }
+    }
     
+    func calendar(_ calendar: FSCalendar, appearance: FSCalendarAppearance, titleDefaultColorFor date: Date) -> UIColor? {
+        let dateString = formatter.format(date: date)
+        if allExerciseDates.contains(dateString) {
+            return UIColor.white
+        }
+        return nil
+    }
 }
 
 extension DailyViewController: UIScrollViewDelegate {

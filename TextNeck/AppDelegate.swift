@@ -7,11 +7,26 @@
 
 import UIKit
 
+let userGoalKey = "userGoalKey"
+let userCurrentKey = "userCurrentKey"
+let initialLaunchKey = "initialLaunchKey"
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if !UserDefaults.standard.bool(forKey: initialLaunchKey) {
+            
+//            let defaultSettings = [userGoalKey: 30, userCurrentKey: 0] as [String: Any]
+//            UserDefaults.standard.register(defaults: defaultSettings)
+            UserDefaults.standard.set(30, forKey: userGoalKey)
+            UserDefaults.standard.set(0, forKey: userCurrentKey)
+            UserDefaults.standard.set(true, forKey: initialLaunchKey)
+            
+            print("initial launch")
+        }
         
         DataManager.shared.setup(modelName: "DataModel")
         

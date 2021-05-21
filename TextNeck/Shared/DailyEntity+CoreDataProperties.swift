@@ -20,6 +20,7 @@ extension DailyEntity {
     @NSManaged public var goodPostureTime: Double
     @NSManaged public var badPostureTime: Double
     @NSManaged public var exerciseNum: Int16
+    @NSManaged public var moreThanThree: Bool
 
 }
 

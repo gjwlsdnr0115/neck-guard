@@ -25,6 +25,9 @@ class StartExerciseViewController: UIViewController {
     @IBAction func unwindToStartExercise (_ unwindSegue: UIStoryboardSegue) {
         print("exercise completed")
         
+        let currentTotal = UserDefaults.standard.integer(forKey: userCurrentKey)
+        UserDefaults.standard.set(currentTotal+1, forKey: userCurrentKey)
+        
         let sharedFormatter = SharedDateFormatter()
         let today = sharedFormatter.getToday()
         
