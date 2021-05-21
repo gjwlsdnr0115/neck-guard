@@ -27,6 +27,10 @@ class HomeViewController: UIViewController {
     
     var motion = CMMotionManager()
     
+    var token: NSObjectProtocol!
+    var list = [DailyEntity]()
+    
+    
     
     let values = [0.8]
     let values2 = [0.54]
@@ -42,6 +46,16 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        list = DataManager.shared.fetchDaily()
+        
+        token = NotificationCenter.default.addObserver(forName: NSNotification.Name.NewDataDidInsert, object: nil, queue: .main, using: { [weak self] (noti) in
+            self?.list = DataManager.shared.fetchDaily()
+            self?.reloadData()
+            // implement update UI code
+        })
+        
+        
         reloadData()
 //        getGyroMotion()
     }
@@ -50,7 +64,38 @@ class HomeViewController: UIViewController {
         drawCircleChart(values: values, fgColor: chartColor1[0], bgColor: UIColor.systemGray5, width: 10, margin: 2, radius: 90, view: goalCircleChartView)
         drawCircleChart(values: values2, fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, view: goodCircleChartView)
         drawCircleChart(values: values3, fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, view: badCircleChartView)
-        drawCircleChart(values: values4, fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+        
+        
+        if list.count != 0 {
+            let sharedFormatter = SharedDateFormatter()
+            let today = sharedFormatter.getToday()
+            let lastData = list.first
+            if lastData?.date == today, let exerciseNum = lastData?.exerciseNum {
+                switch exerciseNum {
+                case 0:
+                    drawCircleChart(values: [0.0], fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+                    exerciseLabel.text = "0 sets"
+                case 1:
+                    drawCircleChart(values: [0.33], fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+                    exerciseLabel.text = "1 set"
+                case 2:
+                    drawCircleChart(values: [0.66], fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+                    exerciseLabel.text = "2 sets"
+                case 3:
+                    drawCircleChart(values: [1.0], fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+                    exerciseLabel.text = "3 sets"
+                default:
+                    drawCircleChart(values: [1.0], fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+                    exerciseLabel.text = "\(exerciseNum) sets"
+                }
+            } else {
+                drawCircleChart(values: [0.0], fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+                exerciseLabel.text = "0 sets"
+            }
+            
+        } else {
+            drawCircleChart(values: [0.0], fgColor: chartColor3[0], bgColor: chartColor3[1], width: 6, margin: 2, radius: 32, view: exerciseCircleChartView)
+        }
     }
 
     

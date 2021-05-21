@@ -17,7 +17,7 @@ class StartExerciseViewController: UIViewController {
         super.viewDidLoad()
         
         list = DataManager.shared.fetchDaily()
-        target = list.last
+        target = list.first
 
         // Do any additional setup after loading the view.
     }
@@ -27,6 +27,7 @@ class StartExerciseViewController: UIViewController {
         
         let sharedFormatter = SharedDateFormatter()
         let today = sharedFormatter.getToday()
+        
         
         if let target = target as? DailyEntity {
             if target.date == today {

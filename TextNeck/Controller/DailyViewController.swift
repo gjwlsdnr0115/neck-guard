@@ -93,7 +93,7 @@ class DailyViewController: UIViewController {
         if list.count != 0 {
             let sharedFormatter = SharedDateFormatter()
             let today = sharedFormatter.getToday()
-            let lastData = list.last
+            let lastData = list.first
             if lastData?.date == today, let exerciseNum = lastData?.exerciseNum {
                 switch exerciseNum {
                 case 0:
