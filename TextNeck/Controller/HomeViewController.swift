@@ -23,9 +23,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var goodLabel: UILabel!
     @IBOutlet weak var badLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
-    
-    @IBOutlet weak var barChartView: HorizontalProgressBar!
-    
+        
     var motion = CMMotionManager()
     
     var token: NSObjectProtocol!
@@ -129,25 +127,25 @@ class HomeViewController: UIViewController {
     }
 
     
-    func getGyroMotion() {
-        
-        if motion.isDeviceMotionAvailable {
-            motion.deviceMotionUpdateInterval = 0.5
-            
-            motion.startDeviceMotionUpdates(to: OperationQueue()) { (data, error) in
-                if let attitude = data?.attitude {
-                    let deviceAngle = attitude.pitch * 180 / Double.pi
-                    let angleProgress = deviceAngle / 90.0
-                    DispatchQueue.main.async {
-                        self.barChartView.progress = CGFloat(angleProgress)
-                    }
-                }
-            }
-            print("HomeVC motion started")
-        } else {
-            print("HomeVC motion unavailable")
-        }
-    }
+//    func getGyroMotion() {
+//
+//        if motion.isDeviceMotionAvailable {
+//            motion.deviceMotionUpdateInterval = 0.5
+//
+//            motion.startDeviceMotionUpdates(to: OperationQueue()) { (data, error) in
+//                if let attitude = data?.attitude {
+//                    let deviceAngle = attitude.pitch * 180 / Double.pi
+//                    let angleProgress = deviceAngle / 90.0
+//                    DispatchQueue.main.async {
+//                        self.barChartView.progress = CGFloat(angleProgress)
+//                    }
+//                }
+//            }
+//            print("HomeVC motion started")
+//        } else {
+//            print("HomeVC motion unavailable")
+//        }
+//    }
     
     
     @IBAction func setGoalButtonToggled(_ sender: Any) {
