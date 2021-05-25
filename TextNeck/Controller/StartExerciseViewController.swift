@@ -15,11 +15,13 @@ class StartExerciseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        reloadTargetData()
+    }
+    
+    func reloadTargetData() {
         list = DataManager.shared.fetchDaily()
         target = list.first
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func unwindToStartExercise (_ unwindSegue: UIStoryboardSegue) {
@@ -33,18 +35,25 @@ class StartExerciseViewController: UIViewController {
         
         
         if let target = target as? DailyEntity {
+            
+            print("target exsist")
             if target.date == today {
+                print("today exists")
                 let beforeNum = Int(target.exerciseNum)
                 DataManager.shared.updateDaily(entity: target, exerciseNum: beforeNum + 1) {
+                    self.reloadTargetData()
                     NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
                 }
             } else {
                 DataManager.shared.createDaily(date: today, exerciseNum: 1) {
+                    self.reloadTargetData()
                     NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
                 }
             }
         } else {
+            print("no target")
             DataManager.shared.createDaily(date: today, exerciseNum: 1) {
+                self.reloadTargetData()
                 NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
             }
         }

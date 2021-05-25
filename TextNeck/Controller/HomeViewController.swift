@@ -79,9 +79,6 @@ class HomeViewController: UIViewController {
             value = 1.0
         }
         
-        print(currentNum)
-        print(goalNum)
-        print(value)
         
         let valuePercent = Int(value * 100)
         currentNumLabel.text = "\(currentNum)"
@@ -206,4 +203,8 @@ class HomeViewController: UIViewController {
         present(controller, animated: true, completion: nil)
     }
     
+    
+    deinit {
+        NotificationCenter.default.removeObserver(token)
+    }
 }

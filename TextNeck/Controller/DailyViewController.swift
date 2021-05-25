@@ -71,6 +71,7 @@ class DailyViewController: UIViewController {
         threeExerciseDates = DataManager.shared.fetchByExerciseNum(num: 3)
         overThreeExerciseDates = DataManager.shared.fetchMoreThanThree()
         allExerciseDates = oneExerciseDates + twoExerciseDates + threeExerciseDates + overThreeExerciseDates
+        print("datas: \(list.count)")
     }
     
     func setTitleLabel() {
@@ -109,6 +110,7 @@ class DailyViewController: UIViewController {
             let today = sharedFormatter.getToday()
             let lastData = list.first
             if lastData?.date == today, let exerciseNum = lastData?.exerciseNum {
+                print("exerciesNum: \(exerciseNum)")
                 switch exerciseNum {
                 case 0:
                     slide1.setNoStars()
