@@ -8,10 +8,11 @@
 import UIKit
 import ConcentricProgressRingView
 
-func drawCircleChart(values: [Double], fgColor: UIColor, bgColor: UIColor, width: CGFloat, margin: CGFloat, radius: CGFloat, view: UIView) {
+func drawCircleChart(values: [Double], fgColor: UIColor, bgColor: UIColor, width: CGFloat, margin: CGFloat, radius: CGFloat, chartView: UIView) {
     let rings = [ProgressRing(color: fgColor, backgroundColor: bgColor, width: width)]
-    let progressRingView = ConcentricProgressRingView(center: CGPoint(x: view.bounds.midX, y: view.bounds.midY), radius: radius, margin: margin, rings: rings)
+    let progressRingView = ConcentricProgressRingView(center: CGPoint(x: chartView.bounds.midX, y: chartView.bounds.midY), radius: radius, margin: margin, rings: rings)
     progressRingView.arcs[0].setProgress(CGFloat(values[0]), duration: 1)
-    view.addSubview(progressRingView)
+    chartView.addSubview(progressRingView)
+    print(chartView.bounds.midX, chartView.bounds.midY)
 }
 

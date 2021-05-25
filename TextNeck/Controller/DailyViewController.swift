@@ -103,7 +103,7 @@ class DailyViewController: UIViewController {
     func createSlides() -> [UIView] {
         
         let slide1:DailyStatsView = Bundle.main.loadNibNamed("DailyStatsView", owner: self, options: nil)?.first as! DailyStatsView
-        drawCircleChart(values: values, fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, view: slide1.scoreCircleChart)
+        drawCircleChart(values: values, fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
         
         if list.count != 0 {
             let sharedFormatter = SharedDateFormatter()
