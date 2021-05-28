@@ -390,8 +390,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaV-Ke-Lo7">
-                                <rect key="frame" x="160" y="240.00000000000003" width="70" height="33.333333333333343"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="28"/>
+                                <rect key="frame" x="165" y="254.66666666666666" width="60" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="0.38431372549999998" green="0.1215686275" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -401,7 +401,7 @@
                         <constraints>
                             <constraint firstItem="CWJ-kD-yO3" firstAttribute="centerY" secondItem="lA5-iR-5CT" secondAttribute="centerY" multiplier="1.05" id="4a2-qR-RLe"/>
                             <constraint firstItem="CWJ-kD-yO3" firstAttribute="centerX" secondItem="lA5-iR-5CT" secondAttribute="centerX" id="M6z-bw-CNK"/>
-                            <constraint firstItem="CWJ-kD-yO3" firstAttribute="top" secondItem="vaV-Ke-Lo7" secondAttribute="bottom" constant="60" id="gnd-ji-dLa"/>
+                            <constraint firstItem="CWJ-kD-yO3" firstAttribute="top" secondItem="vaV-Ke-Lo7" secondAttribute="bottom" constant="50" id="gnd-ji-dLa"/>
                             <constraint firstItem="vaV-Ke-Lo7" firstAttribute="centerX" secondItem="lA5-iR-5CT" secondAttribute="centerX" id="hdV-HH-n7s"/>
                         </constraints>
                     </view>
