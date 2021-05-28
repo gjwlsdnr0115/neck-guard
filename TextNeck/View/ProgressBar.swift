@@ -30,10 +30,10 @@ class HorizontalProgressBar: UIView {
     
     override func draw(_ rect: CGRect) {
         let backgroundMask = CAShapeLayer()
-        backgroundMask.path = UIBezierPath(roundedRect: rect, cornerRadius: rect.height*0.25).cgPath
+        backgroundMask.path = UIBezierPath(roundedRect: rect, cornerRadius: rect.width*0.25).cgPath
         layer.mask = backgroundMask
         
-        let progressRect = CGRect(origin: .zero, size: CGSize(width: rect.width*progress, height: rect.height))
+        let progressRect = CGRect(origin: .zero, size: CGSize(width: rect.width, height: rect.height*progress))
         progressLayer.frame = progressRect
         
         layer.addSublayer(progressLayer)

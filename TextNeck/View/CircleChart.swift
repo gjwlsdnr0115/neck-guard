@@ -13,6 +13,5 @@ func drawCircleChart(values: [Double], fgColor: UIColor, bgColor: UIColor, width
     let progressRingView = ConcentricProgressRingView(center: CGPoint(x: chartView.bounds.midX, y: chartView.bounds.midY), radius: radius, margin: margin, rings: rings)
     progressRingView.arcs[0].setProgress(CGFloat(values[0]), duration: 1)
     chartView.addSubview(progressRingView)
-    print(chartView.bounds.midX, chartView.bounds.midY)
 }
 

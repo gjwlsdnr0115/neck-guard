@@ -158,6 +158,7 @@
             <connections>
                 <outlet property="exercisedNumLabel" destination="zBB-f2-YQ7" id="CUD-Ku-HMP"/>
                 <outlet property="scoreCircleChart" destination="Hj1-yc-prV" id="KSJ-bL-Hkh"/>
+                <outlet property="scoreLabel" destination="vsN-ga-7jD" id="Oa8-Vq-Fsx"/>
                 <outlet property="starView1" destination="q5z-3c-beX" id="pHq-Lp-WSa"/>
                 <outlet property="starView2" destination="Vsq-JG-bV6" id="o4E-Mp-ewi"/>
                 <outlet property="starView3" destination="i3R-Fc-kwE" id="UYm-SN-beQ"/>

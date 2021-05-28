@@ -71,7 +71,7 @@ class HomeViewController: UIViewController {
         
         reloadGoalStatusData()
         reloadGoodPostureData()
-        reloadBadPostureDate()
+        reloadBadPostureData()
         reloadExerciseNumData()
     }
     
@@ -93,11 +93,51 @@ class HomeViewController: UIViewController {
     }
     
     func reloadGoodPostureData() {
-        drawCircleChart(values: values2, fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, chartView: goodCircleChartView)
+        if list.count != 0 {
+            let sharedFormatter = SharedDateFormatter()
+            let today = sharedFormatter.getToday()
+            let lastData = list.first
+            if lastData?.date == today, let goodPoseTime = lastData?.goodPostureTime, let badPoseTime = lastData?.badPostureTime {
+                print("gooddata: \(goodPoseTime)")
+                let totalTime = goodPoseTime + badPoseTime
+                if totalTime != 0.0 {
+                    var value = goodPoseTime / totalTime
+                    if value > 1.0 {
+                        value = 1.0
+                    }
+                    drawCircleChart(values: [value], fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, chartView: goodCircleChartView)
+                    let mins = goodPoseTime / 60.0
+                    let roundedMins = Double(round(10*mins)/10)
+                    goodLabel.text = "\(roundedMins) min."
+                }
+            }
+        } else {
+            drawCircleChart(values: [0.0], fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, chartView: goodCircleChartView)
+        }
     }
     
-    func reloadBadPostureDate() {
-        drawCircleChart(values: values3, fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, chartView: badCircleChartView)
+    func reloadBadPostureData() {
+        if list.count != 0 {
+            let sharedFormatter = SharedDateFormatter()
+            let today = sharedFormatter.getToday()
+            let lastData = list.first
+            if lastData?.date == today, let goodPoseTime = lastData?.goodPostureTime, let badPoseTime = lastData?.badPostureTime {
+                print("baddata: \(badPoseTime)")
+                let totalTime = goodPoseTime + badPoseTime
+                if totalTime != 0.0 {
+                    var value = badPoseTime / totalTime
+                    if value > 1.0 {
+                        value = 1.0
+                    }
+                    drawCircleChart(values: [value], fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, chartView: badCircleChartView)
+                    let mins = badPoseTime / 60.0
+                    let roundedMins = Double(round(10*mins)/10)
+                    badLabel.text = "\(roundedMins) min."
+                }
+            }
+        } else {
+            drawCircleChart(values: [0.0], fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, chartView: badCircleChartView)
+        }
     }
     
     func reloadExerciseNumData() {
@@ -133,27 +173,6 @@ class HomeViewController: UIViewController {
         }
     }
 
-    
-//    func getGyroMotion() {
-//
-//        if motion.isDeviceMotionAvailable {
-//            motion.deviceMotionUpdateInterval = 0.5
-//
-//            motion.startDeviceMotionUpdates(to: OperationQueue()) { (data, error) in
-//                if let attitude = data?.attitude {
-//                    let deviceAngle = attitude.pitch * 180 / Double.pi
-//                    let angleProgress = deviceAngle / 90.0
-//                    DispatchQueue.main.async {
-//                        self.barChartView.progress = CGFloat(angleProgress)
-//                    }
-//                }
-//            }
-//            print("HomeVC motion started")
-//        } else {
-//            print("HomeVC motion unavailable")
-//        }
-//    }
-    
     
     @IBAction func setGoalButtonToggled(_ sender: Any) {
         let controller = UIAlertController(title: "Manage Goal Settings", message: nil, preferredStyle: .actionSheet)

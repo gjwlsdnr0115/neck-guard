@@ -109,6 +109,24 @@ class DailyViewController: UIViewController {
             let sharedFormatter = SharedDateFormatter()
             let today = sharedFormatter.getToday()
             let lastData = list.first
+            
+            if lastData?.date == today, let goodPoseTime = lastData?.goodPostureTime, let badPoseTime = lastData?.badPostureTime {
+                let totalTime = goodPoseTime + badPoseTime
+                if totalTime != 0.0 {
+                    var value = goodPoseTime / totalTime
+                    if value > 1.0 {
+                        value = 1.0
+                    }
+                    drawCircleChart(values: [value], fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
+                    let valuePercent = Int(value*100)
+                    slide1.scoreLabel.text = "\(valuePercent)%"
+
+                }
+            } else {
+                drawCircleChart(values: [0.0], fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
+                slide1.scoreLabel.text = "0%"
+            }
+            
             if lastData?.date == today, let exerciseNum = lastData?.exerciseNum {
                 print("exerciesNum: \(exerciseNum)")
                 switch exerciseNum {
@@ -130,6 +148,8 @@ class DailyViewController: UIViewController {
 
         } else {
             slide1.setNoStars()
+            drawCircleChart(values: [0.0], fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
+            slide1.scoreLabel.text = "0%"
         }
         
         let slide2:ExerciseStatsView = Bundle.main.loadNibNamed("ExerciseStatsView", owner: self, options: nil)?.first as! ExerciseStatsView

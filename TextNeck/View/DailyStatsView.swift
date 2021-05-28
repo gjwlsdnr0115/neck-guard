@@ -10,6 +10,7 @@ import UIKit
 class DailyStatsView: UIView {
 
 
+    @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var scoreCircleChart: UIView!
     @IBOutlet weak var starView1: UIImageView!
     @IBOutlet weak var starView2: UIImageView!

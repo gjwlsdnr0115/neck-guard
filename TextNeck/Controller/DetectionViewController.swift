@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 import VideoToolbox
+import CoreData
 
 class DetectionViewController: UIViewController {
 
@@ -17,17 +18,35 @@ class DetectionViewController: UIViewController {
     @IBOutlet weak var postureStatusLabel: UILabel!
     private let videoCapture = VideoCapture()
     
+    var list = [DailyEntity]()
+    var target: NSManagedObject?
+    
+    
     private var poseNet: PoseNet!
     
     private var currentFrame: CGImage?
     
     private var poseBuilderConfiguration = PoseBuilderConfiguration()
+    
+    private var isGoodPose = false
+    
+    private var goodPoseTime = 0.0
+    private var badPoseTime = 0.0
+    
+    var goodPoseTimer: Timer?
+    var badPoseTimer: Timer?
 
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        reloadTargetData()
+        resetTimer()
+        
         
         do {
             poseNet = try PoseNet()
@@ -67,15 +86,104 @@ class DetectionViewController: UIViewController {
     }
     
     
+    func reloadTargetData() {
+        list = DataManager.shared.fetchDaily()
+        target = list.first
+    }
+    
     
     @IBAction func stopDetectinToggled(_ sender: Any) {
+        
+        stopGoodPoseTimer()
+        stopBadPoseTimer()
+        
+        let sharedFormatter = SharedDateFormatter()
+        let today = sharedFormatter.getToday()
+        
+        if let target = target as? DailyEntity {
+            print("target exists")
+            if target.date == today {
+                let beforeGoodPostureTime = target.goodPostureTime
+                let beforeBadPostureTime = target.badPostureTime
+                
+                DataManager.shared.updateDaily(entity: target, goodPostureTime: beforeGoodPostureTime + goodPoseTime, badPostureTime: beforeBadPostureTime + badPoseTime) {
+                    self.reloadTargetData()
+                    NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
+                }
+            } else {
+                DataManager.shared.createDaily(date: today, goodPostureTime: goodPoseTime, badPostureTime: badPoseTime) {
+                    self.reloadTargetData()
+                    NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
+                }
+            }
+        } else {
+            print("no target")
+            DataManager.shared.createDaily(date: today, goodPostureTime: goodPoseTime, badPostureTime: badPoseTime) {
+                self.reloadTargetData()
+                NotificationCenter.default.post(name: NSNotification.Name.NewDataDidInsert, object: nil)
+            }
+        }
+        
+        
+        
         dismiss(animated: true, completion: nil)
     }
     
     deinit {
         print("detection finished")
+        stopGoodPoseTimer()
+        stopBadPoseTimer()
+        
+        print("good: \(goodPoseTime)")
+        print("bad: \(badPoseTime)")
     }
 
+}
+
+extension DetectionViewController {
+    
+    func resetTimer() {
+        goodPoseTimer = nil
+        goodPoseTime = 0
+        
+        badPoseTimer = nil
+        badPoseTime = 0
+    }
+    
+    func startGoodPoseTimer() {
+        guard goodPoseTimer == nil else {
+            return
+        }
+        
+        goodPoseTimer = Timer(timeInterval: 1.0, repeats: true, block: { [weak self] timer in
+            self?.goodPoseTime += 1
+        })
+        
+        RunLoop.current.add(goodPoseTimer!, forMode: .default)
+    }
+    
+    func stopGoodPoseTimer() {
+        goodPoseTimer?.invalidate()
+        goodPoseTimer = nil
+    }
+    
+    func startBadPoseTimer() {
+        guard badPoseTimer == nil else {
+            return
+        }
+        
+        badPoseTimer = Timer(timeInterval: 1.0, repeats: true, block: { [weak self] timer in
+            self?.badPoseTime += 1
+        })
+        
+        RunLoop.current.add(badPoseTimer!, forMode: .default)
+    }
+    
+    func stopBadPoseTimer() {
+        badPoseTimer?.invalidate()
+        badPoseTimer = nil
+    }
+    
 }
 
 
@@ -110,22 +218,33 @@ extension DetectionViewController: PoseNetDelegate {
         
         let poses = [poseBuilder.pose]
         
-        if poses.count == 1 {
-            let p = poses.first
-            let nosePoint = p?.joints[.nose]?.position
-            let leftShoulderPoint = p?.joints[.rightShoulder]?.position
-            
-            if  leftShoulderPoint!.x - nosePoint!.x > 30 {
+        let p = poses.first
+        let nosePoint = p?.joints[.nose]?.position
+        let leftShoulderPoint = p?.joints[.rightShoulder]?.position
+        
+        if  leftShoulderPoint!.x - nosePoint!.x > 30 {
 
-                if postureStatusLabel.isHidden {
-                    postureStatusLabel.isHidden = false
-                }
-            } else {
-                if !postureStatusLabel.isHidden {
-                    postureStatusLabel.isHidden = true
-                }
-                
+            if isGoodPose {
+                isGoodPose = false
+                stopGoodPoseTimer()
+                startBadPoseTimer()
             }
+            
+            if postureStatusLabel.isHidden {
+                postureStatusLabel.isHidden = false
+            }
+        } else {
+            
+            if !isGoodPose {
+                isGoodPose = true
+                stopBadPoseTimer()
+                startGoodPoseTimer()
+            }
+            
+            if !postureStatusLabel.isHidden {
+                postureStatusLabel.isHidden = true
+            }
+            
         }
         
         
