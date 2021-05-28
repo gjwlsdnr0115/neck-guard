@@ -8,13 +8,14 @@
 import UIKit
 
 @IBDesignable
-class HorizontalProgressBar: UIView {
+class VerticalProgressBar: UIView {
     @IBInspectable var color: UIColor? = .gray
     var progress: CGFloat = 0.0 {
         didSet { setNeedsDisplay() }
     }
     
     private let progressLayer = CALayer()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,10 +34,13 @@ class HorizontalProgressBar: UIView {
         backgroundMask.path = UIBezierPath(roundedRect: rect, cornerRadius: rect.width*0.25).cgPath
         layer.mask = backgroundMask
         
-        let progressRect = CGRect(origin: .zero, size: CGSize(width: rect.width, height: rect.height*progress))
+        let origin = CGPoint(x: 0, y: rect.height)
+        
+        let progressRect = CGRect(origin: origin, size: CGSize(width: rect.width, height: -rect.height*progress))
         progressLayer.frame = progressRect
         
         layer.addSublayer(progressLayer)
         progressLayer.backgroundColor = color?.cgColor
+        
     }
 }

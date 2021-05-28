@@ -101,6 +101,7 @@ class HomeViewController: UIViewController {
                 print("gooddata: \(goodPoseTime)")
                 let totalTime = goodPoseTime + badPoseTime
                 if totalTime != 0.0 {
+                    
                     var value = goodPoseTime / totalTime
                     if value > 1.0 {
                         value = 1.0
@@ -109,7 +110,11 @@ class HomeViewController: UIViewController {
                     let mins = goodPoseTime / 60.0
                     let roundedMins = Double(round(10*mins)/10)
                     goodLabel.text = "\(roundedMins) min."
+                } else {
+                    drawCircleChart(values: [0.0], fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, chartView: goodCircleChartView)
                 }
+            } else {
+                drawCircleChart(values: [0.0], fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, chartView: goodCircleChartView)
             }
         } else {
             drawCircleChart(values: [0.0], fgColor: chartColor2[0], bgColor: chartColor2[1], width: 6, margin: 2, radius: 32, chartView: goodCircleChartView)
@@ -133,7 +138,11 @@ class HomeViewController: UIViewController {
                     let mins = badPoseTime / 60.0
                     let roundedMins = Double(round(10*mins)/10)
                     badLabel.text = "\(roundedMins) min."
+                } else {
+                    drawCircleChart(values: [0.0], fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, chartView: badCircleChartView)
                 }
+            } else {
+                drawCircleChart(values: [0.0], fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, chartView: badCircleChartView)
             }
         } else {
             drawCircleChart(values: [0.0], fgColor: chartColor1[0], bgColor: chartColor1[1], width: 6, margin: 2, radius: 32, chartView: badCircleChartView)

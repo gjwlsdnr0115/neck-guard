@@ -64,6 +64,7 @@ class DailyViewController: UIViewController {
 
     }
     
+    
     func reloadData() {
         list = DataManager.shared.fetchDaily()
         oneExerciseDates = DataManager.shared.fetchByExerciseNum(num: 1)
@@ -103,7 +104,12 @@ class DailyViewController: UIViewController {
     func createSlides() -> [UIView] {
         
         let slide1:DailyStatsView = Bundle.main.loadNibNamed("DailyStatsView", owner: self, options: nil)?.first as! DailyStatsView
-        drawCircleChart(values: values, fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
+        
+        
+    
+        slide1.setBar(bar: slide1.bar1, value: 0.5)
+        slide1.setBar(bar: slide1.bar2, value: 0.7)
+        slide1.setBar(bar: slide1.bar4, value: 0.3)
         
         if list.count != 0 {
             let sharedFormatter = SharedDateFormatter()
@@ -121,6 +127,9 @@ class DailyViewController: UIViewController {
                     let valuePercent = Int(value*100)
                     slide1.scoreLabel.text = "\(valuePercent)%"
 
+                } else {
+                    drawCircleChart(values: [0.0], fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
+                    slide1.scoreLabel.text = "0%"
                 }
             } else {
                 drawCircleChart(values: [0.0], fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
