@@ -14,6 +14,7 @@ class DetectionViewController: UIViewController {
     
     @IBOutlet weak var previewImageView: PoseImageView!
     
+    @IBOutlet weak var postureStatusLabel: UILabel!
     private let videoCapture = VideoCapture()
     
     private var poseNet: PoseNet!
@@ -114,11 +115,16 @@ extension DetectionViewController: PoseNetDelegate {
             let nosePoint = p?.joints[.nose]?.position
             let leftShoulderPoint = p?.joints[.rightShoulder]?.position
             
-            if  leftShoulderPoint!.x - nosePoint!.x > 50 {
+            if  leftShoulderPoint!.x - nosePoint!.x > 30 {
 
-                print(nosePoint!.x)
-                print(leftShoulderPoint!.x)
+                if postureStatusLabel.isHidden {
+                    postureStatusLabel.isHidden = false
+                }
             } else {
+                if !postureStatusLabel.isHidden {
+                    postureStatusLabel.isHidden = true
+                }
+                
             }
         }
         

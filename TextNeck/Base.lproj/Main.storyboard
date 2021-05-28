@@ -246,7 +246,7 @@
                                     <action selector="stopDetectinToggled:" destination="3Qr-54-vql" eventType="touchUpInside" id="s0U-5M-2nr"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad Posture!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-42-bxr">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad Posture!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-42-bxr">
                                 <rect key="frame" x="122.66666666666669" y="94" width="145" height="29"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
                                 <color key="textColor" red="0.38431372549999998" green="0.1215686275" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
@@ -267,6 +267,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="postureStatusLabel" destination="Lr9-42-bxr" id="UaM-JD-Pn7"/>
                         <outlet property="previewImageView" destination="oYi-fM-NYN" id="AiN-pW-5oH"/>
                     </connections>
                 </viewController>
