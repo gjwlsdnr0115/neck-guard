@@ -209,6 +209,13 @@ class HomeViewController: UIViewController {
     }
     
     
+    @IBAction func startDetectionToggled(_ sender: Any) {
+        let detectionVC = storyboard?.instantiateViewController(identifier: "DetectionViewController") as! DetectionViewController
+        detectionVC.modalPresentationStyle = .fullScreen
+        present(detectionVC, animated: true, completion: nil)
+    }
+    
+    
     deinit {
         NotificationCenter.default.removeObserver(token)
     }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E0F0FD426510E4200652290 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F0FD326510E4200652290 /* Exercise.swift */; };
 		0E0F0FD626511A3000652290 /* StartExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F0FD526511A3000652290 /* StartExerciseViewController.swift */; };
+		0E393ABB2660B1530057BBF8 /* DetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E393ABA2660B1530057BBF8 /* DetectionViewController.swift */; };
 		0E40C1D2264E534C0028FFDC /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40C1D1264E534C0028FFDC /* DailyViewController.swift */; };
 		0E40C1DC264E54B10028FFDC /* DailyStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E40C1DB264E54B10028FFDC /* DailyStatsView.xib */; };
 		0E40C1DF264E54DA0028FFDC /* DailyStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40C1DE264E54DA0028FFDC /* DailyStatsView.swift */; };
@@ -30,7 +31,6 @@
 		0ED6DD18265D19200027C1BB /* PoseNetOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD17265D19200027C1BB /* PoseNetOutput.swift */; };
 		0ED6DD1A265D19400027C1BB /* PoseNet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD19265D19400027C1BB /* PoseNet.swift */; };
 		0ED6DD1C265D196B0027C1BB /* PoseBuilder+Single.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD1B265D196B0027C1BB /* PoseBuilder+Single.swift */; };
-		0ED6DD1E265D19850027C1BB /* PoseBuilder+Muliple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD1D265D19850027C1BB /* PoseBuilder+Muliple.swift */; };
 		0ED6DD20265D199D0027C1BB /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD1F265D199D0027C1BB /* Pose.swift */; };
 		0ED6DD22265D19AE0027C1BB /* Joint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD21265D19AE0027C1BB /* Joint.swift */; };
 		0ED6DD25265D1BE20027C1BB /* CGPoint+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD24265D1BE20027C1BB /* CGPoint+Extension.swift */; };
@@ -52,6 +52,7 @@
 /* Begin PBXFileReference section */
 		0E0F0FD326510E4200652290 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		0E0F0FD526511A3000652290 /* StartExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartExerciseViewController.swift; sourceTree = "<group>"; };
+		0E393ABA2660B1530057BBF8 /* DetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionViewController.swift; sourceTree = "<group>"; };
 		0E40C1D1264E534C0028FFDC /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
 		0E40C1DB264E54B10028FFDC /* DailyStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyStatsView.xib; sourceTree = "<group>"; };
 		0E40C1DE264E54DA0028FFDC /* DailyStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStatsView.swift; sourceTree = "<group>"; };
@@ -75,7 +76,6 @@
 		0ED6DD17265D19200027C1BB /* PoseNetOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNetOutput.swift; sourceTree = "<group>"; };
 		0ED6DD19265D19400027C1BB /* PoseNet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseNet.swift; sourceTree = "<group>"; };
 		0ED6DD1B265D196B0027C1BB /* PoseBuilder+Single.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseBuilder+Single.swift"; sourceTree = "<group>"; };
-		0ED6DD1D265D19850027C1BB /* PoseBuilder+Muliple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PoseBuilder+Muliple.swift"; sourceTree = "<group>"; };
 		0ED6DD1F265D199D0027C1BB /* Pose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pose.swift; sourceTree = "<group>"; };
 		0ED6DD21265D19AE0027C1BB /* Joint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joint.swift; sourceTree = "<group>"; };
 		0ED6DD24265D1BE20027C1BB /* CGPoint+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extension.swift"; sourceTree = "<group>"; };
@@ -175,7 +175,6 @@
 				0ED6DD0E265D186B0027C1BB /* PoseBuilder.swift */,
 				0ED6DD10265D189C0027C1BB /* PoseBuilderConfiguration.swift */,
 				0ED6DD1B265D196B0027C1BB /* PoseBuilder+Single.swift */,
-				0ED6DD1D265D19850027C1BB /* PoseBuilder+Muliple.swift */,
 				0ED6DD1F265D199D0027C1BB /* Pose.swift */,
 				0ED6DD21265D19AE0027C1BB /* Joint.swift */,
 			);
@@ -219,6 +218,7 @@
 				0EE7B4E4264FB1DD003708D7 /* ExerciseViewController.swift */,
 				0EE7B4E6264FCE37003708D7 /* ExerciseDetailViewController.swift */,
 				0E0F0FD526511A3000652290 /* StartExerciseViewController.swift */,
+				0E393ABA2660B1530057BBF8 /* DetectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -381,6 +381,7 @@
 				0EFA2FA12655106200B441DC /* DataModel.xcdatamodeld in Sources */,
 				0ED6DD11265D189C0027C1BB /* PoseBuilderConfiguration.swift in Sources */,
 				0ED6DD25265D1BE20027C1BB /* CGPoint+Extension.swift in Sources */,
+				0E393ABB2660B1530057BBF8 /* DetectionViewController.swift in Sources */,
 				0ED6DD20265D199D0027C1BB /* Pose.swift in Sources */,
 				0ED6DD1C265D196B0027C1BB /* PoseBuilder+Single.swift in Sources */,
 				0ED6DD22265D19AE0027C1BB /* Joint.swift in Sources */,
@@ -388,7 +389,6 @@
 				0EFA2FA9265515C500B441DC /* DataManager+Daily.swift in Sources */,
 				0EE7B4E7264FCE37003708D7 /* ExerciseDetailViewController.swift in Sources */,
 				0E0F0FD626511A3000652290 /* StartExerciseViewController.swift in Sources */,
-				0ED6DD1E265D19850027C1BB /* PoseBuilder+Muliple.swift in Sources */,
 				0E6182B826255F8200359CAB /* AppDelegate.swift in Sources */,
 				0E0F0FD426510E4200652290 /* Exercise.swift in Sources */,
 				0EFA2FA7265511DE00B441DC /* DataManager.swift in Sources */,

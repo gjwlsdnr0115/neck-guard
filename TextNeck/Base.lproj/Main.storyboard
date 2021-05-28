@@ -157,6 +157,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23r-XX-lAQ">
                                 <rect key="frame" x="77.666666666666686" y="692" width="235" height="39"/>
                                 <state key="normal" image="startDetection"/>
+                                <connections>
+                                    <action selector="startDetectionToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qRA-Jk-eX0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OVERALL STATS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ppv-2L-YDv">
                                 <rect key="frame" x="139.33333333333334" y="116" width="111.33333333333334" height="17"/>
@@ -225,31 +228,51 @@
             </objects>
             <point key="canvasLocation" x="876" y="-235.23238380809596"/>
         </scene>
-        <!--View Controller-->
+        <!--Detection View Controller-->
         <scene sceneID="4M9-hw-111">
             <objects>
-                <viewController id="3Qr-54-vql" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetectionViewController" id="3Qr-54-vql" customClass="DetectionViewController" customModule="TextNeck" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MDV-C7-nT4">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oYi-fM-NYN" customClass="PoseImageView" customModule="TextNeck" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="144" width="390" height="566"/>
+                                <rect key="frame" x="0.0" y="143" width="390" height="568"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3B-0x-l8b">
+                                <rect key="frame" x="77.666666666666686" y="731" width="235" height="39"/>
+                                <state key="normal" image="stopDetection"/>
+                                <connections>
+                                    <action selector="stopDetectinToggled:" destination="3Qr-54-vql" eventType="touchUpInside" id="s0U-5M-2nr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bad Posture!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lr9-42-bxr">
+                                <rect key="frame" x="122.66666666666669" y="94" width="145" height="29"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.38431372549999998" green="0.1215686275" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ubM-Zj-LFd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ubM-Zj-LFd" firstAttribute="bottom" secondItem="M3B-0x-l8b" secondAttribute="bottom" constant="40" id="25V-JL-zOr"/>
                             <constraint firstItem="oYi-fM-NYN" firstAttribute="leading" secondItem="ubM-Zj-LFd" secondAttribute="leading" id="4yj-og-MF9"/>
-                            <constraint firstItem="oYi-fM-NYN" firstAttribute="top" secondItem="ubM-Zj-LFd" secondAttribute="top" constant="100" id="9rY-O4-usG"/>
+                            <constraint firstItem="Lr9-42-bxr" firstAttribute="top" secondItem="ubM-Zj-LFd" secondAttribute="top" constant="50" id="5g0-Eh-JQv"/>
+                            <constraint firstItem="M3B-0x-l8b" firstAttribute="top" secondItem="oYi-fM-NYN" secondAttribute="bottom" constant="20" id="8kI-uZ-cxU"/>
+                            <constraint firstItem="oYi-fM-NYN" firstAttribute="top" secondItem="Lr9-42-bxr" secondAttribute="bottom" constant="20" id="TsB-oL-Ad8"/>
                             <constraint firstItem="ubM-Zj-LFd" firstAttribute="trailing" secondItem="oYi-fM-NYN" secondAttribute="trailing" id="UHI-d2-aRq"/>
-                            <constraint firstItem="ubM-Zj-LFd" firstAttribute="bottom" secondItem="oYi-fM-NYN" secondAttribute="bottom" constant="100" id="Uzj-SZ-sMD"/>
+                            <constraint firstItem="Lr9-42-bxr" firstAttribute="centerX" secondItem="MDV-C7-nT4" secondAttribute="centerX" id="jRn-yD-DJD"/>
+                            <constraint firstItem="M3B-0x-l8b" firstAttribute="centerX" secondItem="MDV-C7-nT4" secondAttribute="centerX" id="o5w-Ph-xDv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewImageView" destination="oYi-fM-NYN" id="AiN-pW-5oH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8N4-P4-NHS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1738" y="-235"/>
+            <point key="canvasLocation" x="2328" y="-235"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NyU-2Y-Az7">
@@ -641,6 +664,7 @@ Hold the stretch for 30-60 seconds</string>
         <image name="start" width="206" height="37"/>
         <image name="startDetection" width="235" height="39"/>
         <image name="start_exercise" width="127" height="127"/>
+        <image name="stopDetection" width="235" height="39"/>
         <image name="timer" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

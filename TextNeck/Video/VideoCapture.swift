@@ -46,17 +46,45 @@ class VideoCapture: NSObject {
     /// - parameters:
     ///     - completion: Handler called once the camera is set up (or fails).
     public func setUpAVCapture(completion: @escaping (Error?) -> Void) {
-        sessionQueue.async {
-            do {
-                try self.setUpAVCapture()
-                DispatchQueue.main.async {
-                    completion(nil)
-                }
-            } catch {
-                DispatchQueue.main.async {
-                    completion(error)
+        switch AVCaptureDevice.authorizationStatus(for: .video) {
+        case .authorized:
+            sessionQueue.async {
+                do {
+                    try self.setUpAVCapture()
+                    DispatchQueue.main.async {
+                        completion(nil)
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        completion(error)
+                    }
                 }
             }
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { granted in
+                if granted {
+                    self.sessionQueue.async {
+                        do {
+                            try self.setUpAVCapture()
+                            DispatchQueue.main.async {
+                                completion(nil)
+                            }
+                        } catch {
+                            DispatchQueue.main.async {
+                                completion(error)
+                            }
+                        }
+                    }
+                }
+            }
+            
+        case .denied:
+            return
+            
+        case .restricted:
+            return
+            
+            
         }
     }
 
