@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "exercise-3.jpeg",
+      "filename" : "exercise-3.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "exercise-3@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "exercise-3@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
