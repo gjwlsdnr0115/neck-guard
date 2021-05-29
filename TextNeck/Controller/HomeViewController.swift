@@ -238,9 +238,11 @@ class HomeViewController: UIViewController {
     
     
     @IBAction func startDetectionToggled(_ sender: Any) {
-        let detectionVC = storyboard?.instantiateViewController(identifier: "DetectionViewController") as! DetectionViewController
+        
+        
+        let detectionVC = self.storyboard?.instantiateViewController(identifier: "DetectionViewController") as! DetectionViewController
         detectionVC.modalPresentationStyle = .fullScreen
-        present(detectionVC, animated: true, completion: nil)
+        self.present(detectionVC, animated: true, completion: nil)
     }
     
     

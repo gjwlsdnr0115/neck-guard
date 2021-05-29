@@ -13,6 +13,7 @@ import CoreData
 class DetectionViewController: UIViewController {
 
     
+    @IBOutlet weak var positionControl: UISegmentedControl!
     @IBOutlet weak var previewImageView: PoseImageView!
     
     @IBOutlet weak var postureStatusLabel: UILabel!
@@ -22,6 +23,7 @@ class DetectionViewController: UIViewController {
     var target: NSManagedObject?
     
     
+    private var preferedRight = true
     private var poseNet: PoseNet!
     
     private var currentFrame: CGImage?
@@ -43,6 +45,8 @@ class DetectionViewController: UIViewController {
         super.viewDidLoad()
 
         UIApplication.shared.isIdleTimerDisabled = true
+        
+        
         
         reloadTargetData()
         resetTimer()
@@ -85,11 +89,23 @@ class DetectionViewController: UIViewController {
         setupAndBeginCapturingVideoFrames()
     }
     
+
+    
     
     func reloadTargetData() {
         list = DataManager.shared.fetchDaily()
         target = list.first
     }
+    
+    
+    @IBAction func positionControlToggled(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            preferedRight = false
+        } else {
+            preferedRight = true
+        }
+    }
+    
     
     
     @IBAction func stopDetectinToggled(_ sender: Any) {
@@ -128,6 +144,7 @@ class DetectionViewController: UIViewController {
         
         dismiss(animated: true, completion: nil)
     }
+    
     
     deinit {
         print("detection finished")
@@ -220,36 +237,63 @@ extension DetectionViewController: PoseNetDelegate {
         
         let p = poses.first
         let nosePoint = p?.joints[.nose]?.position
-        let leftShoulderPoint = p?.joints[.rightShoulder]?.position
         
-        if  leftShoulderPoint!.x - nosePoint!.x > 30 {
+        if preferedRight {
+            let rightShoulderPoint = p?.joints[.rightShoulder]?.position
+            
+            if  rightShoulderPoint!.x - nosePoint!.x > 30 {
 
-            if isGoodPose {
-                isGoodPose = false
-                stopGoodPoseTimer()
-                startBadPoseTimer()
+                if isGoodPose {
+                    isGoodPose = false
+                    stopGoodPoseTimer()
+                    startBadPoseTimer()
+                }
+                
+                if postureStatusLabel.isHidden {
+                    postureStatusLabel.isHidden = false
+                }
+            } else {
+                
+                if !isGoodPose {
+                    isGoodPose = true
+                    stopBadPoseTimer()
+                    startGoodPoseTimer()
+                }
+                
+                if !postureStatusLabel.isHidden {
+                    postureStatusLabel.isHidden = true
+                }
+                
             }
-            
-            if postureStatusLabel.isHidden {
-                postureStatusLabel.isHidden = false
-            }
+            previewImageView.show(poses: poses, on: currentFrame)
+        
         } else {
+            let leftShoulderPoint = p?.joints[.leftShoulder]?.position
             
-            if !isGoodPose {
-                isGoodPose = true
-                stopBadPoseTimer()
-                startGoodPoseTimer()
+            if nosePoint!.x - leftShoulderPoint!.x > 30 {
+                if isGoodPose {
+                    isGoodPose = false
+                    stopGoodPoseTimer()
+                    startBadPoseTimer()
+                }
+                
+                if postureStatusLabel.isHidden {
+                    postureStatusLabel.isHidden = false
+                }
+            } else {
+                if !isGoodPose {
+                    isGoodPose = true
+                    stopBadPoseTimer()
+                    startGoodPoseTimer()
+                }
+                
+                if !postureStatusLabel.isHidden {
+                    postureStatusLabel.isHidden = true
+                }
             }
-            
-            if !postureStatusLabel.isHidden {
-                postureStatusLabel.isHidden = true
-            }
-            
+            previewImageView.show(poses: poses, on: currentFrame)
         }
         
-        
-        
-        previewImageView.show(poses: poses, on: currentFrame)
     }
     
     

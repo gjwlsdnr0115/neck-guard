@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E02B16F266209AA005318F2 /* PrepareDetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E02B16E266209AA005318F2 /* PrepareDetectionViewController.swift */; };
 		0E0F0FD426510E4200652290 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F0FD326510E4200652290 /* Exercise.swift */; };
 		0E0F0FD626511A3000652290 /* StartExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E0F0FD526511A3000652290 /* StartExerciseViewController.swift */; };
 		0E393ABB2660B1530057BBF8 /* DetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E393ABA2660B1530057BBF8 /* DetectionViewController.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E02B16E266209AA005318F2 /* PrepareDetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareDetectionViewController.swift; sourceTree = "<group>"; };
 		0E0F0FD326510E4200652290 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		0E0F0FD526511A3000652290 /* StartExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartExerciseViewController.swift; sourceTree = "<group>"; };
 		0E393ABA2660B1530057BBF8 /* DetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				0EE7B4E6264FCE37003708D7 /* ExerciseDetailViewController.swift */,
 				0E0F0FD526511A3000652290 /* StartExerciseViewController.swift */,
 				0E393ABA2660B1530057BBF8 /* DetectionViewController.swift */,
+				0E02B16E266209AA005318F2 /* PrepareDetectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				0ED6DD11265D189C0027C1BB /* PoseBuilderConfiguration.swift in Sources */,
 				0ED6DD25265D1BE20027C1BB /* CGPoint+Extension.swift in Sources */,
 				0E393ABB2660B1530057BBF8 /* DetectionViewController.swift in Sources */,
+				0E02B16F266209AA005318F2 /* PrepareDetectionViewController.swift in Sources */,
 				0ED6DD20265D199D0027C1BB /* Pose.swift in Sources */,
 				0ED6DD1C265D196B0027C1BB /* PoseBuilder+Single.swift in Sources */,
 				0ED6DD22265D19AE0027C1BB /* Joint.swift in Sources */,
