@@ -25,4 +25,36 @@ class SharedDateFormatter {
         let dateString = formatter.string(from: date)
         return dateString
     }
+    
+    func getPastSevenDays() -> [String] {
+        let calendar = Calendar.current
+        var date = calendar.startOfDay(for: Date())
+        var days = [String]()
+        
+        for _ in 1...7 {
+            let day = format(date: date)
+            days.append(day)
+            date = calendar.date(byAdding: .day, value: -1, to: date)!
+        }
+        
+        return days
+    }
+    
+    func getPastSevenDaysLabel() -> [String] {
+        let tempFormater = DateFormatter()
+        tempFormater.dateFormat = "MM/dd"
+        
+        let calendar = Calendar.current
+        var date = calendar.startOfDay(for: Date())
+        var days = [String]()
+        
+        for _ in 1...7 {
+            print("day: \(date)")
+            let day = tempFormater.string(from: date)
+            days.append(day)
+            date = calendar.date(byAdding: .day, value: -1, to: date)!
+        }
+        
+        return days
+    }
 }

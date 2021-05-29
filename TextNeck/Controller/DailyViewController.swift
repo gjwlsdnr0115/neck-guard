@@ -107,9 +107,7 @@ class DailyViewController: UIViewController {
         
         
     
-        slide1.setBar(bar: slide1.bar1, value: 0.5)
-        slide1.setBar(bar: slide1.bar2, value: 0.7)
-        slide1.setBar(bar: slide1.bar4, value: 0.3)
+        slide1.loadBarData()
         
         if list.count != 0 {
             let sharedFormatter = SharedDateFormatter()

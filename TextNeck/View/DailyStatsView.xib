@@ -180,7 +180,7 @@
                                             </constraints>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="value" red="0.12549019610000001" green="0.52941176469999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
@@ -340,6 +340,13 @@
                 <outlet property="bar5" destination="RmP-4h-7rI" id="hg1-AA-HCO"/>
                 <outlet property="bar6" destination="gFb-K0-Sjp" id="WqJ-3r-roz"/>
                 <outlet property="bar7" destination="ObQ-ye-4rJ" id="DTo-1V-P0a"/>
+                <outlet property="date1Label" destination="KIl-xv-FNR" id="UxO-cf-Y06"/>
+                <outlet property="date2Label" destination="P4g-NW-sUY" id="cfb-Do-4b0"/>
+                <outlet property="date3Label" destination="3UI-cs-R9X" id="5PQ-Er-pYW"/>
+                <outlet property="date4Label" destination="0IT-Ou-T8S" id="kMT-LP-Pxu"/>
+                <outlet property="date5Label" destination="WnG-pK-xTx" id="CRE-YM-I72"/>
+                <outlet property="date6Label" destination="IVh-FX-bLC" id="R8P-hS-f3N"/>
+                <outlet property="date7Label" destination="Hed-Lw-DDM" id="iN9-WC-NzM"/>
                 <outlet property="exercisedNumLabel" destination="zBB-f2-YQ7" id="CUD-Ku-HMP"/>
                 <outlet property="scoreCircleChart" destination="Hj1-yc-prV" id="KSJ-bL-Hkh"/>
                 <outlet property="scoreLabel" destination="vsN-ga-7jD" id="Oa8-Vq-Fsx"/>

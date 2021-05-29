@@ -84,6 +84,44 @@ extension DataManager {
         }
     }
     
+    func fetchByDate(date: String) -> Double {
+        var list = [DailyEntity]()
+        mainContext.performAndWait {
+            let request: NSFetchRequest<DailyEntity> = DailyEntity.fetchRequest()
+            let predicate = NSPredicate(format: "date == %@", date)
+            request.predicate = predicate
+            
+            do {
+                list = try mainContext.fetch(request)
+            } catch {
+                print(error)
+            }
+        }
+        let goodPoseTimes = list.map { $0.goodPostureTime }
+        let badPoseTimes = list.map { $0.badPostureTime }
+        
+        guard goodPoseTimes.count != 0, badPoseTimes.count != 0 else {
+            print("no data for date \(date)")
+            return 0.0
+        }
+        
+        let goodPoseTime = goodPoseTimes.first
+        let badPoseTime = badPoseTimes.first
+        
+        guard goodPoseTime != nil, badPoseTime != nil else {
+            return 0.0
+        }
+        
+        let totalTime = goodPoseTime! + badPoseTime!
+        
+        var value = 0.0
+        
+        if totalTime != 0.0 {
+            value = goodPoseTime! / totalTime
+        }
+        
+        return value
+    }
     
     func fetchByExerciseNum(num: Int) -> [String] {
         var list = [DailyEntity]()
