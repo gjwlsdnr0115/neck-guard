@@ -16,7 +16,8 @@ class DetectionViewController: UIViewController {
     @IBOutlet weak var positionControl: UISegmentedControl!
     @IBOutlet weak var previewImageView: PoseImageView!
     
-    @IBOutlet weak var postureStatusLabel: UILabel!
+    @IBOutlet weak var warningImageView: UIImageView!
+    //    @IBOutlet weak var postureStatusLabel: UILabel!
     private let videoCapture = VideoCapture()
     
     var list = [DailyEntity]()
@@ -249,8 +250,8 @@ extension DetectionViewController: PoseNetDelegate {
                     startBadPoseTimer()
                 }
                 
-                if postureStatusLabel.isHidden {
-                    postureStatusLabel.isHidden = false
+                if warningImageView.isHidden {
+                    warningImageView.isHidden = false
                 }
             } else {
                 
@@ -260,8 +261,8 @@ extension DetectionViewController: PoseNetDelegate {
                     startGoodPoseTimer()
                 }
                 
-                if !postureStatusLabel.isHidden {
-                    postureStatusLabel.isHidden = true
+                if !warningImageView.isHidden {
+                    warningImageView.isHidden = true
                 }
                 
             }
@@ -277,8 +278,8 @@ extension DetectionViewController: PoseNetDelegate {
                     startBadPoseTimer()
                 }
                 
-                if postureStatusLabel.isHidden {
-                    postureStatusLabel.isHidden = false
+                if warningImageView.isHidden {
+                    warningImageView.isHidden = false
                 }
             } else {
                 if !isGoodPose {
@@ -287,8 +288,8 @@ extension DetectionViewController: PoseNetDelegate {
                     startGoodPoseTimer()
                 }
                 
-                if !postureStatusLabel.isHidden {
-                    postureStatusLabel.isHidden = true
+                if !warningImageView.isHidden {
+                    warningImageView.isHidden = true
                 }
             }
             previewImageView.show(poses: poses, on: currentFrame)
