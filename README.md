@@ -16,6 +16,8 @@
   * Daily tab
   * Exercise tab
 
+* [Distribution](https://github.com/gjwlsdnr0115/neck-guard#Distribution)
+
 
 # Introduction
 
