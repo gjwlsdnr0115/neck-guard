@@ -24,6 +24,7 @@
 		0E66F06926258346006F4C87 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E66F06826258346006F4C87 /* ProgressBar.swift */; };
 		0E8E0D97264E5B9800E06174 /* ExerciseStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8E0D96264E5B9800E06174 /* ExerciseStatsView.swift */; };
 		0E8E0D9A264E5BDD00E06174 /* ExerciseStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8E0D99264E5BDD00E06174 /* ExerciseStatsView.xib */; };
+		0EB9D5A9266CFCCB00620409 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9D5A8266CFCCB00620409 /* Chart.swift */; };
 		0ED41B4826569610008EB845 /* SharedDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED41B4726569610008EB845 /* SharedDateFormatter.swift */; };
 		0ED6DD0F265D186B0027C1BB /* PoseBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD0E265D186B0027C1BB /* PoseBuilder.swift */; };
 		0ED6DD11265D189C0027C1BB /* PoseBuilderConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED6DD10265D189C0027C1BB /* PoseBuilderConfiguration.swift */; };
@@ -70,6 +71,7 @@
 		0E66F06826258346006F4C87 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		0E8E0D96264E5B9800E06174 /* ExerciseStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseStatsView.swift; sourceTree = "<group>"; };
 		0E8E0D99264E5BDD00E06174 /* ExerciseStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExerciseStatsView.xib; sourceTree = "<group>"; };
+		0EB9D5A8266CFCCB00620409 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		0ED41B4726569610008EB845 /* SharedDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedDateFormatter.swift; sourceTree = "<group>"; };
 		0ED6DD0E265D186B0027C1BB /* PoseBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBuilder.swift; sourceTree = "<group>"; };
 		0ED6DD10265D189C0027C1BB /* PoseBuilderConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseBuilderConfiguration.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				0EFA2F9F2655106200B441DC /* DataModel.xcdatamodeld */,
 				0EFA2FA6265511DE00B441DC /* DataManager.swift */,
 				0EFA2FA8265515C400B441DC /* DataManager+Daily.swift */,
+				0EB9D5A8266CFCCB00620409 /* Chart.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				0E40C1DF264E54DA0028FFDC /* DailyStatsView.swift in Sources */,
 				0ED6DD16265D19070027C1BB /* PoseNetInput.swift in Sources */,
 				0ED6DD1A265D19400027C1BB /* PoseNet.swift in Sources */,
+				0EB9D5A9266CFCCB00620409 /* Chart.swift in Sources */,
 				0ED6DD14265D18E80027C1BB /* PoseNetMobileNet075S16FP16.mlmodel in Sources */,
 				0E6182CF26255FB700359CAB /* HomeViewController.swift in Sources */,
 				0ED6DD27265D1BF50027C1BB /* CGImage+Extension.swift in Sources */,

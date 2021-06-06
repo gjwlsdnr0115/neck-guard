@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -28,181 +27,19 @@
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3gL-cA-uVv">
-                            <rect key="frame" x="20" y="54.666666666666657" width="310" height="411.33333333333337"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tV9-Hv-Ygc">
-                                    <rect key="frame" x="0.0" y="0.0" width="37.333333333333336" height="411.33333333333331"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cod-cy-A0g" customClass="VerticalProgressBar" customModule="TextNeck" customModuleProvider="target">
-                                            <rect key="frame" x="8.6666666666666643" y="0.0" width="20" height="391.33333333333331"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="qfm-uh-Zmq"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIl-xv-FNR">
-                                            <rect key="frame" x="5.6666666666666643" y="399.33333333333337" width="26" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="oNc-30-UVT">
-                                    <rect key="frame" x="45.333333333333329" y="0.0" width="37.666666666666671" height="411.33333333333331"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3d-q5-i2w" customClass="VerticalProgressBar" customModule="TextNeck" customModuleProvider="target">
-                                            <rect key="frame" x="8.6666666666666714" y="0.0" width="20" height="391.33333333333331"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="RSc-bK-Meb"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4g-NW-sUY">
-                                            <rect key="frame" x="5.6666666666666714" y="399.33333333333337" width="26" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hmh-LY-Xhc">
-                                    <rect key="frame" x="91" y="0.0" width="37.333333333333343" height="411.33333333333331"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3n-bw-K6o" customClass="VerticalProgressBar" customModule="TextNeck" customModuleProvider="target">
-                                            <rect key="frame" x="8.6666666666666572" y="0.0" width="20" height="391.33333333333331"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="a5e-qA-tBN"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UI-cs-R9X">
-                                            <rect key="frame" x="5.6666666666666572" y="399.33333333333337" width="26" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="v6E-J0-tnO">
-                                    <rect key="frame" x="136.33333333333334" y="0.0" width="37.333333333333343" height="411.33333333333331"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVd-to-eqU" customClass="VerticalProgressBar" customModule="TextNeck" customModuleProvider="target">
-                                            <rect key="frame" x="8.6666666666666572" y="0.0" width="20" height="391.33333333333331"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="sGo-Ft-b9M"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IT-Ou-T8S">
-                                            <rect key="frame" x="5.6666666666666572" y="399.33333333333337" width="26" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BTg-mx-T9P">
-                                    <rect key="frame" x="181.66666666666666" y="0.0" width="37.333333333333343" height="411.33333333333331"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RmP-4h-7rI" customClass="VerticalProgressBar" customModule="TextNeck" customModuleProvider="target">
-                                            <rect key="frame" x="8.6666666666666856" y="0.0" width="20" height="391.33333333333331"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="URz-Xd-Kn3"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WnG-pK-xTx">
-                                            <rect key="frame" x="5.6666666666666856" y="399.33333333333337" width="26" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="p7M-wK-w6N">
-                                    <rect key="frame" x="227" y="0.0" width="37.666666666666686" height="411.33333333333331"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gFb-K0-Sjp" customClass="VerticalProgressBar" customModule="TextNeck" customModuleProvider="target">
-                                            <rect key="frame" x="9" y="0.0" width="20" height="391.33333333333331"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="Fxd-dz-kR0"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.4823529412" green="0.43137254899999999" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IVh-FX-bLC">
-                                            <rect key="frame" x="6" y="399.33333333333337" width="26" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bU2-vK-HiJ">
-                                    <rect key="frame" x="272.66666666666669" y="0.0" width="37.333333333333314" height="411.33333333333331"/>
-                                    <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObQ-ye-4rJ" customClass="VerticalProgressBar" customModule="TextNeck" customModuleProvider="target">
-                                            <rect key="frame" x="8.6666666666666288" y="0.0" width="20" height="391.33333333333331"/>
-                                            <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="20" id="1lV-ZE-cUR"/>
-                                            </constraints>
-                                            <userDefinedRuntimeAttributes>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="color">
-                                                    <color key="value" red="0.12549019610000001" green="0.52941176469999995" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                </userDefinedRuntimeAttribute>
-                                            </userDefinedRuntimeAttributes>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12/31" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hed-Lw-DDM">
-                                            <rect key="frame" x="5.6666666666666288" y="399.33333333333337" width="26" height="12"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="10"/>
-                                            <color key="textColor" systemColor="systemGrayColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUx-0v-8D7" customClass="BarChartView" customModule="Charts">
+                            <rect key="frame" x="20" y="64.666666666666657" width="310" height="401.33333333333337"/>
+                            <color key="backgroundColor" systemColor="systemRedColor"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="jUx-0v-8D7" secondAttribute="bottom" constant="20" id="1bB-Vw-To9"/>
                         <constraint firstItem="o4X-2Z-FTC" firstAttribute="leading" secondItem="fUE-DS-Can" secondAttribute="leading" constant="12" id="L3C-0c-uCG"/>
-                        <constraint firstAttribute="bottom" secondItem="3gL-cA-uVv" secondAttribute="bottom" constant="20" id="ZqM-qB-rEf"/>
-                        <constraint firstAttribute="trailing" secondItem="3gL-cA-uVv" secondAttribute="trailing" constant="20" id="hyi-3G-Mke"/>
+                        <constraint firstAttribute="trailing" secondItem="jUx-0v-8D7" secondAttribute="trailing" constant="20" id="Z6Y-Uq-Sp0"/>
+                        <constraint firstItem="jUx-0v-8D7" firstAttribute="top" secondItem="o4X-2Z-FTC" secondAttribute="bottom" constant="30" id="btf-1B-xqd"/>
                         <constraint firstItem="o4X-2Z-FTC" firstAttribute="top" secondItem="fUE-DS-Can" secondAttribute="top" constant="14" id="mQc-pm-8lX"/>
-                        <constraint firstItem="3gL-cA-uVv" firstAttribute="leading" secondItem="fUE-DS-Can" secondAttribute="leading" constant="20" id="poV-vw-a4F"/>
-                        <constraint firstItem="3gL-cA-uVv" firstAttribute="top" secondItem="o4X-2Z-FTC" secondAttribute="bottom" constant="20" id="qs7-Q3-yc1"/>
+                        <constraint firstItem="jUx-0v-8D7" firstAttribute="leading" secondItem="fUE-DS-Can" secondAttribute="leading" constant="20" id="rZH-Qy-VvR"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="j1Y-AV-KY5">
@@ -333,20 +170,7 @@
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="j1Y-AV-KY5" secondAttribute="bottom" constant="50" id="nP8-qW-9W6"/>
             </constraints>
             <connections>
-                <outlet property="bar1" destination="Cod-cy-A0g" id="fIL-8l-utj"/>
-                <outlet property="bar2" destination="k3d-q5-i2w" id="qzL-SF-qms"/>
-                <outlet property="bar3" destination="L3n-bw-K6o" id="U2o-EI-Kfl"/>
-                <outlet property="bar4" destination="UVd-to-eqU" id="5DO-9q-xJb"/>
-                <outlet property="bar5" destination="RmP-4h-7rI" id="hg1-AA-HCO"/>
-                <outlet property="bar6" destination="gFb-K0-Sjp" id="WqJ-3r-roz"/>
-                <outlet property="bar7" destination="ObQ-ye-4rJ" id="DTo-1V-P0a"/>
-                <outlet property="date1Label" destination="KIl-xv-FNR" id="UxO-cf-Y06"/>
-                <outlet property="date2Label" destination="P4g-NW-sUY" id="cfb-Do-4b0"/>
-                <outlet property="date3Label" destination="3UI-cs-R9X" id="5PQ-Er-pYW"/>
-                <outlet property="date4Label" destination="0IT-Ou-T8S" id="kMT-LP-Pxu"/>
-                <outlet property="date5Label" destination="WnG-pK-xTx" id="CRE-YM-I72"/>
-                <outlet property="date6Label" destination="IVh-FX-bLC" id="R8P-hS-f3N"/>
-                <outlet property="date7Label" destination="Hed-Lw-DDM" id="iN9-WC-NzM"/>
+                <outlet property="barChartView" destination="jUx-0v-8D7" id="Xhb-Uv-XaN"/>
                 <outlet property="exercisedNumLabel" destination="zBB-f2-YQ7" id="CUD-Ku-HMP"/>
                 <outlet property="scoreCircleChart" destination="Hj1-yc-prV" id="KSJ-bL-Hkh"/>
                 <outlet property="scoreLabel" destination="vsN-ga-7jD" id="Oa8-Vq-Fsx"/>
@@ -360,11 +184,11 @@
     <resources>
         <image name="gray_star" width="27.333333969116211" height="26"/>
         <image name="star" width="27.333333969116211" height="26"/>
-        <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
