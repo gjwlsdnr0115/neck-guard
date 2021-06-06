@@ -55,7 +55,7 @@ class ExerciseViewController: UIViewController {
     func resetTimer() {
         timer = nil
         timeLabel.text = "03:00"
-        count = 3
+        count = 180
     }
     
     

@@ -122,7 +122,7 @@ class DailyViewController: UIViewController {
                         value = 1.0
                     }
                     drawCircleChart(values: [value], fgColor: chartColor[0], bgColor: chartColor[1], width: 20, margin: 2, radius: 34, chartView: slide1.scoreCircleChart)
-                    let valuePercent = Int(value*100)
+                    let valuePercent = Int(round(100*value))
                     slide1.scoreLabel.text = "\(valuePercent)%"
 
                 } else {

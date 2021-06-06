@@ -127,6 +127,11 @@ class DailyStatsView: UIView {
 //        setBar(bar: bar6, value: CGFloat(datas[5]))
 //        setBar(bar: bar7, value: CGFloat(datas[6]))
         
+//        var dataPercent = [Int]()
+//        for data in datas {
+//            let percent = Int(data * 100)
+//            dataPercent.append(percent)
+//        }
         
         barChartView.noDataText = "No data"
         var barDataEntries: [BarChartDataEntry] = []
@@ -142,8 +147,8 @@ class DailyStatsView: UIView {
         barChartView.data!.setValueTextColor(UIColor.systemGray2)
         let pFormatter = NumberFormatter()
         pFormatter.numberStyle = .percent
-        pFormatter.maximumFractionDigits = 1
-        pFormatter.multiplier = 1
+        pFormatter.maximumFractionDigits = 0
+        pFormatter.multiplier = 100
         pFormatter.percentSymbol = " %"
         
         data.setValueFormatter(DefaultValueFormatter(formatter: pFormatter))
@@ -183,7 +188,7 @@ class DailyStatsView: UIView {
         // bar chart
         // 바 컬러, 바 두께
 
-        barChartDataSet.colors = [UIColor(red: 1, green: 0.7686, blue: 0.8941, alpha: 1.0), UIColor(red: 1, green: 0.8824, blue: 0.749, alpha: 1.0), UIColor(red: 1, green: 0.9922, blue: 0.7686, alpha: 1.0), UIColor(red: 0.7686, green: 1, blue: 0.9255, alpha: 1.0), UIColor(red: 0.7686, green: 0.9843, blue: 1, alpha: 1.0), UIColor(red: 0.7686, green: 0.8039, blue: 1, alpha: 1.0), UIColor(red: 0.8196, green: 0.7686, blue: 1, alpha: 1.0) ]
+        barChartDataSet.colors = [UIColor(red: 0.7686, green: 1, blue: 0.9255, alpha: 1.0), UIColor(red: 0.7686, green: 1, blue: 0.9255, alpha: 1.0), UIColor(red: 0.7686, green: 1, blue: 0.9255, alpha: 1.0), UIColor(red: 0.7686, green: 1, blue: 0.9255, alpha: 1.0), UIColor(red: 0.7686, green: 1, blue: 0.9255, alpha: 1.0), UIColor(red: 0.7686, green: 1, blue: 0.9255, alpha: 1.0), UIColor(red: 0.8196, green: 0.7686, blue: 1, alpha: 1.0) ]
 
         let barWidth = 0.5
         data.barWidth = barWidth
